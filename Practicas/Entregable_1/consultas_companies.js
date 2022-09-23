@@ -1,3 +1,6 @@
+// Alejandro Barrachina Argudo
+// Iñaki Berrocal Diaz
+
 use companies
 col = db.summary
 print("C1: Número de empleados de la empresa 'Spotify'")

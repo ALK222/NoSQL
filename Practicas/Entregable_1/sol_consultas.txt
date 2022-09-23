@@ -1,3 +1,5 @@
+// Alejandro Barrachina Argudo
+// Iñaki Berrocal Diaz
 Current Mongosh Log ID:	632dae14ce31d45bb81d6fa5
 Connecting to:		mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.5.4
 Using MongoDB:		6.0.1
