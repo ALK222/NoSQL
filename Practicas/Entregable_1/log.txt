@@ -1,0 +1,168 @@
+Current Mongosh Log ID:	632dae14ce31d45bb81d6fa5
+Connecting to:		mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.5.4
+Using MongoDB:		6.0.1
+Using Mongosh:		1.5.4
+
+For mongosh info see: [1mhttps://docs.mongodb.com/mongodb-shell/[0m
+
+------
+   The server generated these startup warnings when booting
+   2022-09-23T14:02:48.211+02:00: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem
+   2022-09-23T14:02:48.876+02:00: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+   2022-09-23T14:02:48.876+02:00: This server is bound to localhost. Remote systems will be unable to connect to this server. Start the server with --bind_ip <address> to specify which IP addresses it should serve responses from, or with --bind_ip_all to bind to all interfaces. If this behavior is desired, start the server with --bind_ip 127.0.0.1 to disable this warning
+   2022-09-23T14:02:48.877+02:00: Soft rlimits for open file descriptors too low
+------
+
+------
+   Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+   metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+   
+   The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+   and anyone you share the URL with. MongoDB may use this information to make product
+   improvements and to suggest MongoDB products and deployment options to you.
+   
+   To enable free monitoring, run the following command: db.enableFreeMonitoring()
+   To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+------
+
+test> switched to db companies
+companies> companies.summary
+companies> C1: Número de empleados de la empresa 'Spotify'
+
+companies> -----------------------------------------------
+
+companies> [
+  {
+    _id: ObjectId("632da7522fbf3b124ce1ebbb"),
+    number_of_employees: 5000
+  }
+]
+companies> 
+companies> C2: Numero de empresas fundadas en Enero de 2005
+
+companies> -----------------------------
+
+companies> 467
+companies> 
+companies> C3: Numero de empresas fundadas entre Enero y Marzo de 2005
+
+companies> -----------------------------
+
+companies> 17
+companies> 
+companies> C4: Nombre de las empresas cuya categoría(category_code) es 'music' 
+
+companies> -----------------------------
+
+companies> [
+  { _id: ObjectId("632da7522fbf3b124ce1e5e3"), name: 'Slacker' },
+  { _id: ObjectId("632da7522fbf3b124ce1e6b6"), name: 'Thumbplay' },
+  { _id: ObjectId("632da7522fbf3b124ce1e6cf"), name: 'imeem' },
+  { _id: ObjectId("632da7522fbf3b124ce1e70b"), name: 'Myxer' },
+  { _id: ObjectId("632da7522fbf3b124ce1e785"), name: 'OurStage' },
+  { _id: ObjectId("632da7522fbf3b124ce1e80a"), name: 'blinkbox music' },
+  { _id: ObjectId("632da7522fbf3b124ce1ebbb"), name: 'Spotify' },
+  { _id: ObjectId("632da7522fbf3b124ce1ede7"), name: 'MIKESTAR' },
+  { _id: ObjectId("632da7522fbf3b124ce1edf4"), name: 'Nimbit' },
+  { _id: ObjectId("632da7522fbf3b124ce1ee35"), name: 'Bandsintown' },
+  { _id: ObjectId("632da7522fbf3b124ce1ef62"), name: 'Rhapsody' },
+  { _id: ObjectId("632da7522fbf3b124ce1f549"), name: 'Band Metrics' },
+  { _id: ObjectId("632da7522fbf3b124ce1f65c"), name: 'Smule' },
+  { _id: ObjectId("632da7522fbf3b124ce1f69c"), name: 'Radionomy' },
+  { _id: ObjectId("632da7522fbf3b124ce1fad9"), name: 'Club Cooee' },
+  { _id: ObjectId("632da7522fbf3b124ce2049f"), name: 'Audocs' },
+  { _id: ObjectId("632da7522fbf3b124ce206ed"), name: 'Stereomood' },
+  {
+    _id: ObjectId("632da7522fbf3b124ce20af0"),
+    name: 'OfficialVirtualDJ'
+  }
+]
+companies> 
+companies> C5: Número de empresas que no tienen ninguna imagen (image)
+
+companies> --------------------------------------------------------------
+
+companies> 1357
+companies> 
+companies> C6: Numero de empresas con empleado con categoría 'Chief Revenue Officer'. Campo relationships.
+
+companies> -----------------------------
+
+companies> 67
+companies> 
+companies> C7: Nombre de las empresas con oficina en las zonas de San Diego o San Francisco con más de 600 empleados. Mostrar los resultados ordenados por nombre y número de empelados
+
+companies> -----------------------------
+
+companies> [
+  { _id: ObjectId("632da7522fbf3b124ce1eb49"), name: 'Globant' },
+  { _id: ObjectId("632da7522fbf3b124ce1f622"), name: 'Groupon' },
+  { _id: ObjectId("632da7522fbf3b124ce1eb5a"), name: 'InMobi' },
+  { _id: ObjectId("632da7522fbf3b124ce20947"), name: 'ManTech' },
+  {
+    _id: ObjectId("632da7522fbf3b124ce1fed5"),
+    name: 'Riverbed Technology'
+  },
+  { _id: ObjectId("632da7522fbf3b124ce1e659"), name: 'Sony' },
+  { _id: ObjectId("632da7522fbf3b124ce1e5e0"), name: 'Twitter' },
+  { _id: ObjectId("632da7522fbf3b124ce209ef"), name: 'UCWeb' },
+  { _id: ObjectId("632da7522fbf3b124ce200ab"), name: 'Webmetrics' }
+]
+companies> 
+companies> c8: Nombre de empresas adquiridas por menos de 50000 dólares
+
+companies> -----------------------------
+
+companies> [
+  { _id: ObjectId("632da7522fbf3b124ce1e68a"), name: 'InviteShare' },
+  { _id: ObjectId("632da7522fbf3b124ce1f429"), name: 'Cupr Hill' },
+  {
+    _id: ObjectId("632da7522fbf3b124ce1fc71"),
+    name: 'DynaTech-Hosting'
+  },
+  {
+    _id: ObjectId("632da7522fbf3b124ce209f8"),
+    name: "Don't Shoot Enterprises"
+  },
+  { _id: ObjectId("632da7522fbf3b124ce20a74"), name: 'Dial Assurance' }
+]
+companies> 
+companies> c9: Nombre de empresas que tienen varias oficinas. Al menos una en Seattle y otra en New York
+
+companies> -----------------------------
+
+companies> [
+  { _id: ObjectId("632da7522fbf3b124ce1e5dd"), name: 'Wetpaint' },
+  {
+    _id: ObjectId("632da7522fbf3b124ce1fe89"),
+    name: 'Good Technology'
+  },
+  { _id: ObjectId("632da7522fbf3b124ce20436"), name: 'Banyan Branch' }
+]
+companies> 
+companies> c10: Listado de paises distintos en los que las empresas tienen oficina
+
+companies> -----------------------------
+
+companies> [
+  'AFG', 'ALB', 'ANT', 'ARA', 'ARE', 'ARG', 'ATG', 'AUS',
+  'AUT', 'BEL', 'BFA', 'BGD', 'BGR', 'BIH', 'BMU', 'BOL',
+  'BRA', 'BRB', 'CAN', 'CHE', 'CHL', 'CHN', 'CIV', 'COL',
+  'CRI', 'CSS', 'CYP', 'CZE', 'DEU', 'DNK', 'DOM', 'ECU',
+  'EGY', 'ESP', 'EST', 'FIN', 'FRA', 'GBR', 'GIN', 'GRC',
+  'HKG', 'HRV', 'HUN', 'IDN', 'IND', 'IRL', 'IRQ', 'ISL',
+  'ISR', 'ITA', 'JOR', 'JPN', 'KAZ', 'KGZ', 'KOR', 'LAO',
+  'LBN', 'LIE', 'LKA', 'LTU', 'LUX', 'LVA', 'MAR', 'MEX',
+  'MKD', 'MLT', 'MUS', 'MYS', 'NGA', 'NIC', 'NLD', 'NOR',
+  'NZL', 'PAK', 'PAN', 'PHL', 'POL', 'PRT', 'PST', 'QAT',
+  'REU', 'ROM', 'RUS', 'SAU', 'SDN', 'SGP', 'SVN', 'SWE',
+  'THA', 'TUN', 'TUR', 'TWN', 'UKR', 'UMI', 'URY', 'USA',
+  'UZB', 'VGB', 'VNM', 'ZAF'
+]
+companies> 
+companies> c11: Listado de empresas que tienen oficina en al menos 3 países:  USA, GBR y también en  Japón (JPN) 
+
+companies> -----------------------------
+
+companies> { _id: ObjectId("632da7522fbf3b124ce1e5ed"), name: 'OpenX' }
+companies> 

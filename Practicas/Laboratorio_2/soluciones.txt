@@ -1,0 +1,4318 @@
+Current Mongosh Log ID:	632b1585095053eedeea778c
+Connecting to:		mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.5.4
+Using MongoDB:		6.0.1
+Using Mongosh:		1.5.4
+
+For mongosh info see: [1mhttps://docs.mongodb.com/mongodb-shell/[0m
+
+------
+   The server generated these startup warnings when booting
+   2022-09-21T14:20:58.903+02:00: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem
+   2022-09-21T14:20:59.570+02:00: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+   2022-09-21T14:20:59.570+02:00: This server is bound to localhost. Remote systems will be unable to connect to this server. Start the server with --bind_ip <address> to specify which IP addresses it should serve responses from, or with --bind_ip_all to bind to all interfaces. If this behavior is desired, start the server with --bind_ip 127.0.0.1 to disable this warning
+   2022-09-21T14:20:59.570+02:00: Soft rlimits for open file descriptors too low
+------
+
+------
+   Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+   metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+   
+   The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+   and anyone you share the URL with. MongoDB may use this information to make product
+   improvements and to suggest MongoDB products and deployment options to you.
+   
+   To enable free monitoring, run the following command: db.enableFreeMonitoring()
+   To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+------
+
+test> switched to db novelPrizes
+novelPrizes> 
+novelPrizes> Numero de documentos en la coleccion: 646
+
+novelPrizes> 
+novelPrizes> Primer documento: [object Object]
+
+novelPrizes> 
+novelPrizes> Numero de premios concedidos en 2010: 
+
+novelPrizes> 6
+novelPrizes> 
+novelPrizes> Premios con una cantidad monetaria de 1000000: 
+
+novelPrizes> [
+  {
+    _id: ObjectId("632478d2fa1703143f3e1971"),
+    awardYear: '1981',
+    category: { en: 'Chemistry', no: 'Kjemi', se: 'Kemi' },
+    categoryFullName: {
+      en: 'The Nobel Prize in Chemistry',
+      no: 'Nobelprisen i kjemi',
+      se: 'Nobelpriset i kemi'
+    },
+    dateAwarded: '1981-10-19',
+    prizeAmount: 1000000,
+    prizeAmountAdjusted: 2929688,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/che/1981',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '257',
+        knownName: { en: 'Kenichi Fukui' },
+        portion: '1/2',
+        sortOrder: '1',
+        motivation: {
+          en: 'for their theories, developed independently, concerning the course of chemical reactions',
+          se: 'för deras var för sig utvecklade teorier för kemiska reaktioners förlopp'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/257',
+          action: 'Get',
+          types: 'application/json'
+        }
+      },
+      {
+        id: '258',
+        knownName: { en: 'Roald Hoffmann' },
+        portion: '1/2',
+        sortOrder: '2',
+        motivation: {
+          en: 'for their theories, developed independently, concerning the course of chemical reactions',
+          se: 'för deras var för sig utvecklade teorier för kemiska reaktioners förlopp'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/258',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e1972"),
+    awardYear: '1981',
+    category: { en: 'Economic Sciences', no: 'Økonomi', se: 'Ekonomi' },
+    categoryFullName: {
+      en: 'The Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel',
+      no: 'Sveriges Riksbanks pris i økonomisk vitenskap til minne om Alfred Nobel',
+      se: 'Sveriges Riksbanks pris i ekonomisk vetenskap till Alfred Nobels minne'
+    },
+    dateAwarded: '1981-10-13',
+    prizeAmount: 1000000,
+    prizeAmountAdjusted: 2929688,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/eco/1981',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '695',
+        knownName: { en: 'James Tobin' },
+        portion: '1',
+        sortOrder: '1',
+        motivation: {
+          en: 'for his analysis of financial markets and their relations to expenditure decisions, employment, production and prices',
+          se: 'för hans analys av finansiella marknader och dessas samband med utgiftsbeslut och därmed sysselsättning, produktion och prisutveckling'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/695',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e1973"),
+    awardYear: '1981',
+    category: { en: 'Literature', no: 'Litteratur', se: 'Litteratur' },
+    categoryFullName: {
+      en: 'The Nobel Prize in  Literature',
+      no: 'Nobelprisen i litteratur',
+      se: 'Nobelpriset i litteratur'
+    },
+    prizeAmount: 1000000,
+    prizeAmountAdjusted: 2929688,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/lit/1981',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '658',
+        knownName: { en: 'Elias Canetti' },
+        portion: '1',
+        sortOrder: '1',
+        motivation: {
+          en: 'for writings marked by a broad outlook, a wealth of ideas and artistic power',
+          se: 'för ett författarskap präglat av vid utblick, idérikedom och konstnärlig kraft'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/658',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e1974"),
+    awardYear: '1981',
+    category: { en: 'Peace', no: 'Fred', se: 'Fred' },
+    categoryFullName: {
+      en: 'The Nobel Peace Prize',
+      no: 'Nobels fredspris',
+      se: 'Nobels fredspris'
+    },
+    dateAwarded: '1981-10-14',
+    prizeAmount: 1000000,
+    prizeAmountAdjusted: 2929688,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/pea/1981',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '515',
+        orgName: {
+          en: 'Office of the United Nations High Commissioner for Refugees',
+          no: 'FNs Høykommissariat for Flyktninger'
+        },
+        portion: '1',
+        sortOrder: '1',
+        motivation: {
+          en: 'for promoting the fundamental rights of refugees',
+          no: 'for å ha fremmet flyktningers grunnleggende rettigheter'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/515',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e1975"),
+    awardYear: '1981',
+    category: { en: 'Physics', no: 'Fysikk', se: 'Fysik' },
+    categoryFullName: {
+      en: 'The Nobel Prize in Physics',
+      no: 'Nobelprisen i fysikk',
+      se: 'Nobelpriset i fysik'
+    },
+    dateAwarded: '1981-10-19',
+    prizeAmount: 1000000,
+    prizeAmountAdjusted: 2929688,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/phy/1981',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '118',
+        knownName: { en: 'Nicolaas Bloembergen' },
+        portion: '1/4',
+        sortOrder: '1',
+        motivation: {
+          en: 'for their contribution to the development of laser spectroscopy',
+          se: 'för deras bidrag till utvecklingen av laserspektroskopien'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/118',
+          action: 'Get',
+          types: 'application/json'
+        }
+      },
+      {
+        id: '119',
+        knownName: { en: 'Arthur L. Schawlow' },
+        portion: '1/4',
+        sortOrder: '2',
+        motivation: {
+          en: 'for their contribution to the development of laser spectroscopy',
+          se: 'för deras bidrag till utvecklingen av laserspektroskopien'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/119',
+          action: 'Get',
+          types: 'application/json'
+        }
+      },
+      {
+        id: '120',
+        knownName: { en: 'Kai M. Siegbahn' },
+        portion: '1/2',
+        sortOrder: '3',
+        motivation: {
+          en: 'for his contribution to the development of high-resolution electron spectroscopy',
+          se: 'för hans bidrag till utvecklingen av den högupplösande elektronspektroskopien'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/120',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e1976"),
+    awardYear: '1981',
+    category: {
+      en: 'Physiology or Medicine',
+      no: 'Fysiologi eller medisin',
+      se: 'Fysiologi eller medicin'
+    },
+    categoryFullName: {
+      en: 'The Nobel Prize in Physiology or Medicine',
+      no: 'Nobelprisen i fysiologi eller medisin',
+      se: 'Nobelpriset i fysiologi eller medicin'
+    },
+    dateAwarded: '1981-10-09',
+    prizeAmount: 1000000,
+    prizeAmountAdjusted: 2929688,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/med/1981',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '422',
+        knownName: { en: 'Roger W. Sperry' },
+        portion: '1/2',
+        sortOrder: '1',
+        motivation: {
+          en: 'for his discoveries concerning the functional specialization of the cerebral hemispheres',
+          se: 'för hans upptäckter rörande hjärnhemisfärernas funktionella specialisering'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/422',
+          action: 'Get',
+          types: 'application/json'
+        }
+      },
+      {
+        id: '423',
+        knownName: { en: 'David H. Hubel' },
+        portion: '1/4',
+        sortOrder: '2',
+        motivation: {
+          en: 'for their discoveries concerning information processing in the visual system',
+          se: 'för deras upptäckter rörande informationsbearbetningen i synsystemet'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/423',
+          action: 'Get',
+          types: 'application/json'
+        }
+      },
+      {
+        id: '424',
+        knownName: { en: 'Torsten N. Wiesel' },
+        portion: '1/4',
+        sortOrder: '3',
+        motivation: {
+          en: 'for their discoveries concerning information processing in the visual system',
+          se: 'för deras upptäckter rörande informationsbearbetningen i synsystemet'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/424',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  }
+]
+novelPrizes> 
+novelPrizes> Premios entre 1000000 y 150000: 
+
+novelPrizes> [
+  {
+    _id: ObjectId("632478d2fa1703143f3e17d5"),
+    awardYear: '1901',
+    category: { en: 'Chemistry', no: 'Kjemi', se: 'Kemi' },
+    categoryFullName: {
+      en: 'The Nobel Prize in Chemistry',
+      no: 'Nobelprisen i kjemi',
+      se: 'Nobelpriset i kemi'
+    },
+    prizeAmount: 150782,
+    prizeAmountAdjusted: 8567159,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/che/1901',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '160',
+        knownName: { en: "Jacobus H. van 't Hoff" },
+        portion: '1',
+        sortOrder: '1',
+        motivation: {
+          en: 'in recognition of the extraordinary services he has rendered by the discovery of the laws of chemical dynamics and osmotic pressure in solutions',
+          se: 'såsom ett erkännande av den utomordentliga förtjänst han inlagt genom upptäckten av lagarna för den kemiska dynamiken och för det osmotiska trycket i lösningar'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/160',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e17d6"),
+    awardYear: '1901',
+    category: { en: 'Literature', no: 'Litteratur', se: 'Litteratur' },
+    categoryFullName: {
+      en: 'The Nobel Prize in  Literature',
+      no: 'Nobelprisen i litteratur',
+      se: 'Nobelpriset i litteratur'
+    },
+    prizeAmount: 150782,
+    prizeAmountAdjusted: 8567159,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/lit/1901',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '569',
+        knownName: { en: 'Sully Prudhomme' },
+        portion: '1',
+        sortOrder: '1',
+        motivation: {
+          en: 'in special recognition of his poetic composition, which gives evidence of lofty idealism, artistic perfection and a rare combination of the qualities of both heart and intellect',
+          se: 'såsom ett erkännande av hans utmärkta, jämväl under senare år ådagalagda förtjänster som författare och särskilt av hans om hög idealitet, konstnärlig fulländning samt sällspord förening av hjärtats och snillets egenskaper vittnande diktning'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/569',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e17d7"),
+    awardYear: '1901',
+    category: { en: 'Peace', no: 'Fred', se: 'Fred' },
+    categoryFullName: {
+      en: 'The Nobel Peace Prize',
+      no: 'Nobels fredspris',
+      se: 'Nobels fredspris'
+    },
+    dateAwarded: '1901-12-10',
+    prizeAmount: 150782,
+    prizeAmountAdjusted: 8567159,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/pea/1901',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '462',
+        knownName: { en: 'Henry Dunant' },
+        portion: '1/2',
+        sortOrder: '1',
+        motivation: {
+          en: 'for his humanitarian efforts to help wounded soldiers and create international understanding',
+          no: 'for sin humanitære innsats for å hjelpe sårede soldater og skape internasjonal forståelse'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/462',
+          action: 'Get',
+          types: 'application/json'
+        }
+      },
+      {
+        id: '463',
+        knownName: { en: 'Frédéric Passy' },
+        portion: '1/2',
+        sortOrder: '2',
+        motivation: {
+          en: 'for his lifelong work for international peace conferences, diplomacy and arbitration',
+          no: 'for sin  livslange innsats for internasjonale fredskonferanser, diplomati og voldgift'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/463',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e17d8"),
+    awardYear: '1901',
+    category: { en: 'Physics', no: 'Fysikk', se: 'Fysik' },
+    categoryFullName: {
+      en: 'The Nobel Prize in Physics',
+      no: 'Nobelprisen i fysikk',
+      se: 'Nobelpriset i fysik'
+    },
+    prizeAmount: 150782,
+    prizeAmountAdjusted: 8567159,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/phy/1901',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '1',
+        knownName: { en: 'Wilhelm Conrad Röntgen' },
+        portion: '1',
+        sortOrder: '1',
+        motivation: {
+          en: 'in recognition of the extraordinary services he has rendered by the discovery of the remarkable rays subsequently named after him',
+          se: 'såsom ett erkännande av den utomordentliga förtjänst han inlagt genom upptäckten av de egendomliga strålar, som sedermera uppkallats efter honom'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/1',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e17d9"),
+    awardYear: '1901',
+    category: {
+      en: 'Physiology or Medicine',
+      no: 'Fysiologi eller medisin',
+      se: 'Fysiologi eller medicin'
+    },
+    categoryFullName: {
+      en: 'The Nobel Prize in Physiology or Medicine',
+      no: 'Nobelprisen i fysiologi eller medisin',
+      se: 'Nobelpriset i fysiologi eller medicin'
+    },
+    prizeAmount: 150782,
+    prizeAmountAdjusted: 8567159,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/med/1901',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '293',
+        knownName: { en: 'Emil von Behring' },
+        portion: '1',
+        sortOrder: '1',
+        motivation: {
+          en: 'for his work on serum therapy, especially its application against diphtheria, by which he has opened a new road in the domain of medical science and thereby placed in the hands of the physician a victorious weapon against illness and deaths',
+          se: 'för hans arbete rörande serumterapien och särskilt dess användning mot difteri, varigenom han brutit en ny väg inom den medicinska vetenskapens område och givit läkaren ett segerrikt vapen i kampen mot sjukdom och död'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/293',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e185c"),
+    awardYear: '1928',
+    category: { en: 'Chemistry', no: 'Kjemi', se: 'Kemi' },
+    categoryFullName: {
+      en: 'The Nobel Prize in Chemistry',
+      no: 'Nobelprisen i kjemi',
+      se: 'Nobelpriset i kemi'
+    },
+    prizeAmount: 156939,
+    prizeAmountAdjusted: 4458494,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/che/1928',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '185',
+        knownName: { en: 'Adolf Windaus' },
+        portion: '1',
+        sortOrder: '1',
+        motivation: {
+          en: 'for the services rendered through his research into the constitution of the sterols and their connection with the vitamins',
+          se: 'för hans förtjänster om utforskandet av sterinernas konstitution och deras samband med vitamingruppen'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/185',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e185d"),
+    awardYear: '1928',
+    category: { en: 'Literature', no: 'Litteratur', se: 'Litteratur' },
+    categoryFullName: {
+      en: 'The Nobel Prize in  Literature',
+      no: 'Nobelprisen i litteratur',
+      se: 'Nobelpriset i litteratur'
+    },
+    prizeAmount: 156939,
+    prizeAmountAdjusted: 4458494,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/lit/1928',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '601',
+        knownName: { en: 'Sigrid Undset' },
+        portion: '1',
+        sortOrder: '1',
+        motivation: {
+          en: 'principally for her powerful descriptions of Northern life during the Middle Ages',
+          se: 'förnämligast för hennes mäktiga skildringar ur Nordens medeltida liv'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/601',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e185e"),
+    awardYear: '1928',
+    category: { en: 'Peace', no: 'Fred', se: 'Fred' },
+    categoryFullName: {
+      en: 'The Nobel Peace Prize',
+      no: 'Nobels fredspris',
+      se: 'Nobels fredspris'
+    },
+    topMotivation: {
+      en: 'No Nobel Prize was awarded this year. The prize money was allocated to the Special Fund of this prize section.'
+    },
+    prizeAmount: 156939,
+    prizeAmountAdjusted: 4458494,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/pea/1928',
+      action: 'Get',
+      types: 'application/json'
+    }
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e185f"),
+    awardYear: '1928',
+    category: { en: 'Physics', no: 'Fysikk', se: 'Fysik' },
+    categoryFullName: {
+      en: 'The Nobel Prize in Physics',
+      no: 'Nobelprisen i fysikk',
+      se: 'Nobelpriset i fysik'
+    },
+    prizeAmount: 156939,
+    prizeAmountAdjusted: 4458494,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/phy/1928',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '35',
+        knownName: { en: 'Owen Willans Richardson' },
+        portion: '1',
+        sortOrder: '1',
+        motivation: {
+          en: 'for his work on the thermionic phenomenon and especially for the discovery of the law named after him',
+          se: 'för hans arbeten rörande termjonfenomenet och särskilt för upptäckten av den efter honom benämnda lagen'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/35',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e1860"),
+    awardYear: '1928',
+    category: {
+      en: 'Physiology or Medicine',
+      no: 'Fysiologi eller medisin',
+      se: 'Fysiologi eller medicin'
+    },
+    categoryFullName: {
+      en: 'The Nobel Prize in Physiology or Medicine',
+      no: 'Nobelprisen i fysiologi eller medisin',
+      se: 'Nobelpriset i fysiologi eller medicin'
+    },
+    prizeAmount: 156939,
+    prizeAmountAdjusted: 4458494,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/med/1928',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '318',
+        knownName: { en: 'Charles Nicolle' },
+        portion: '1',
+        sortOrder: '1',
+        motivation: {
+          en: 'for his work on typhus',
+          se: 'för hans arbeten om fläcktyfus'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/318',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e1861"),
+    awardYear: '1929',
+    category: { en: 'Chemistry', no: 'Kjemi', se: 'Kemi' },
+    categoryFullName: {
+      en: 'The Nobel Prize in Chemistry',
+      no: 'Nobelprisen i kjemi',
+      se: 'Nobelpriset i kemi'
+    },
+    prizeAmount: 172760,
+    prizeAmountAdjusted: 4907955,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/che/1929',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '186',
+        knownName: { en: 'Arthur Harden' },
+        portion: '1/2',
+        sortOrder: '1',
+        motivation: {
+          en: 'for their investigations on the fermentation of sugar and fermentative enzymes',
+          se: 'för deras undersökningar av sockerarters jäsning och därvid verksamma enzym'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/186',
+          action: 'Get',
+          types: 'application/json'
+        }
+      },
+      {
+        id: '187',
+        knownName: { en: 'Hans von Euler-Chelpin' },
+        portion: '1/2',
+        sortOrder: '2',
+        motivation: {
+          en: 'for their investigations on the fermentation of sugar and fermentative enzymes',
+          se: 'för deras undersökningar av sockerarters jäsning och därvid verksamma enzym'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/187',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e1862"),
+    awardYear: '1929',
+    category: { en: 'Literature', no: 'Litteratur', se: 'Litteratur' },
+    categoryFullName: {
+      en: 'The Nobel Prize in  Literature',
+      no: 'Nobelprisen i litteratur',
+      se: 'Nobelpriset i litteratur'
+    },
+    prizeAmount: 172760,
+    prizeAmountAdjusted: 4907955,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/lit/1929',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '602',
+        knownName: { en: 'Thomas Mann' },
+        portion: '1',
+        sortOrder: '1',
+        motivation: {
+          en: 'principally for his great novel, <I>Buddenbrooks</I>, which has won steadily increased recognition as one of the classic works of contemporary literature',
+          se: 'förnämligast för hans stora roman Buddenbrooks, vilken under årens lopp vunnit alltmer stadgat erkännande som ett av den samtida litteraturens klassiska verk'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/602',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e1863"),
+    awardYear: '1929',
+    category: { en: 'Peace', no: 'Fred', se: 'Fred' },
+    categoryFullName: {
+      en: 'The Nobel Peace Prize',
+      no: 'Nobels fredspris',
+      se: 'Nobels fredspris'
+    },
+    dateAwarded: '1930-12-10',
+    prizeAmount: 172760,
+    prizeAmountAdjusted: 4907955,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/pea/1929',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '494',
+        knownName: { en: 'Frank B. Kellogg' },
+        portion: '1',
+        sortOrder: '1',
+        motivation: {
+          en: 'for his crucial role in bringing about the Briand-Kellogg Pact',
+          no: 'for sin avgjørende rolle i arbeidet med Briand-Kellogg-pakten'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/494',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e1864"),
+    awardYear: '1929',
+    category: { en: 'Physics', no: 'Fysikk', se: 'Fysik' },
+    categoryFullName: {
+      en: 'The Nobel Prize in Physics',
+      no: 'Nobelprisen i fysikk',
+      se: 'Nobelpriset i fysik'
+    },
+    prizeAmount: 172760,
+    prizeAmountAdjusted: 4907955,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/phy/1929',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '36',
+        knownName: { en: 'Louis de Broglie' },
+        portion: '1',
+        sortOrder: '1',
+        motivation: {
+          en: 'for his discovery of the wave nature of electrons',
+          se: 'för upptäckten av elektronernas vågnatur'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/36',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e1865"),
+    awardYear: '1929',
+    category: {
+      en: 'Physiology or Medicine',
+      no: 'Fysiologi eller medisin',
+      se: 'Fysiologi eller medicin'
+    },
+    categoryFullName: {
+      en: 'The Nobel Prize in Physiology or Medicine',
+      no: 'Nobelprisen i fysiologi eller medisin',
+      se: 'Nobelpriset i fysiologi eller medicin'
+    },
+    prizeAmount: 172760,
+    prizeAmountAdjusted: 4907955,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/med/1929',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '319',
+        knownName: { en: 'Christiaan Eijkman' },
+        portion: '1/2',
+        sortOrder: '1',
+        motivation: {
+          en: 'for his discovery of the antineuritic vitamin',
+          se: 'för hans upptäckt av antinevritiska vitaminet'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/319',
+          action: 'Get',
+          types: 'application/json'
+        }
+      },
+      {
+        id: '320',
+        knownName: { en: 'Sir Frederick Hopkins' },
+        portion: '1/2',
+        sortOrder: '2',
+        motivation: {
+          en: 'for his discovery of the growth-stimulating vitamins',
+          se: 'för hans upptäckt av tillväxtvitaminerna'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/320',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e1866"),
+    awardYear: '1930',
+    category: { en: 'Chemistry', no: 'Kjemi', se: 'Kemi' },
+    categoryFullName: {
+      en: 'The Nobel Prize in Chemistry',
+      no: 'Nobelprisen i kjemi',
+      se: 'Nobelpriset i kemi'
+    },
+    prizeAmount: 172947,
+    prizeAmountAdjusted: 5066807,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/che/1930',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '188',
+        knownName: { en: 'Hans Fischer' },
+        portion: '1',
+        sortOrder: '1',
+        motivation: {
+          en: 'for his researches into the constitution of haemin and chlorophyll and especially for his synthesis of haemin',
+          se: 'för hans arbeten över blad - och blodfärgämenenas konstitution samt för hans syntes av hämin'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/188',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e1867"),
+    awardYear: '1930',
+    category: { en: 'Literature', no: 'Litteratur', se: 'Litteratur' },
+    categoryFullName: {
+      en: 'The Nobel Prize in  Literature',
+      no: 'Nobelprisen i litteratur',
+      se: 'Nobelpriset i litteratur'
+    },
+    prizeAmount: 172947,
+    prizeAmountAdjusted: 5066807,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/lit/1930',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '603',
+        knownName: { en: 'Sinclair Lewis' },
+        portion: '1',
+        sortOrder: '1',
+        motivation: {
+          en: 'for his vigorous and graphic art of description and his ability to create, with wit and humour, new types of characters',
+          se: 'för hans starka och levande skildringskonst, med typskapande förmåga, med kvickhet och humor'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/603',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e1868"),
+    awardYear: '1930',
+    category: { en: 'Peace', no: 'Fred', se: 'Fred' },
+    categoryFullName: {
+      en: 'The Nobel Peace Prize',
+      no: 'Nobels fredspris',
+      se: 'Nobels fredspris'
+    },
+    dateAwarded: '1930-12-10',
+    prizeAmount: 172947,
+    prizeAmountAdjusted: 5066807,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/pea/1930',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '495',
+        knownName: { en: 'Nathan Söderblom' },
+        portion: '1',
+        sortOrder: '1',
+        motivation: {
+          en: "for promoting Christian unity and helping create 'that new attitude of mind which is necessary if peace between nations is to become reality'",
+          no: 'for arbeidet med å fremme kristent samhold og skape \x93denne nye innstillingen som er nødvendig hvis fred mellom nasjoner skal bli en realitet'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/495',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e1869"),
+    awardYear: '1930',
+    category: { en: 'Physics', no: 'Fysikk', se: 'Fysik' },
+    categoryFullName: {
+      en: 'The Nobel Prize in Physics',
+      no: 'Nobelprisen i fysikk',
+      se: 'Nobelpriset i fysik'
+    },
+    prizeAmount: 172947,
+    prizeAmountAdjusted: 5066807,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/phy/1930',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '37',
+        knownName: { en: 'Sir Chandrasekhara Venkata Raman' },
+        portion: '1',
+        sortOrder: '1',
+        motivation: {
+          en: 'for his work on the scattering of light and for the discovery of the effect named after him',
+          se: 'för hans arbeten angående ljusets diffusion och för upptäckten av den efter honom uppkallade effekten'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/37',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e186a"),
+    awardYear: '1930',
+    category: {
+      en: 'Physiology or Medicine',
+      no: 'Fysiologi eller medisin',
+      se: 'Fysiologi eller medicin'
+    },
+    categoryFullName: {
+      en: 'The Nobel Prize in Physiology or Medicine',
+      no: 'Nobelprisen i fysiologi eller medisin',
+      se: 'Nobelpriset i fysiologi eller medicin'
+    },
+    prizeAmount: 172947,
+    prizeAmountAdjusted: 5066807,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/med/1930',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '321',
+        knownName: { en: 'Karl Landsteiner' },
+        portion: '1',
+        sortOrder: '1',
+        motivation: {
+          en: 'for his discovery of human blood groups',
+          se: 'för hans upptäckt av människosläktets blodgrupper'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/321',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  }
+]
+Type "it" for more
+novelPrizes> 
+novelPrizes> Premios entre 1000000 y 700000 ordenados por el año descendientemente: 
+
+novelPrizes> [
+  {
+    _id: ObjectId("632478d2fa1703143f3e196b"),
+    awardYear: '1980',
+    category: { en: 'Chemistry', no: 'Kjemi', se: 'Kemi' },
+    categoryFullName: {
+      en: 'The Nobel Prize in Chemistry',
+      no: 'Nobelprisen i kjemi',
+      se: 'Nobelpriset i kemi'
+    },
+    dateAwarded: '1980-10-14',
+    prizeAmount: 880000,
+    prizeAmountAdjusted: 2889667,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/che/1980',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '254',
+        knownName: { en: 'Paul Berg' },
+        portion: '1/2',
+        sortOrder: '1',
+        motivation: {
+          en: 'for his fundamental studies of the biochemistry of nucleic acids, with particular regard to recombinant-DNA',
+          se: 'för hans grundläggande arbeten över nukleinsyrors biokemi, särskilt avseende hybrid-DNA'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/254',
+          action: 'Get',
+          types: 'application/json'
+        }
+      },
+      {
+        id: '255',
+        knownName: { en: 'Walter Gilbert' },
+        portion: '1/4',
+        sortOrder: '2',
+        motivation: {
+          en: 'for their contributions concerning the determination of base sequences in nucleic acids',
+          se: 'för deras insatser rörande bassekvensbestämning i nukleinsyror'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/255',
+          action: 'Get',
+          types: 'application/json'
+        }
+      },
+      {
+        id: '222',
+        knownName: { en: 'Frederick Sanger' },
+        portion: '1/4',
+        sortOrder: '3',
+        motivation: {
+          en: 'for their contributions concerning the determination of base sequences in nucleic acids',
+          se: 'för deras insatser rörande bassekvensbestämning i nukleinsyror'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/222',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e196c"),
+    awardYear: '1980',
+    category: { en: 'Economic Sciences', no: 'Økonomi', se: 'Ekonomi' },
+    categoryFullName: {
+      en: 'The Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel',
+      no: 'Sveriges Riksbanks pris i økonomisk vitenskap til minne om Alfred Nobel',
+      se: 'Sveriges Riksbanks pris i ekonomisk vetenskap till Alfred Nobels minne'
+    },
+    dateAwarded: '1980-10-15',
+    prizeAmount: 880000,
+    prizeAmountAdjusted: 2889667,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/eco/1980',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '694',
+        knownName: { en: 'Lawrence R. Klein' },
+        portion: '1',
+        sortOrder: '1',
+        motivation: {
+          en: 'for the creation of econometric models and the application to the analysis of economic fluctuations and economic policies',
+          se: 'för konstruktionen av ekonometriska konjunkturmodeller samt deras tilllämpning för analys av ekonomisk politik'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/694',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e196d"),
+    awardYear: '1980',
+    category: { en: 'Literature', no: 'Litteratur', se: 'Litteratur' },
+    categoryFullName: {
+      en: 'The Nobel Prize in  Literature',
+      no: 'Nobelprisen i litteratur',
+      se: 'Nobelpriset i litteratur'
+    },
+    prizeAmount: 880000,
+    prizeAmountAdjusted: 2889667,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/lit/1980',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '657',
+        knownName: { en: 'Czeslaw Milosz' },
+        portion: '1',
+        sortOrder: '1',
+        motivation: {
+          en: "who with uncompromising clear-sightedness voices man's exposed condition in a world of severe conflicts",
+          se: 'som med kompromisslös klarsyn tolkar människans utsatthet i en värld av starka konflikter'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/657',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e196e"),
+    awardYear: '1980',
+    category: { en: 'Peace', no: 'Fred', se: 'Fred' },
+    categoryFullName: {
+      en: 'The Nobel Peace Prize',
+      no: 'Nobels fredspris',
+      se: 'Nobels fredspris'
+    },
+    dateAwarded: '1980-10-27',
+    prizeAmount: 880000,
+    prizeAmountAdjusted: 2889667,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/pea/1980',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '541',
+        knownName: { en: 'Adolfo Pérez Esquivel' },
+        portion: '1',
+        sortOrder: '1',
+        motivation: {
+          en: 'for being a source of inspiration to repressed people, especially in Latin America',
+          no: 'for rollen som inspirator for undertrykte mennesker, særlig i Latin-Amerika'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/541',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e196f"),
+    awardYear: '1980',
+    category: { en: 'Physics', no: 'Fysikk', se: 'Fysik' },
+    categoryFullName: {
+      en: 'The Nobel Prize in Physics',
+      no: 'Nobelprisen i fysikk',
+      se: 'Nobelpriset i fysik'
+    },
+    dateAwarded: '1980-10-12',
+    prizeAmount: 880000,
+    prizeAmountAdjusted: 2889667,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/phy/1980',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '116',
+        knownName: { en: 'James Cronin' },
+        portion: '1/2',
+        sortOrder: '1',
+        motivation: {
+          en: 'for the discovery of violations of fundamental symmetry principles in the decay of neutral K-mesons',
+          se: 'för upptäckten av brott mot fundamentala symmetriprinciper i neutrala K-mesoners sönderfall'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/116',
+          action: 'Get',
+          types: 'application/json'
+        }
+      },
+      {
+        id: '117',
+        knownName: { en: 'Val Fitch' },
+        portion: '1/2',
+        sortOrder: '2',
+        motivation: {
+          en: 'for the discovery of violations of fundamental symmetry principles in the decay of neutral K-mesons',
+          se: 'för upptäckten av brott mot fundamentala symmetriprinciper i neutrala K-mesoners sönderfall'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/117',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e1970"),
+    awardYear: '1980',
+    category: {
+      en: 'Physiology or Medicine',
+      no: 'Fysiologi eller medisin',
+      se: 'Fysiologi eller medicin'
+    },
+    categoryFullName: {
+      en: 'The Nobel Prize in Physiology or Medicine',
+      no: 'Nobelprisen i fysiologi eller medisin',
+      se: 'Nobelpriset i fysiologi eller medicin'
+    },
+    dateAwarded: '1980-10-10',
+    prizeAmount: 880000,
+    prizeAmountAdjusted: 2889667,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/med/1980',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '419',
+        knownName: { en: 'Baruj Benacerraf' },
+        portion: '1/3',
+        sortOrder: '1',
+        motivation: {
+          en: 'for their discoveries concerning genetically determined structures on the cell surface that regulate immunological reactions',
+          se: 'för deras upptäckter rörande genetiskt bestämda cellulära ytstrukturer som styr immunologiska reaktioner'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/419',
+          action: 'Get',
+          types: 'application/json'
+        }
+      },
+      {
+        id: '420',
+        knownName: { en: 'Jean Dausset' },
+        portion: '1/3',
+        sortOrder: '2',
+        motivation: {
+          en: 'for their discoveries concerning genetically determined structures on the cell surface that regulate immunological reactions',
+          se: 'för deras upptäckter rörande genetiskt bestämda cellulära ytstrukturer som styr immunologiska reaktioner'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/420',
+          action: 'Get',
+          types: 'application/json'
+        }
+      },
+      {
+        id: '421',
+        knownName: { en: 'George D. Snell' },
+        portion: '1/3',
+        sortOrder: '3',
+        motivation: {
+          en: 'for their discoveries concerning genetically determined structures on the cell surface that regulate immunological reactions',
+          se: 'för deras upptäckter rörande genetiskt bestämda cellulära ytstrukturer som styr immunologiska reaktioner'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/421',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e1965"),
+    awardYear: '1979',
+    category: { en: 'Chemistry', no: 'Kjemi', se: 'Kemi' },
+    categoryFullName: {
+      en: 'The Nobel Prize in Chemistry',
+      no: 'Nobelprisen i kjemi',
+      se: 'Nobelpriset i kemi'
+    },
+    dateAwarded: '1979-10-15',
+    prizeAmount: 800000,
+    prizeAmountAdjusted: 2988048,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/che/1979',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '252',
+        knownName: { en: 'Herbert C. Brown' },
+        portion: '1/2',
+        sortOrder: '1',
+        motivation: {
+          en: 'for their development of the use of boron- and phosphorus-containing compounds, respectively, into important reagents in organic synthesis',
+          se: 'för deras utveckling av borföreningar respektive fosforföreningar till viktiga reagens inom organsk syntes'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/252',
+          action: 'Get',
+          types: 'application/json'
+        }
+      },
+      {
+        id: '253',
+        knownName: { en: 'Georg Wittig' },
+        portion: '1/2',
+        sortOrder: '2',
+        motivation: {
+          en: 'for their development of the use of boron- and phosphorus-containing compounds, respectively, into important reagents in organic synthesis',
+          se: 'för deras utveckling av borföreningar respektive fosforföreningar till viktiga reagens inom organsk syntes'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/253',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e1966"),
+    awardYear: '1979',
+    category: { en: 'Economic Sciences', no: 'Økonomi', se: 'Ekonomi' },
+    categoryFullName: {
+      en: 'The Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel',
+      no: 'Sveriges Riksbanks pris i økonomisk vitenskap til minne om Alfred Nobel',
+      se: 'Sveriges Riksbanks pris i ekonomisk vetenskap till Alfred Nobels minne'
+    },
+    dateAwarded: '1979-10-16',
+    prizeAmount: 800000,
+    prizeAmountAdjusted: 2988048,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/eco/1979',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '692',
+        knownName: { en: 'Theodore W. Schultz' },
+        portion: '1/2',
+        sortOrder: '1',
+        motivation: {
+          en: 'for their pioneering research into economic development research with particular consideration of the problems of developing countries',
+          se: 'för deras pionjärarbeten inom ekonomisk utvecklingsforskning med särskild hänsyn till u-ländernas problem'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/692',
+          action: 'Get',
+          types: 'application/json'
+        }
+      },
+      {
+        id: '693',
+        knownName: { en: 'Sir Arthur Lewis' },
+        portion: '1/2',
+        sortOrder: '2',
+        motivation: {
+          en: 'for their pioneering research into economic development research with particular consideration of the problems of developing countries',
+          se: 'för deras pionjärarbeten inom ekonomisk utvecklingsforskning med särskild hänsyn till u-ländernas problem'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/693',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e1967"),
+    awardYear: '1979',
+    category: { en: 'Literature', no: 'Litteratur', se: 'Litteratur' },
+    categoryFullName: {
+      en: 'The Nobel Prize in  Literature',
+      no: 'Nobelprisen i litteratur',
+      se: 'Nobelpriset i litteratur'
+    },
+    prizeAmount: 800000,
+    prizeAmountAdjusted: 2988048,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/lit/1979',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '655',
+        knownName: { en: 'Odysseus Elytis' },
+        portion: '1',
+        sortOrder: '1',
+        motivation: {
+          en: "for his poetry, which, against the background of Greek tradition, depicts with sensuous strength and intellectual clear-sightedness modern man's struggle for freedom and creativeness",
+          se: 'för hans poesi som mot bakgrund av grekisk tradition med sinnlig styrka och intellektuell klarsyn levandegör en modern människas kamp för frihet och skapande'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/655',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e1968"),
+    awardYear: '1979',
+    category: { en: 'Peace', no: 'Fred', se: 'Fred' },
+    categoryFullName: {
+      en: 'The Nobel Peace Prize',
+      no: 'Nobels fredspris',
+      se: 'Nobels fredspris'
+    },
+    dateAwarded: '1979-10-27',
+    prizeAmount: 800000,
+    prizeAmountAdjusted: 2988048,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/pea/1979',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '540',
+        knownName: { en: 'Mother Teresa ', no: 'Mor Teresa' },
+        portion: '1',
+        sortOrder: '1',
+        motivation: {
+          en: 'for her work for bringing help to suffering humanity',
+          no: 'for arbeidet med å hjelpe en lidende menneskehet'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/540',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e1969"),
+    awardYear: '1979',
+    category: { en: 'Physics', no: 'Fysikk', se: 'Fysik' },
+    categoryFullName: {
+      en: 'The Nobel Prize in Physics',
+      no: 'Nobelprisen i fysikk',
+      se: 'Nobelpriset i fysik'
+    },
+    dateAwarded: '1979-10-15',
+    prizeAmount: 800000,
+    prizeAmountAdjusted: 2988048,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/phy/1979',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '113',
+        knownName: { en: 'Sheldon Glashow' },
+        portion: '1/3',
+        sortOrder: '1',
+        motivation: {
+          en: 'for their contributions to the theory of the unified weak and electromagnetic interaction between elementary particles, including, inter alia, the prediction of the weak neutral current',
+          se: 'för deras insatser inom teorin för förenad svag och elektromagnetisk växelverkan mellan elementar partiklar, innefattande bl.a. förutsägelsen av den svaga neutrala strömmen'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/113',
+          action: 'Get',
+          types: 'application/json'
+        }
+      },
+      {
+        id: '114',
+        knownName: { en: 'Abdus Salam' },
+        portion: '1/3',
+        sortOrder: '2',
+        motivation: {
+          en: 'for their contributions to the theory of the unified weak and electromagnetic interaction between elementary particles, including, inter alia, the prediction of the weak neutral current',
+          se: 'för deras insatser inom teorin för förenad svag och elektromagnetisk växelverkan mellan elementar partiklar, innefattande bl.a. förutsägelsen av den svaga neutrala strömmen'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/114',
+          action: 'Get',
+          types: 'application/json'
+        }
+      },
+      {
+        id: '115',
+        knownName: { en: 'Steven Weinberg' },
+        portion: '1/3',
+        sortOrder: '3',
+        motivation: {
+          en: 'for their contributions to the theory of the unified weak and electromagnetic interaction between elementary particles, including, inter alia, the prediction of the weak neutral current',
+          se: 'för deras insatser inom teorin för förenad svag och elektromagnetisk växelverkan mellan elementar partiklar, innefattande bl.a. förutsägelsen av den svaga neutrala strömmen'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/115',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e196a"),
+    awardYear: '1979',
+    category: {
+      en: 'Physiology or Medicine',
+      no: 'Fysiologi eller medisin',
+      se: 'Fysiologi eller medicin'
+    },
+    categoryFullName: {
+      en: 'The Nobel Prize in Physiology or Medicine',
+      no: 'Nobelprisen i fysiologi eller medisin',
+      se: 'Nobelpriset i fysiologi eller medicin'
+    },
+    dateAwarded: '1979-10-11',
+    prizeAmount: 800000,
+    prizeAmountAdjusted: 2988048,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/med/1979',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '417',
+        knownName: { en: 'Allan M. Cormack' },
+        portion: '1/2',
+        sortOrder: '1',
+        motivation: {
+          en: 'for the development of computer assisted tomography',
+          se: 'för utvecklandet av datortomografi'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/417',
+          action: 'Get',
+          types: 'application/json'
+        }
+      },
+      {
+        id: '418',
+        knownName: { en: 'Godfrey N. Hounsfield' },
+        portion: '1/2',
+        sortOrder: '2',
+        motivation: {
+          en: 'for the development of computer assisted tomography',
+          se: 'för utvecklandet av datortomografi'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/418',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e195f"),
+    awardYear: '1978',
+    category: { en: 'Chemistry', no: 'Kjemi', se: 'Kemi' },
+    categoryFullName: {
+      en: 'The Nobel Prize in Chemistry',
+      no: 'Nobelprisen i kjemi',
+      se: 'Nobelpriset i kemi'
+    },
+    dateAwarded: '1978-10-17',
+    prizeAmount: 725000,
+    prizeAmountAdjusted: 2898454,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/che/1978',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '251',
+        knownName: { en: 'Peter Mitchell' },
+        portion: '1',
+        sortOrder: '1',
+        motivation: {
+          en: 'for his contribution to the understanding of biological energy transfer through the formulation of the chemiosmotic theory',
+          se: 'för hans bidrag till förståelsen av biologisk energiöverföring genom utvecklingen av den kemiosmotiska teorin'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/251',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e1960"),
+    awardYear: '1978',
+    category: { en: 'Economic Sciences', no: 'Økonomi', se: 'Ekonomi' },
+    categoryFullName: {
+      en: 'The Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel',
+      no: 'Sveriges Riksbanks pris i økonomisk vitenskap til minne om Alfred Nobel',
+      se: 'Sveriges Riksbanks pris i ekonomisk vetenskap till Alfred Nobels minne'
+    },
+    dateAwarded: '1978-10-16',
+    prizeAmount: 725000,
+    prizeAmountAdjusted: 2898454,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/eco/1978',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '691',
+        knownName: { en: 'Herbert Simon' },
+        portion: '1',
+        sortOrder: '1',
+        motivation: {
+          en: 'for his pioneering research into the decision-making process within economic organizations',
+          se: 'för hans banbrytande forskning om beslutsprocessen inom ekonomiska organisationer'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/691',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e1961"),
+    awardYear: '1978',
+    category: { en: 'Literature', no: 'Litteratur', se: 'Litteratur' },
+    categoryFullName: {
+      en: 'The Nobel Prize in  Literature',
+      no: 'Nobelprisen i litteratur',
+      se: 'Nobelpriset i litteratur'
+    },
+    prizeAmount: 725000,
+    prizeAmountAdjusted: 2898454,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/lit/1978',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '654',
+        knownName: { en: 'Isaac Bashevis Singer' },
+        portion: '1',
+        sortOrder: '1',
+        motivation: {
+          en: 'for his impassioned narrative art which, with roots in a Polish-Jewish cultural tradition, brings universal human conditions to life',
+          se: 'för hans intensiva berättarkonst, som med rötter i en polsk-judisk kulturtradition levandegör universella mänskliga villkor'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/654',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e1962"),
+    awardYear: '1978',
+    category: { en: 'Peace', no: 'Fred', se: 'Fred' },
+    categoryFullName: {
+      en: 'The Nobel Peace Prize',
+      no: 'Nobels fredspris',
+      se: 'Nobels fredspris'
+    },
+    dateAwarded: '1978-10-27',
+    prizeAmount: 725000,
+    prizeAmountAdjusted: 2898454,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/pea/1978',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '538',
+        knownName: { en: 'Anwar al-Sadat' },
+        portion: '1/2',
+        sortOrder: '1',
+        motivation: {
+          en: 'for jointly having negotiated peace between Egypt and Israel in 1978',
+          no: 'for i felleskap å ha forhandlet frem fred mellom Egypt og Israel i 1978'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/538',
+          action: 'Get',
+          types: 'application/json'
+        }
+      },
+      {
+        id: '539',
+        knownName: { en: 'Menachem Begin' },
+        portion: '1/2',
+        sortOrder: '2',
+        motivation: {
+          en: 'for jointly having negotiated peace between Egypt and Israel in 1978',
+          no: 'for i felleskap å ha forhandlet frem fred mellom Egypt og Israel i 1978'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/539',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e1963"),
+    awardYear: '1978',
+    category: { en: 'Physics', no: 'Fysikk', se: 'Fysik' },
+    categoryFullName: {
+      en: 'The Nobel Prize in Physics',
+      no: 'Nobelprisen i fysikk',
+      se: 'Nobelpriset i fysik'
+    },
+    dateAwarded: '1978-10-17',
+    prizeAmount: 725000,
+    prizeAmountAdjusted: 2898454,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/phy/1978',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '110',
+        knownName: { en: 'Pyotr Kapitsa' },
+        portion: '1/2',
+        sortOrder: '1',
+        motivation: {
+          en: 'for his basic inventions and discoveries in the area of low-temperature physics',
+          se: 'för hans grundläggande uppfinningar och upptäckter inom lågtemperaturfysiken'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/110',
+          action: 'Get',
+          types: 'application/json'
+        }
+      },
+      {
+        id: '111',
+        knownName: { en: 'Arno Penzias' },
+        portion: '1/4',
+        sortOrder: '2',
+        motivation: {
+          en: 'for their discovery of cosmic microwave background radiation',
+          se: 'för deras upptäckt av den kosmiska bakgrunden av mikrovågor'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/111',
+          action: 'Get',
+          types: 'application/json'
+        }
+      },
+      {
+        id: '112',
+        knownName: { en: 'Robert Woodrow Wilson' },
+        portion: '1/4',
+        sortOrder: '3',
+        motivation: {
+          en: 'for their discovery of cosmic microwave background radiation',
+          se: 'för deras upptäckt av den kosmiska bakgrunden av mikrovågor'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/112',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e1964"),
+    awardYear: '1978',
+    category: {
+      en: 'Physiology or Medicine',
+      no: 'Fysiologi eller medisin',
+      se: 'Fysiologi eller medicin'
+    },
+    categoryFullName: {
+      en: 'The Nobel Prize in Physiology or Medicine',
+      no: 'Nobelprisen i fysiologi eller medisin',
+      se: 'Nobelpriset i fysiologi eller medicin'
+    },
+    prizeAmount: 725000,
+    prizeAmountAdjusted: 2898454,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/med/1978',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '414',
+        knownName: { en: 'Werner Arber' },
+        portion: '1/3',
+        sortOrder: '1',
+        motivation: {
+          en: 'for the discovery of restriction enzymes and their application to problems of molecular genetics',
+          se: 'för upptäckten av restriktionsenzym och deras användning inom den molekylära tekniken'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/414',
+          action: 'Get',
+          types: 'application/json'
+        }
+      },
+      {
+        id: '415',
+        knownName: { en: 'Daniel Nathans' },
+        portion: '1/3',
+        sortOrder: '2',
+        motivation: {
+          en: 'for the discovery of restriction enzymes and their application to problems of molecular genetics',
+          se: 'för upptäckten av restriktionsenzym och deras användning inom den molekylära tekniken'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/415',
+          action: 'Get',
+          types: 'application/json'
+        }
+      },
+      {
+        id: '416',
+        knownName: { en: 'Hamilton O. Smith' },
+        portion: '1/3',
+        sortOrder: '3',
+        motivation: {
+          en: 'for the discovery of restriction enzymes and their application to problems of molecular genetics',
+          se: 'för upptäckten av restriktionsenzym och deras användning inom den molekylära tekniken'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/416',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  }
+]
+novelPrizes> 
+novelPrizes> Premios entre 1000000 y 700000 en el año 1979: 
+
+novelPrizes> [
+  {
+    _id: ObjectId("632478d2fa1703143f3e195f"),
+    awardYear: '1978',
+    category: { en: 'Chemistry', no: 'Kjemi', se: 'Kemi' },
+    categoryFullName: {
+      en: 'The Nobel Prize in Chemistry',
+      no: 'Nobelprisen i kjemi',
+      se: 'Nobelpriset i kemi'
+    },
+    dateAwarded: '1978-10-17',
+    prizeAmount: 725000,
+    prizeAmountAdjusted: 2898454,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/che/1978',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '251',
+        knownName: { en: 'Peter Mitchell' },
+        portion: '1',
+        sortOrder: '1',
+        motivation: {
+          en: 'for his contribution to the understanding of biological energy transfer through the formulation of the chemiosmotic theory',
+          se: 'för hans bidrag till förståelsen av biologisk energiöverföring genom utvecklingen av den kemiosmotiska teorin'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/251',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e1960"),
+    awardYear: '1978',
+    category: { en: 'Economic Sciences', no: 'Økonomi', se: 'Ekonomi' },
+    categoryFullName: {
+      en: 'The Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel',
+      no: 'Sveriges Riksbanks pris i økonomisk vitenskap til minne om Alfred Nobel',
+      se: 'Sveriges Riksbanks pris i ekonomisk vetenskap till Alfred Nobels minne'
+    },
+    dateAwarded: '1978-10-16',
+    prizeAmount: 725000,
+    prizeAmountAdjusted: 2898454,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/eco/1978',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '691',
+        knownName: { en: 'Herbert Simon' },
+        portion: '1',
+        sortOrder: '1',
+        motivation: {
+          en: 'for his pioneering research into the decision-making process within economic organizations',
+          se: 'för hans banbrytande forskning om beslutsprocessen inom ekonomiska organisationer'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/691',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e1961"),
+    awardYear: '1978',
+    category: { en: 'Literature', no: 'Litteratur', se: 'Litteratur' },
+    categoryFullName: {
+      en: 'The Nobel Prize in  Literature',
+      no: 'Nobelprisen i litteratur',
+      se: 'Nobelpriset i litteratur'
+    },
+    prizeAmount: 725000,
+    prizeAmountAdjusted: 2898454,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/lit/1978',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '654',
+        knownName: { en: 'Isaac Bashevis Singer' },
+        portion: '1',
+        sortOrder: '1',
+        motivation: {
+          en: 'for his impassioned narrative art which, with roots in a Polish-Jewish cultural tradition, brings universal human conditions to life',
+          se: 'för hans intensiva berättarkonst, som med rötter i en polsk-judisk kulturtradition levandegör universella mänskliga villkor'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/654',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e1962"),
+    awardYear: '1978',
+    category: { en: 'Peace', no: 'Fred', se: 'Fred' },
+    categoryFullName: {
+      en: 'The Nobel Peace Prize',
+      no: 'Nobels fredspris',
+      se: 'Nobels fredspris'
+    },
+    dateAwarded: '1978-10-27',
+    prizeAmount: 725000,
+    prizeAmountAdjusted: 2898454,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/pea/1978',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '538',
+        knownName: { en: 'Anwar al-Sadat' },
+        portion: '1/2',
+        sortOrder: '1',
+        motivation: {
+          en: 'for jointly having negotiated peace between Egypt and Israel in 1978',
+          no: 'for i felleskap å ha forhandlet frem fred mellom Egypt og Israel i 1978'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/538',
+          action: 'Get',
+          types: 'application/json'
+        }
+      },
+      {
+        id: '539',
+        knownName: { en: 'Menachem Begin' },
+        portion: '1/2',
+        sortOrder: '2',
+        motivation: {
+          en: 'for jointly having negotiated peace between Egypt and Israel in 1978',
+          no: 'for i felleskap å ha forhandlet frem fred mellom Egypt og Israel i 1978'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/539',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e1963"),
+    awardYear: '1978',
+    category: { en: 'Physics', no: 'Fysikk', se: 'Fysik' },
+    categoryFullName: {
+      en: 'The Nobel Prize in Physics',
+      no: 'Nobelprisen i fysikk',
+      se: 'Nobelpriset i fysik'
+    },
+    dateAwarded: '1978-10-17',
+    prizeAmount: 725000,
+    prizeAmountAdjusted: 2898454,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/phy/1978',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '110',
+        knownName: { en: 'Pyotr Kapitsa' },
+        portion: '1/2',
+        sortOrder: '1',
+        motivation: {
+          en: 'for his basic inventions and discoveries in the area of low-temperature physics',
+          se: 'för hans grundläggande uppfinningar och upptäckter inom lågtemperaturfysiken'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/110',
+          action: 'Get',
+          types: 'application/json'
+        }
+      },
+      {
+        id: '111',
+        knownName: { en: 'Arno Penzias' },
+        portion: '1/4',
+        sortOrder: '2',
+        motivation: {
+          en: 'for their discovery of cosmic microwave background radiation',
+          se: 'för deras upptäckt av den kosmiska bakgrunden av mikrovågor'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/111',
+          action: 'Get',
+          types: 'application/json'
+        }
+      },
+      {
+        id: '112',
+        knownName: { en: 'Robert Woodrow Wilson' },
+        portion: '1/4',
+        sortOrder: '3',
+        motivation: {
+          en: 'for their discovery of cosmic microwave background radiation',
+          se: 'för deras upptäckt av den kosmiska bakgrunden av mikrovågor'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/112',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e1964"),
+    awardYear: '1978',
+    category: {
+      en: 'Physiology or Medicine',
+      no: 'Fysiologi eller medisin',
+      se: 'Fysiologi eller medicin'
+    },
+    categoryFullName: {
+      en: 'The Nobel Prize in Physiology or Medicine',
+      no: 'Nobelprisen i fysiologi eller medisin',
+      se: 'Nobelpriset i fysiologi eller medicin'
+    },
+    prizeAmount: 725000,
+    prizeAmountAdjusted: 2898454,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/med/1978',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '414',
+        knownName: { en: 'Werner Arber' },
+        portion: '1/3',
+        sortOrder: '1',
+        motivation: {
+          en: 'for the discovery of restriction enzymes and their application to problems of molecular genetics',
+          se: 'för upptäckten av restriktionsenzym och deras användning inom den molekylära tekniken'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/414',
+          action: 'Get',
+          types: 'application/json'
+        }
+      },
+      {
+        id: '415',
+        knownName: { en: 'Daniel Nathans' },
+        portion: '1/3',
+        sortOrder: '2',
+        motivation: {
+          en: 'for the discovery of restriction enzymes and their application to problems of molecular genetics',
+          se: 'för upptäckten av restriktionsenzym och deras användning inom den molekylära tekniken'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/415',
+          action: 'Get',
+          types: 'application/json'
+        }
+      },
+      {
+        id: '416',
+        knownName: { en: 'Hamilton O. Smith' },
+        portion: '1/3',
+        sortOrder: '3',
+        motivation: {
+          en: 'for the discovery of restriction enzymes and their application to problems of molecular genetics',
+          se: 'för upptäckten av restriktionsenzym och deras användning inom den molekylära tekniken'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/416',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  }
+]
+novelPrizes> 
+novelPrizes> Prueba de consulta: 
+
+novelPrizes> [
+  { _id: ObjectId("632478d2fa1703143f3e17d5"), awardYear: '1901' },
+  { _id: ObjectId("632478d2fa1703143f3e17d6"), awardYear: '1901' },
+  { _id: ObjectId("632478d2fa1703143f3e17d7"), awardYear: '1901' },
+  { _id: ObjectId("632478d2fa1703143f3e17d8"), awardYear: '1901' },
+  { _id: ObjectId("632478d2fa1703143f3e17d9"), awardYear: '1901' },
+  { _id: ObjectId("632478d2fa1703143f3e17da"), awardYear: '1902' },
+  { _id: ObjectId("632478d2fa1703143f3e17db"), awardYear: '1902' },
+  { _id: ObjectId("632478d2fa1703143f3e17dc"), awardYear: '1902' },
+  { _id: ObjectId("632478d2fa1703143f3e17dd"), awardYear: '1902' },
+  { _id: ObjectId("632478d2fa1703143f3e17de"), awardYear: '1902' },
+  { _id: ObjectId("632478d2fa1703143f3e17df"), awardYear: '1903' },
+  { _id: ObjectId("632478d2fa1703143f3e17e0"), awardYear: '1903' },
+  { _id: ObjectId("632478d2fa1703143f3e17e1"), awardYear: '1903' },
+  { _id: ObjectId("632478d2fa1703143f3e17e2"), awardYear: '1903' },
+  { _id: ObjectId("632478d2fa1703143f3e17e3"), awardYear: '1903' },
+  { _id: ObjectId("632478d2fa1703143f3e17e4"), awardYear: '1904' },
+  { _id: ObjectId("632478d2fa1703143f3e17e5"), awardYear: '1904' },
+  { _id: ObjectId("632478d2fa1703143f3e17e6"), awardYear: '1904' },
+  { _id: ObjectId("632478d2fa1703143f3e17e7"), awardYear: '1904' },
+  { _id: ObjectId("632478d2fa1703143f3e17e8"), awardYear: '1904' }
+]
+Type "it" for more
+novelPrizes> Esta consulta está mal ya que el filtro hace que se muestren todos los años
+
+novelPrizes> 
+novelPrizes> Premios con el campo dateAwarded: 
+
+novelPrizes> [
+  {
+    _id: ObjectId("632478d2fa1703143f3e17d7"),
+    awardYear: '1901',
+    category: { en: 'Peace', no: 'Fred', se: 'Fred' },
+    categoryFullName: {
+      en: 'The Nobel Peace Prize',
+      no: 'Nobels fredspris',
+      se: 'Nobels fredspris'
+    },
+    dateAwarded: '1901-12-10',
+    prizeAmount: 150782,
+    prizeAmountAdjusted: 8567159,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/pea/1901',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '462',
+        knownName: { en: 'Henry Dunant' },
+        portion: '1/2',
+        sortOrder: '1',
+        motivation: {
+          en: 'for his humanitarian efforts to help wounded soldiers and create international understanding',
+          no: 'for sin humanitære innsats for å hjelpe sårede soldater og skape internasjonal forståelse'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/462',
+          action: 'Get',
+          types: 'application/json'
+        }
+      },
+      {
+        id: '463',
+        knownName: { en: 'Frédéric Passy' },
+        portion: '1/2',
+        sortOrder: '2',
+        motivation: {
+          en: 'for his lifelong work for international peace conferences, diplomacy and arbitration',
+          no: 'for sin  livslange innsats for internasjonale fredskonferanser, diplomati og voldgift'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/463',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e17dc"),
+    awardYear: '1902',
+    category: { en: 'Peace', no: 'Fred', se: 'Fred' },
+    categoryFullName: {
+      en: 'The Nobel Peace Prize',
+      no: 'Nobels fredspris',
+      se: 'Nobels fredspris'
+    },
+    dateAwarded: '1902-12-10',
+    prizeAmount: 141847,
+    prizeAmountAdjusted: 8059489,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/pea/1902',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '464',
+        knownName: { en: 'Élie Ducommun' },
+        portion: '1/2',
+        sortOrder: '1',
+        motivation: {
+          en: 'for his untiring and skilful directorship of the Bern Peace Bureau',
+          no: 'for sin utrettelige og dyktige ledelse av Det internasjonale fredsbyrået i Bern'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/464',
+          action: 'Get',
+          types: 'application/json'
+        }
+      },
+      {
+        id: '465',
+        knownName: { en: 'Albert Gobat' },
+        portion: '1/2',
+        sortOrder: '2',
+        motivation: {
+          en: 'for his eminently practical administration of the Inter-Parliamentary Union',
+          no: 'for sin fremragende praktiske administrering av Den interparlamentariske union'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/465',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e17e1"),
+    awardYear: '1903',
+    category: { en: 'Peace', no: 'Fred', se: 'Fred' },
+    categoryFullName: {
+      en: 'The Nobel Peace Prize',
+      no: 'Nobels fredspris',
+      se: 'Nobels fredspris'
+    },
+    dateAwarded: '1903-12-10',
+    prizeAmount: 141358,
+    prizeAmountAdjusted: 7795478,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/pea/1903',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '466',
+        knownName: { en: 'Randal Cremer' },
+        portion: '1',
+        sortOrder: '1',
+        motivation: {
+          en: 'for his longstanding and devoted effort in favour of the ideas of peace and arbitration',
+          no: 'for sin lange og oppofrende innsats for å fremme ideen om fred og voldgift'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/466',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e17e6"),
+    awardYear: '1904',
+    category: { en: 'Peace', no: 'Fred', se: 'Fred' },
+    categoryFullName: {
+      en: 'The Nobel Peace Prize',
+      no: 'Nobels fredspris',
+      se: 'Nobels fredspris'
+    },
+    dateAwarded: '1904-12-10',
+    prizeAmount: 140859,
+    prizeAmountAdjusted: 7767960,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/pea/1904',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '467',
+        orgName: {
+          en: 'Institute of International Law',
+          no: 'Folkerettsinstituttet'
+        },
+        portion: '1',
+        sortOrder: '1',
+        motivation: {
+          en: 'for its striving in public law to develop peaceful ties between nations and to make the laws of war more humane',
+          no: 'for arbeidet med å skape fredelige forbindelser mellom nasjoner og gjøre krigens lover mer humane gjennom folkeretten'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/467',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e17eb"),
+    awardYear: '1905',
+    category: { en: 'Peace', no: 'Fred', se: 'Fred' },
+    categoryFullName: {
+      en: 'The Nobel Peace Prize',
+      no: 'Nobels fredspris',
+      se: 'Nobels fredspris'
+    },
+    dateAwarded: '1905-12-10',
+    prizeAmount: 138089,
+    prizeAmountAdjusted: 7615202,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/pea/1905',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '468',
+        knownName: { en: 'Bertha von Suttner' },
+        portion: '1',
+        sortOrder: '1',
+        motivation: {
+          en: 'for her audacity to oppose the horrors of war',
+          no: 'for sin modige kamp mot krigens grusomheter'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/468',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e17f0"),
+    awardYear: '1906',
+    category: { en: 'Peace', no: 'Fred', se: 'Fred' },
+    categoryFullName: {
+      en: 'The Nobel Peace Prize',
+      no: 'Nobels fredspris',
+      se: 'Nobels fredspris'
+    },
+    dateAwarded: '1906-12-10',
+    prizeAmount: 138536,
+    prizeAmountAdjusted: 7421571,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/pea/1906',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '470',
+        knownName: { en: 'Theodore Roosevelt' },
+        portion: '1',
+        sortOrder: '1',
+        motivation: {
+          en: "for his role in bringing to an end the bloody war recently waged between two of the world's great powers, Japan and Russia",
+          no: 'for rollen han spilte for å få slutt på den blodige krigen som nettopp var utkjempet mellom to av verdens stormakter, Japan og Russland'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/470',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e17f5"),
+    awardYear: '1907',
+    category: { en: 'Peace', no: 'Fred', se: 'Fred' },
+    categoryFullName: {
+      en: 'The Nobel Peace Prize',
+      no: 'Nobels fredspris',
+      se: 'Nobels fredspris'
+    },
+    dateAwarded: '1907-12-10',
+    prizeAmount: 138796,
+    prizeAmountAdjusted: 7033581,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/pea/1907',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '471',
+        knownName: { en: 'Ernesto Teodoro Moneta' },
+        portion: '1/2',
+        sortOrder: '1',
+        motivation: {
+          en: 'for his work in the press and in peace meetings, both public and private, for an understanding between France and Italy',
+          no: 'for sitt arbeid i pressen og på fredsmøter, både offentlig og privat, for å skape forståelse mellom Frankrike og Italia'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/471',
+          action: 'Get',
+          types: 'application/json'
+        }
+      },
+      {
+        id: '472',
+        knownName: { en: 'Louis Renault' },
+        portion: '1/2',
+        sortOrder: '2',
+        motivation: {
+          en: 'for his decisive influence upon the conduct and outcome of the Hague and Geneva Conferences',
+          no: 'for sin avgjørende innflytelse på gjennomføringen og utfallet av konferansene i Haag og Genève'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/472',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e17fa"),
+    awardYear: '1908',
+    category: { en: 'Peace', no: 'Fred', se: 'Fred' },
+    categoryFullName: {
+      en: 'The Nobel Peace Prize',
+      no: 'Nobels fredspris',
+      se: 'Nobels fredspris'
+    },
+    dateAwarded: '1908-12-10',
+    prizeAmount: 139800,
+    prizeAmountAdjusted: 7084459,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/pea/1908',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '473',
+        knownName: { en: 'Klas Pontus Arnoldson' },
+        portion: '1/2',
+        sortOrder: '1',
+        motivation: {
+          en: 'for their long time work for the cause of peace as politicians, peace society leaders, orators and authors',
+          no: 'for deres langvarige arbeid for fredssaken som politikere, ledere av fredsforeninger, talere og forfattere'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/473',
+          action: 'Get',
+          types: 'application/json'
+        }
+      },
+      {
+        id: '474',
+        knownName: { en: 'Fredrik Bajer' },
+        portion: '1/2',
+        sortOrder: '2',
+        motivation: {
+          en: 'for their long time work for the cause of peace as politicians, peace society leaders, orators and authors',
+          no: 'for deres langvarige arbeid for fredssaken som politikere, ledere av fredsforeninger, talere og forfattere'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/474',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e17ff"),
+    awardYear: '1909',
+    category: { en: 'Peace', no: 'Fred', se: 'Fred' },
+    categoryFullName: {
+      en: 'The Nobel Peace Prize',
+      no: 'Nobels fredspris',
+      se: 'Nobels fredspris'
+    },
+    dateAwarded: '1909-12-10',
+    prizeAmount: 139800,
+    prizeAmountAdjusted: 7084459,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/pea/1909',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '475',
+        knownName: { en: 'Auguste Beernaert' },
+        portion: '1/2',
+        sortOrder: '1',
+        motivation: {
+          en: 'for their prominent position in the international movement for peace and arbitration',
+          no: 'for deres fremstående rolle i den internasjonale freds- og voldgiftsbevegelsen'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/475',
+          action: 'Get',
+          types: 'application/json'
+        }
+      },
+      {
+        id: '476',
+        knownName: { en: "Paul Henri d'Estournelles de Constant" },
+        portion: '1/2',
+        sortOrder: '2',
+        motivation: {
+          en: 'for their prominent position in the international movement for peace and arbitration',
+          no: 'for deres fremstående rolle i den internasjonale freds- og voldgiftsbevegelsen'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/476',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e1804"),
+    awardYear: '1910',
+    category: { en: 'Peace', no: 'Fred', se: 'Fred' },
+    categoryFullName: {
+      en: 'The Nobel Peace Prize',
+      no: 'Nobels fredspris',
+      se: 'Nobels fredspris'
+    },
+    dateAwarded: '1910-12-10',
+    prizeAmount: 140703,
+    prizeAmountAdjusted: 7130220,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/pea/1910',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '477',
+        orgName: {
+          en: 'Permanent International Peace Bureau',
+          no: 'Det internasjonale fredsbyrå'
+        },
+        portion: '1',
+        sortOrder: '1',
+        motivation: {
+          en: 'for acting as a link between the peace societies of the various countries, and helping them to organize the world rallies of the international peace movement',
+          no: 'for rollen som bindeledd mellom fredsforeninger i ulike land, og for å ha hjulpet dem til å organisere verdenskongresser for den internasjonale fredsbevegelsen'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/477',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e1809"),
+    awardYear: '1911',
+    category: { en: 'Peace', no: 'Fred', se: 'Fred' },
+    categoryFullName: {
+      en: 'The Nobel Peace Prize',
+      no: 'Nobels fredspris',
+      se: 'Nobels fredspris'
+    },
+    dateAwarded: '1911-12-10',
+    prizeAmount: 140695,
+    prizeAmountAdjusted: 7327865,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/pea/1911',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '478',
+        knownName: { en: 'Tobias Asser' },
+        portion: '1/2',
+        sortOrder: '1',
+        motivation: {
+          en: 'for his role as co-founder of the Institut de droit international, initiator of the Conferences on International Private Law (Conférences de Droit international privé) at the Hague, and pioneer in the field of international legal relations',
+          no: 'for sin rolle som medgrunnlegger av Folkerettsinstituttet (Institut de droit international), initiativtaker til konferansene om internasjonal privatrett (Conférences de Droit international privé) i Haag og  foregangsmann innen internasjonale juridiske relasjoner'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/478',
+          action: 'Get',
+          types: 'application/json'
+        }
+      },
+      {
+        id: '479',
+        knownName: { en: 'Alfred Fried' },
+        portion: '1/2',
+        sortOrder: '2',
+        motivation: {
+          en: 'for his effort to expose and fight what he considers to be the main cause of war, namely, the anarchy in international relations',
+          no: 'for sin innsats for å avdekke og bekjempe det han oppfattet som hovedårsaken til krig, nemlig anarkiet som preger internasjonale relasjoner'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/479',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e180e"),
+    awardYear: '1912',
+    category: { en: 'Peace', no: 'Fred', se: 'Fred' },
+    categoryFullName: {
+      en: 'The Nobel Peace Prize',
+      no: 'Nobels fredspris',
+      se: 'Nobels fredspris'
+    },
+    dateAwarded: '1913-12-10',
+    prizeAmount: 140476,
+    prizeAmountAdjusted: 6753654,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/pea/1912',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '480',
+        knownName: { en: 'Elihu Root' },
+        portion: '1',
+        sortOrder: '1',
+        motivation: {
+          en: 'for bringing about better understanding between the countries of North and South America and initiating important arbitration agreements between the United States and other countries',
+          no: 'for å ha skapt økt forståelse mellom landene i Nord- og Sør-Amerika og for å ha tatt initiativ til viktige voldgiftsavtaler mellom USA og andre land'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/480',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e1813"),
+    awardYear: '1913',
+    category: { en: 'Peace', no: 'Fred', se: 'Fred' },
+    categoryFullName: {
+      en: 'The Nobel Peace Prize',
+      no: 'Nobels fredspris',
+      se: 'Nobels fredspris'
+    },
+    dateAwarded: '1913-12-10',
+    prizeAmount: 143010,
+    prizeAmountAdjusted: 6875481,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/pea/1913',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '481',
+        knownName: { en: 'Henri La Fontaine' },
+        portion: '1',
+        sortOrder: '1',
+        motivation: {
+          en: 'for his unparalleled contribution to the organization of peaceful internationalism',
+          no: 'for sitt enestående bidrag til å organisere en fredelig internasjonalisme'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/481',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e1816"),
+    awardYear: '1914',
+    category: { en: 'Chemistry', no: 'Kjemi', se: 'Kemi' },
+    categoryFullName: {
+      en: 'The Nobel Prize in Chemistry',
+      no: 'Nobelprisen i kjemi',
+      se: 'Nobelpriset i kemi'
+    },
+    dateAwarded: '1915-11-11',
+    prizeAmount: 146900,
+    prizeAmountAdjusted: 7062500,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/che/1914',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '175',
+        knownName: { en: 'Theodore W. Richards' },
+        portion: '1',
+        sortOrder: '1',
+        motivation: {
+          en: 'in recognition of his accurate determinations of the atomic weight of a large number of chemical elements',
+          se: 'såsom ett erkännande för hans noggranna bestämmningar av ett stort antal kemiska grundämnens atomvikter'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/175',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e1819"),
+    awardYear: '1914',
+    category: { en: 'Physics', no: 'Fysikk', se: 'Fysik' },
+    categoryFullName: {
+      en: 'The Nobel Prize in Physics',
+      no: 'Nobelprisen i fysikk',
+      se: 'Nobelpriset i fysik'
+    },
+    dateAwarded: '1915-11-11',
+    prizeAmount: 146900,
+    prizeAmountAdjusted: 7062500,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/phy/1914',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '19',
+        knownName: { en: 'Max von Laue' },
+        portion: '1',
+        sortOrder: '1',
+        motivation: {
+          en: 'for his discovery of the diffraction of X-rays by crystals',
+          se: 'för hans upptäckt av röntgenstrålarnas diffraktion i kristaller'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/19',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e181a"),
+    awardYear: '1914',
+    category: {
+      en: 'Physiology or Medicine',
+      no: 'Fysiologi eller medisin',
+      se: 'Fysiologi eller medicin'
+    },
+    categoryFullName: {
+      en: 'The Nobel Prize in Physiology or Medicine',
+      no: 'Nobelprisen i fysiologi eller medisin',
+      se: 'Nobelpriset i fysiologi eller medicin'
+    },
+    dateAwarded: '1915-10-29',
+    prizeAmount: 146900,
+    prizeAmountAdjusted: 7062500,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/med/1914',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '308',
+        knownName: { en: 'Robert Bárány' },
+        portion: '1',
+        sortOrder: '1',
+        motivation: {
+          en: 'for his work on the physiology and pathology of the vestibular apparatus',
+          se: 'för hans arbeten om vestibularapparatens fysiologi och patologi'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/308',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e181b"),
+    awardYear: '1915',
+    category: { en: 'Chemistry', no: 'Kjemi', se: 'Kemi' },
+    categoryFullName: {
+      en: 'The Nobel Prize in Chemistry',
+      no: 'Nobelprisen i kjemi',
+      se: 'Nobelpriset i kemi'
+    },
+    dateAwarded: '1915-11-11',
+    prizeAmount: 149223,
+    prizeAmountAdjusted: 6217625,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/che/1915',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '176',
+        knownName: { en: 'Richard Willstätter' },
+        portion: '1',
+        sortOrder: '1',
+        motivation: {
+          en: 'for his researches on plant pigments, especially chlorophyll',
+          se: 'för hans undersökningar av färgämnen i växtriket, framförallt klorofyll'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/176',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e181c"),
+    awardYear: '1915',
+    category: { en: 'Literature', no: 'Litteratur', se: 'Litteratur' },
+    categoryFullName: {
+      en: 'The Nobel Prize in  Literature',
+      no: 'Nobelprisen i litteratur',
+      se: 'Nobelpriset i litteratur'
+    },
+    dateAwarded: '1916-11-09',
+    prizeAmount: 149223,
+    prizeAmountAdjusted: 6217625,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/lit/1915',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '584',
+        knownName: { en: 'Romain Rolland' },
+        portion: '1',
+        sortOrder: '1',
+        motivation: {
+          en: 'as a tribute to the lofty idealism of his literary production and to the sympathy and love of truth with which he has described different types of human beings',
+          se: 'såsom en hyllning åt den upphöjda idealismen i hans författarskap samt åt den medkänsla och den sanning med vilka han tecknat olika människotyper'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/584',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e181e"),
+    awardYear: '1915',
+    category: { en: 'Physics', no: 'Fysikk', se: 'Fysik' },
+    categoryFullName: {
+      en: 'The Nobel Prize in Physics',
+      no: 'Nobelprisen i fysikk',
+      se: 'Nobelpriset i fysik'
+    },
+    dateAwarded: '1915-11-12',
+    prizeAmount: 149223,
+    prizeAmountAdjusted: 6217625,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/phy/1915',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '20',
+        knownName: { en: 'William Bragg' },
+        portion: '1/2',
+        sortOrder: '1',
+        motivation: {
+          en: 'for their services in the analysis of crystal structure by means of X-rays',
+          se: 'för deras förtjänster om utforskandet av kristallstrukturer medelst röntgenstrålar'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/20',
+          action: 'Get',
+          types: 'application/json'
+        }
+      },
+      {
+        id: '21',
+        knownName: { en: 'Lawrence Bragg' },
+        portion: '1/2',
+        sortOrder: '2',
+        motivation: {
+          en: 'for their services in the analysis of crystal structure by means of X-rays',
+          se: 'för deras förtjänster om utforskandet av kristallstrukturer medelst röntgenstrålar'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/21',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e1821"),
+    awardYear: '1916',
+    category: { en: 'Literature', no: 'Litteratur', se: 'Litteratur' },
+    categoryFullName: {
+      en: 'The Nobel Prize in  Literature',
+      no: 'Nobelprisen i litteratur',
+      se: 'Nobelpriset i litteratur'
+    },
+    dateAwarded: '1916-11-09',
+    prizeAmount: 131793,
+    prizeAmountAdjusted: 4845331,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/lit/1916',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '585',
+        knownName: { en: 'Verner von Heidenstam' },
+        portion: '1',
+        sortOrder: '1',
+        motivation: {
+          en: 'in recognition of his significance as the leading representative of a new era in our literature',
+          se: 'såsom ett erkännande av hans betydelse som målsmannen för ett nytt skede i vår vitterhet'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/585',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  }
+]
+Type "it" for more
+novelPrizes> 
+novelPrizes> Premios concedidos entre 1980 y 2010: 
+
+novelPrizes> [
+  {
+    _id: ObjectId("632478d2fa1703143f3e1971"),
+    awardYear: '1981',
+    category: { en: 'Chemistry', no: 'Kjemi', se: 'Kemi' },
+    categoryFullName: {
+      en: 'The Nobel Prize in Chemistry',
+      no: 'Nobelprisen i kjemi',
+      se: 'Nobelpriset i kemi'
+    },
+    dateAwarded: '1981-10-19',
+    prizeAmount: 1000000,
+    prizeAmountAdjusted: 2929688,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/che/1981',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '257',
+        knownName: { en: 'Kenichi Fukui' },
+        portion: '1/2',
+        sortOrder: '1',
+        motivation: {
+          en: 'for their theories, developed independently, concerning the course of chemical reactions',
+          se: 'för deras var för sig utvecklade teorier för kemiska reaktioners förlopp'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/257',
+          action: 'Get',
+          types: 'application/json'
+        }
+      },
+      {
+        id: '258',
+        knownName: { en: 'Roald Hoffmann' },
+        portion: '1/2',
+        sortOrder: '2',
+        motivation: {
+          en: 'for their theories, developed independently, concerning the course of chemical reactions',
+          se: 'för deras var för sig utvecklade teorier för kemiska reaktioners förlopp'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/258',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e1972"),
+    awardYear: '1981',
+    category: { en: 'Economic Sciences', no: 'Økonomi', se: 'Ekonomi' },
+    categoryFullName: {
+      en: 'The Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel',
+      no: 'Sveriges Riksbanks pris i økonomisk vitenskap til minne om Alfred Nobel',
+      se: 'Sveriges Riksbanks pris i ekonomisk vetenskap till Alfred Nobels minne'
+    },
+    dateAwarded: '1981-10-13',
+    prizeAmount: 1000000,
+    prizeAmountAdjusted: 2929688,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/eco/1981',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '695',
+        knownName: { en: 'James Tobin' },
+        portion: '1',
+        sortOrder: '1',
+        motivation: {
+          en: 'for his analysis of financial markets and their relations to expenditure decisions, employment, production and prices',
+          se: 'för hans analys av finansiella marknader och dessas samband med utgiftsbeslut och därmed sysselsättning, produktion och prisutveckling'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/695',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e1973"),
+    awardYear: '1981',
+    category: { en: 'Literature', no: 'Litteratur', se: 'Litteratur' },
+    categoryFullName: {
+      en: 'The Nobel Prize in  Literature',
+      no: 'Nobelprisen i litteratur',
+      se: 'Nobelpriset i litteratur'
+    },
+    prizeAmount: 1000000,
+    prizeAmountAdjusted: 2929688,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/lit/1981',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '658',
+        knownName: { en: 'Elias Canetti' },
+        portion: '1',
+        sortOrder: '1',
+        motivation: {
+          en: 'for writings marked by a broad outlook, a wealth of ideas and artistic power',
+          se: 'för ett författarskap präglat av vid utblick, idérikedom och konstnärlig kraft'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/658',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e1974"),
+    awardYear: '1981',
+    category: { en: 'Peace', no: 'Fred', se: 'Fred' },
+    categoryFullName: {
+      en: 'The Nobel Peace Prize',
+      no: 'Nobels fredspris',
+      se: 'Nobels fredspris'
+    },
+    dateAwarded: '1981-10-14',
+    prizeAmount: 1000000,
+    prizeAmountAdjusted: 2929688,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/pea/1981',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '515',
+        orgName: {
+          en: 'Office of the United Nations High Commissioner for Refugees',
+          no: 'FNs Høykommissariat for Flyktninger'
+        },
+        portion: '1',
+        sortOrder: '1',
+        motivation: {
+          en: 'for promoting the fundamental rights of refugees',
+          no: 'for å ha fremmet flyktningers grunnleggende rettigheter'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/515',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e1975"),
+    awardYear: '1981',
+    category: { en: 'Physics', no: 'Fysikk', se: 'Fysik' },
+    categoryFullName: {
+      en: 'The Nobel Prize in Physics',
+      no: 'Nobelprisen i fysikk',
+      se: 'Nobelpriset i fysik'
+    },
+    dateAwarded: '1981-10-19',
+    prizeAmount: 1000000,
+    prizeAmountAdjusted: 2929688,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/phy/1981',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '118',
+        knownName: { en: 'Nicolaas Bloembergen' },
+        portion: '1/4',
+        sortOrder: '1',
+        motivation: {
+          en: 'for their contribution to the development of laser spectroscopy',
+          se: 'för deras bidrag till utvecklingen av laserspektroskopien'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/118',
+          action: 'Get',
+          types: 'application/json'
+        }
+      },
+      {
+        id: '119',
+        knownName: { en: 'Arthur L. Schawlow' },
+        portion: '1/4',
+        sortOrder: '2',
+        motivation: {
+          en: 'for their contribution to the development of laser spectroscopy',
+          se: 'för deras bidrag till utvecklingen av laserspektroskopien'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/119',
+          action: 'Get',
+          types: 'application/json'
+        }
+      },
+      {
+        id: '120',
+        knownName: { en: 'Kai M. Siegbahn' },
+        portion: '1/2',
+        sortOrder: '3',
+        motivation: {
+          en: 'for his contribution to the development of high-resolution electron spectroscopy',
+          se: 'för hans bidrag till utvecklingen av den högupplösande elektronspektroskopien'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/120',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e1976"),
+    awardYear: '1981',
+    category: {
+      en: 'Physiology or Medicine',
+      no: 'Fysiologi eller medisin',
+      se: 'Fysiologi eller medicin'
+    },
+    categoryFullName: {
+      en: 'The Nobel Prize in Physiology or Medicine',
+      no: 'Nobelprisen i fysiologi eller medisin',
+      se: 'Nobelpriset i fysiologi eller medicin'
+    },
+    dateAwarded: '1981-10-09',
+    prizeAmount: 1000000,
+    prizeAmountAdjusted: 2929688,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/med/1981',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '422',
+        knownName: { en: 'Roger W. Sperry' },
+        portion: '1/2',
+        sortOrder: '1',
+        motivation: {
+          en: 'for his discoveries concerning the functional specialization of the cerebral hemispheres',
+          se: 'för hans upptäckter rörande hjärnhemisfärernas funktionella specialisering'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/422',
+          action: 'Get',
+          types: 'application/json'
+        }
+      },
+      {
+        id: '423',
+        knownName: { en: 'David H. Hubel' },
+        portion: '1/4',
+        sortOrder: '2',
+        motivation: {
+          en: 'for their discoveries concerning information processing in the visual system',
+          se: 'för deras upptäckter rörande informationsbearbetningen i synsystemet'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/423',
+          action: 'Get',
+          types: 'application/json'
+        }
+      },
+      {
+        id: '424',
+        knownName: { en: 'Torsten N. Wiesel' },
+        portion: '1/4',
+        sortOrder: '3',
+        motivation: {
+          en: 'for their discoveries concerning information processing in the visual system',
+          se: 'för deras upptäckter rörande informationsbearbetningen i synsystemet'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/424',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e1977"),
+    awardYear: '1982',
+    category: { en: 'Chemistry', no: 'Kjemi', se: 'Kemi' },
+    categoryFullName: {
+      en: 'The Nobel Prize in Chemistry',
+      no: 'Nobelprisen i kjemi',
+      se: 'Nobelpriset i kemi'
+    },
+    dateAwarded: '1982-10-18',
+    prizeAmount: 1150000,
+    prizeAmountAdjusted: 3102518,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/che/1982',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '259',
+        knownName: { en: 'Aaron Klug' },
+        portion: '1',
+        sortOrder: '1',
+        motivation: {
+          en: 'for his development of crystallographic electron microscopy and his structural elucidation of biologically important nucleic acid-protein complexes',
+          se: 'för hans utveckling av kristallografisk elektronmikroskopi och hans klarläggande av strukturen hos biologiskt viktiga nukleinsyra-proteinkomplex'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/259',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e1978"),
+    awardYear: '1982',
+    category: { en: 'Economic Sciences', no: 'Økonomi', se: 'Ekonomi' },
+    categoryFullName: {
+      en: 'The Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel',
+      no: 'Sveriges Riksbanks pris i økonomisk vitenskap til minne om Alfred Nobel',
+      se: 'Sveriges Riksbanks pris i ekonomisk vetenskap till Alfred Nobels minne'
+    },
+    dateAwarded: '1982-10-20',
+    prizeAmount: 1150000,
+    prizeAmountAdjusted: 3102518,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/eco/1982',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '696',
+        knownName: { en: 'George J. Stigler' },
+        portion: '1',
+        sortOrder: '1',
+        motivation: {
+          en: 'for his seminal studies of industrial structures, functioning of markets and causes and effects of public regulation',
+          se: 'för hans banbrytande studier av marknaders funktionssätt och strukturer samt offentliga regleringars orsaker och effekter'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/696',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e1979"),
+    awardYear: '1982',
+    category: { en: 'Literature', no: 'Litteratur', se: 'Litteratur' },
+    categoryFullName: {
+      en: 'The Nobel Prize in  Literature',
+      no: 'Nobelprisen i litteratur',
+      se: 'Nobelpriset i litteratur'
+    },
+    prizeAmount: 1150000,
+    prizeAmountAdjusted: 3102518,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/lit/1982',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '659',
+        knownName: { en: 'Gabriel García Márquez' },
+        portion: '1',
+        sortOrder: '1',
+        motivation: {
+          en: "for his novels and short stories, in which the fantastic and the realistic are combined in a richly composed world of imagination, reflecting a continent's life and conflicts",
+          se: 'för hans romaner och noveller, där det fantastiska och det realistiska förenas i en rikt sammansatt diktvärld, som speglar en kontinents liv och konflikter'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/659',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e197a"),
+    awardYear: '1982',
+    category: { en: 'Peace', no: 'Fred', se: 'Fred' },
+    categoryFullName: {
+      en: 'The Nobel Peace Prize',
+      no: 'Nobels fredspris',
+      se: 'Nobels fredspris'
+    },
+    dateAwarded: '1982-10-13',
+    prizeAmount: 1150000,
+    prizeAmountAdjusted: 3102518,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/pea/1982',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '543',
+        knownName: { en: 'Alva Myrdal' },
+        portion: '1/2',
+        sortOrder: '1',
+        motivation: {
+          en: 'for their work for disarmament and nuclear and weapon-free zones',
+          no: 'for deres arbeid med nedrustning og atom- og våpenfrie soner'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/543',
+          action: 'Get',
+          types: 'application/json'
+        }
+      },
+      {
+        id: '544',
+        knownName: { en: 'Alfonso García Robles' },
+        portion: '1/2',
+        sortOrder: '2',
+        motivation: {
+          en: 'for their work for disarmament and nuclear and weapon-free zones',
+          no: 'for deres arbeid med nedrustning og atom- og våpenfrie soner'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/544',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e197b"),
+    awardYear: '1982',
+    category: { en: 'Physics', no: 'Fysikk', se: 'Fysik' },
+    categoryFullName: {
+      en: 'The Nobel Prize in Physics',
+      no: 'Nobelprisen i fysikk',
+      se: 'Nobelpriset i fysik'
+    },
+    dateAwarded: '1982-10-18',
+    prizeAmount: 1150000,
+    prizeAmountAdjusted: 3102518,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/phy/1982',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '121',
+        knownName: { en: 'Kenneth G. Wilson' },
+        portion: '1',
+        sortOrder: '1',
+        motivation: {
+          en: 'for his theory for critical phenomena in connection with phase transitions',
+          se: 'för hans teori för kritiska fenomen vid fasomvandlingar'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/121',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e197c"),
+    awardYear: '1982',
+    category: {
+      en: 'Physiology or Medicine',
+      no: 'Fysiologi eller medisin',
+      se: 'Fysiologi eller medicin'
+    },
+    categoryFullName: {
+      en: 'The Nobel Prize in Physiology or Medicine',
+      no: 'Nobelprisen i fysiologi eller medisin',
+      se: 'Nobelpriset i fysiologi eller medicin'
+    },
+    dateAwarded: '1982-10-11',
+    prizeAmount: 1150000,
+    prizeAmountAdjusted: 3102518,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/med/1982',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '425',
+        knownName: { en: 'Sune K. Bergström' },
+        portion: '1/3',
+        sortOrder: '1',
+        motivation: {
+          en: 'for their discoveries concerning prostaglandins and related biologically active substances',
+          se: 'för deras upptäckter rörande prostaglandiner och närbesläktade biologiskt aktiva substanser'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/425',
+          action: 'Get',
+          types: 'application/json'
+        }
+      },
+      {
+        id: '426',
+        knownName: { en: 'Bengt I. Samuelsson' },
+        portion: '1/3',
+        sortOrder: '2',
+        motivation: {
+          en: 'for their discoveries concerning prostaglandins and related biologically active substances',
+          se: 'för deras upptäckter rörande prostaglandiner och närbesläktade biologiskt aktiva substanser'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/426',
+          action: 'Get',
+          types: 'application/json'
+        }
+      },
+      {
+        id: '427',
+        knownName: { en: 'John R. Vane' },
+        portion: '1/3',
+        sortOrder: '3',
+        motivation: {
+          en: 'for their discoveries concerning prostaglandins and related biologically active substances',
+          se: 'för deras upptäckter rörande prostaglandiner och närbesläktade biologiskt aktiva substanser'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/427',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e197d"),
+    awardYear: '1983',
+    category: { en: 'Chemistry', no: 'Kjemi', se: 'Kemi' },
+    categoryFullName: {
+      en: 'The Nobel Prize in Chemistry',
+      no: 'Nobelprisen i kjemi',
+      se: 'Nobelpriset i kemi'
+    },
+    dateAwarded: '1983-10-19',
+    prizeAmount: 1500000,
+    prizeAmountAdjusted: 3715324,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/che/1983',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '260',
+        knownName: { en: 'Henry Taube' },
+        portion: '1',
+        sortOrder: '1',
+        motivation: {
+          en: 'for his work on the mechanisms of electron transfer reactions, especially in metal complexes',
+          se: 'för hans arbeten över mekanismerna för elektronöverföringsreaktioner, särskilt hos metallkomplex'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/260',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e197e"),
+    awardYear: '1983',
+    category: { en: 'Economic Sciences', no: 'Økonomi', se: 'Ekonomi' },
+    categoryFullName: {
+      en: 'The Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel',
+      no: 'Sveriges Riksbanks pris i økonomisk vitenskap til minne om Alfred Nobel',
+      se: 'Sveriges Riksbanks pris i ekonomisk vetenskap till Alfred Nobels minne'
+    },
+    dateAwarded: '1983-10-17',
+    prizeAmount: 1500000,
+    prizeAmountAdjusted: 3715324,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/eco/1983',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '697',
+        knownName: { en: 'Gerard Debreu' },
+        portion: '1',
+        sortOrder: '1',
+        motivation: {
+          en: 'for having incorporated new analytical methods into economic theory and for his rigorous reformulation of the theory of general equilibrium',
+          se: 'för införandet av nya analytiska metoder i nationalekonomisk teori och för en rigorös omformulering av teorin för allmän jämvikt'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/697',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e197f"),
+    awardYear: '1983',
+    category: { en: 'Literature', no: 'Litteratur', se: 'Litteratur' },
+    categoryFullName: {
+      en: 'The Nobel Prize in  Literature',
+      no: 'Nobelprisen i litteratur',
+      se: 'Nobelpriset i litteratur'
+    },
+    prizeAmount: 1500000,
+    prizeAmountAdjusted: 3715324,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/lit/1983',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '660',
+        knownName: { en: 'William Golding' },
+        portion: '1',
+        sortOrder: '1',
+        motivation: {
+          en: 'for his novels which, with the perspicuity of realistic narrative art and the diversity and universality of myth, illuminate the human condition in the world of today',
+          se: 'för hans romaner som med den realistiska berättarkonstens åskådlighet och med mytens mångtydiga allmängiltighet belyser mänskliga villkor i dagens värld'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/660',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e1980"),
+    awardYear: '1983',
+    category: { en: 'Peace', no: 'Fred', se: 'Fred' },
+    categoryFullName: {
+      en: 'The Nobel Peace Prize',
+      no: 'Nobels fredspris',
+      se: 'Nobels fredspris'
+    },
+    dateAwarded: '1983-10-05',
+    prizeAmount: 1500000,
+    prizeAmountAdjusted: 3715324,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/pea/1983',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '545',
+        knownName: { en: 'Lech Walesa' },
+        portion: '1',
+        sortOrder: '1',
+        motivation: {
+          en: 'for non-violent struggle for free trade unions and human rights in Poland',
+          no: 'for den ikke-voldelige kampen for frie fagforeninger og menneskerettigheter i Polen'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/545',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e1981"),
+    awardYear: '1983',
+    category: { en: 'Physics', no: 'Fysikk', se: 'Fysik' },
+    categoryFullName: {
+      en: 'The Nobel Prize in Physics',
+      no: 'Nobelprisen i fysikk',
+      se: 'Nobelpriset i fysik'
+    },
+    dateAwarded: '1983-10-19',
+    prizeAmount: 1500000,
+    prizeAmountAdjusted: 3715324,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/phy/1983',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '122',
+        knownName: { en: 'Subramanyan Chandrasekhar' },
+        portion: '1/2',
+        sortOrder: '1',
+        motivation: {
+          en: 'for his theoretical studies of the physical processes of importance to the structure and evolution of the stars',
+          se: 'för hans teoretiska studier av de fysikaliska processer, som är av betydelse för stjärnornas struktur och utveckling'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/122',
+          action: 'Get',
+          types: 'application/json'
+        }
+      },
+      {
+        id: '123',
+        knownName: { en: 'William A. Fowler' },
+        portion: '1/2',
+        sortOrder: '2',
+        motivation: {
+          en: 'for his theoretical and experimental studies of the nuclear reactions of importance in the formation of the chemical elements in the universe',
+          se: 'för hans teoretiska och experimentella studier av de kärnreaktioner, som är av betydelse för de kemiska elementens bildning i universum'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/123',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e1982"),
+    awardYear: '1983',
+    category: {
+      en: 'Physiology or Medicine',
+      no: 'Fysiologi eller medisin',
+      se: 'Fysiologi eller medicin'
+    },
+    categoryFullName: {
+      en: 'The Nobel Prize in Physiology or Medicine',
+      no: 'Nobelprisen i fysiologi eller medisin',
+      se: 'Nobelpriset i fysiologi eller medicin'
+    },
+    prizeAmount: 1500000,
+    prizeAmountAdjusted: 3715324,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/med/1983',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '428',
+        knownName: { en: 'Barbara McClintock' },
+        portion: '1',
+        sortOrder: '1',
+        motivation: {
+          en: 'for her discovery of mobile genetic elements',
+          se: 'för hennes upptäckt av rörliga strukturer i arvsmassan'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/428',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e1983"),
+    awardYear: '1984',
+    category: { en: 'Chemistry', no: 'Kjemi', se: 'Kemi' },
+    categoryFullName: {
+      en: 'The Nobel Prize in Chemistry',
+      no: 'Nobelprisen i kjemi',
+      se: 'Nobelpriset i kemi'
+    },
+    dateAwarded: '1984-10-17',
+    prizeAmount: 1650000,
+    prizeAmountAdjusted: 3782090,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/che/1984',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '261',
+        knownName: { en: 'Bruce Merrifield' },
+        portion: '1',
+        sortOrder: '1',
+        motivation: {
+          en: 'for his development of methodology for chemical synthesis on a solid matrix',
+          se: 'för hans utveckling av metodik för kemisk syntes på fast matris'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/261',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId("632478d2fa1703143f3e1984"),
+    awardYear: '1984',
+    category: { en: 'Economic Sciences', no: 'Økonomi', se: 'Ekonomi' },
+    categoryFullName: {
+      en: 'The Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel',
+      no: 'Sveriges Riksbanks pris i økonomisk vitenskap til minne om Alfred Nobel',
+      se: 'Sveriges Riksbanks pris i ekonomisk vetenskap till Alfred Nobels minne'
+    },
+    dateAwarded: '1984-10-18',
+    prizeAmount: 1650000,
+    prizeAmountAdjusted: 3782090,
+    links: {
+      rel: 'nobelPrize',
+      href: 'http://masterdataapi.nobelprize.org/2/nobelPrize/eco/1984',
+      action: 'Get',
+      types: 'application/json'
+    },
+    laureates: [
+      {
+        id: '698',
+        knownName: { en: 'Richard Stone' },
+        portion: '1',
+        sortOrder: '1',
+        motivation: {
+          en: 'for having made fundamental contributions to the development of systems of national accounts and hence greatly improved the basis for empirical economic analysis',
+          se: 'för att han gjort banbrytande insatser vid utvecklandet av system för nationalräkenskaper och därigenom radikalt förbättrat underlaget för empirisk ekonomisk analys'
+        },
+        links: {
+          rel: 'laureate',
+          href: 'http://masterdataapi.nobelprize.org/2/laureate/698',
+          action: 'Get',
+          types: 'application/json'
+        }
+      }
+    ]
+  }
+]
+Type "it" for more
+novelPrizes> 
+novelPrizes> Premios concedidos a grupos de mas de 3 personas
+
+novelPrizes> 106
+novelPrizes> 
+novelPrizes> Nombres de los ganadores sin repeticiones en ingles
+
+novelPrizes> [
+  'A. Michael Spence',      'Aage N. Bohr',          'Aaron Ciechanover',
+  'Aaron Klug',             'Abdus Salam',           'Abhijit Banerjee',
+  'Abiy Ahmed Ali',         'Ada E. Yonath',         'Adam G. Riess',
+  'Adolf Butenandt',        'Adolf Windaus',         'Adolf von Baeyer',
+  'Adolfo Pérez Esquivel',  'Ahmed Zewail',          'Akira Suzuki',
+  'Akira Yoshino',          'Al Gore',               'Alan Heeger',
+  'Alan Hodgkin',           'Alan MacDiarmid',       'Albert A. Michelson',
+  'Albert Camus',           'Albert Claude',         'Albert Einstein',
+  'Albert Fert',            'Albert Gobat',          'Albert Luthuli',
+  'Albert Schweitzer',      'Albert Szent-Györgyi',  'Albrecht Kossel',
+  'Aleksandr M. Prokhorov', 'Alexandr Solzhenitsyn', 'Alexei Abrikosov',
+  'Alexis Carrel',          'Alfonso García Robles', 'Alfred D. Hershey',
+  'Alfred Fried',           'Alfred G. Gilman',      'Alfred Kastler',
+  'Alfred Werner',          'Alice Munro',           'Allan M. Cormack',
+  'Allvar Gullstrand',      'Alphonse Laveran',      'Alva Myrdal',
+  'Alvin E. Roth',          'Amartya Sen',           'Anatole France',
+  'Andre Geim',             'Andrei Sakharov',       'Andrew Huxley',
+  'Andrew V. Schally',      'Andrew Z. Fire',        'André F. Cournand',
+  'André Gide',             'André Lwoff',           'Angus Deaton',
+  'Anthony J. Leggett',     'Antony Hewish',         'Anwar al-Sadat',
+  'Archer J.P. Martin',     'Archibald V. Hill',     'Arieh Warshel',
+  'Aristide Briand',        'Arne Tiselius',         'Arno Penzias',
+  'Arthur Ashkin',          'Arthur B. McDonald',    'Arthur H. Compton',
+  'Arthur Harden',          'Arthur Henderson',      'Arthur Kornberg',
+  'Arthur L. Schawlow',     'Artturi Virtanen',      'Arvid Carlsson',
+  'August Krogh',           'Auguste Beernaert',     'Aung San Suu Kyi ',
+  'Avram Hershko',          'Aziz Sancar',           'Barack H. Obama',
+  'Barbara McClintock',     'Barry C. Barish',       'Barry J. Marshall',
+  'Barry Sharpless',        'Baruch S. Blumberg',    'Baruj Benacerraf',
+  'Ben R. Mottelson',       'Bengt Holmström',       'Bengt I. Samuelsson',
+  'Bernard L. Feringa',     'Bernardo Houssay',      'Bert Sakmann',
+  'Bertha von Suttner',     'Bertil Ohlin',          'Bertram N. Brockhouse',
+  'Bertrand Russell',       'Betty Williams',        'Bjørnstjerne Bjørnson',
+  'Bob Dylan',
+  ... 819 more items
+]
+novelPrizes> 
+novelPrizes> Nombres de los ganadores sin repeticiones en ingles en grupos de mas de 3 personas
+
+novelPrizes> [
+  'A. Michael Spence',
+  'Aage N. Bohr',
+  'Aaron Ciechanover',
+  'Abdus Salam',
+  'Abhijit Banerjee',
+  'Ada E. Yonath',
+  'Adam G. Riess',
+  'Akira Suzuki',
+  'Akira Yoshino',
+  'Alan Heeger',
+  'Alan Hodgkin',
+  'Alan MacDiarmid',
+  'Albert Claude',
+  'Aleksandr M. Prokhorov',
+  'Alexei Abrikosov',
+  'Alfred D. Hershey',
+  'Andrew Huxley',
+  'Andrew V. Schally',
+  'André F. Cournand',
+  'André Lwoff',
+  'Anthony J. Leggett',
+  'Arieh Warshel',
+  'Arno Penzias',
+  'Arthur Ashkin',
+  'Arthur L. Schawlow',
+  'Arvid Carlsson',
+  'Avram Hershko',
+  'Aziz Sancar',
+  'Barry C. Barish',
+  'Barry Sharpless',
+  'Baruj Benacerraf',
+  'Ben R. Mottelson',
+  'Bengt I. Samuelsson',
+  'Bernard L. Feringa',
+  'Bernardo Houssay',
+  'Brian D. Josephson',
+  'Brian P. Schmidt',
+  'Bruce A. Beutler',
+  'Carl Cori',
+  'Carl Wieman',
+  'Carol W. Greider',
+  'Charles H. Townes',
+  'Charles J. Pedersen',
+  'Charles K. Kao',
+  'Christian Anfinsen',
+  'Christian de Duve',
+  'Christiane Nüsslein-Volhard',
+  'Christopher A. Pissarides',
+  'Claude Cohen-Tannoudji',
+  'César Milstein',
+  'Dale T. Mortensen',
+  'Daniel C. Tsui',
+  'Daniel Nathans',
+  'David Baltimore',
+  'David H. Hubel',
+  'David J. Gross',
+  'David J. Thouless',
+  'David M. Lee',
+  'Dickinson W. Richards',
+  'Didier Queloz',
+  'Donald J. Cram',
+  'Donna Strickland',
+  'Douglas D. Osheroff',
+  'Dudley R. Herschbach',
+  'Edvard I. Moser',
+  'Edward B. Lewis',
+  'Edward C. Kendall',
+  'Edward Tatum',
+  'Ei-ichi Negishi',
+  'Elizabeth H. Blackburn',
+  'Ellen Johnson Sirleaf',
+  'Eric Betzig',
+  'Eric Cornell',
+  'Eric F. Wieschaus',
+  'Eric Kandel',
+  'Eric S. Maskin',
+  'Ernst B. Chain',
+  'Ernst Ruska',
+  'Esther Duflo',
+  'Eugene F. Fama',
+  'Eugene Wigner',
+  'F. Duncan M. Haldane',
+  'F. Sherwood Rowland',
+  'Ferid Murad',
+  'Frances H. Arnold',
+  'Francis Crick',
+  'Frank Wilczek',
+  'François Jacob',
+  'Françoise Barré-Sinoussi',
+  'Frederick C. Robbins',
+  'Frederick Sanger',
+  'George A. Akerlof',
+  'George Beadle',
+  'George D. Snell',
+  'George E. Palade',
+  'George E. Smith',
+  'George H. Hitchings',
+  'George H. Whipple',
+  'George P. Smith',
+  'George Porter',
+  ... 217 more items
+]
+novelPrizes> 
+novelPrizes> Años en los que el premio supera 2900000
+
+novelPrizes> [
+  '1989', '1990', '1991', '1992',
+  '1993', '1994', '1995', '1996',
+  '1997', '1998', '1999', '2000',
+  '2001', '2002', '2003', '2004',
+  '2005', '2006', '2007', '2008',
+  '2009', '2010', '2011', '2012',
+  '2013', '2014', '2015', '2016',
+  '2017', '2018', '2019'
+]
+novelPrizes> 
