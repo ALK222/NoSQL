@@ -1,0 +1,2172 @@
+Current Mongosh Log ID:	6336e880b3e520b8f45f2932
+Connecting to:		mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.5.4
+Using MongoDB:		6.0.1
+Using Mongosh:		1.5.4
+
+For mongosh info see: [1mhttps://docs.mongodb.com/mongodb-shell/[0m
+
+------
+   The server generated these startup warnings when booting
+   2022-09-30T14:10:27.031+02:00: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem
+   2022-09-30T14:10:27.697+02:00: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+   2022-09-30T14:10:27.697+02:00: This server is bound to localhost. Remote systems will be unable to connect to this server. Start the server with --bind_ip <address> to specify which IP addresses it should serve responses from, or with --bind_ip_all to bind to all interfaces. If this behavior is desired, start the server with --bind_ip 127.0.0.1 to disable this warning
+   2022-09-30T14:10:27.697+02:00: Soft rlimits for open file descriptors too low
+------
+
+------
+   Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+   metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+   
+   The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+   and anyone you share the URL with. MongoDB may use this information to make product
+   improvements and to suggest MongoDB products and deployment options to you.
+   
+   To enable free monitoring, run the following command: db.enableFreeMonitoring()
+   To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+------
+
+test> 
+test> 
+test> switched to db books
+books> books.titles
+books> 
+books> C1: Número de títulos publicados en septiembre del año 1998 (clave publication_date)
+
+books> -----------------------------------------------
+
+books> 135
+books> 
+books> C2: Número de títulos publicados entre los años 2000 y 2005
+
+books> -----------------------------------------------
+
+books> 1447
+books> 
+books> C3: Número de títulos donde uno de los autores es 'J.K. Rowling'. Mostrar 10 títulos a partir del 5º
+
+books> -----------------------------------------------
+
+books> [
+  {
+    _id: ObjectId("6336de313865743872b482e9"),
+    bookID: 5,
+    title: 'Harry Potter and the Prisoner of Azkaban (Harry Potter  #3)',
+    authors: [ 'J.K. Rowling', 'Mary GrandPré' ],
+    isbn: '043965548X',
+    '  num_pages': 435,
+    ratings_count: 2339585,
+    text_reviews_count: 36325,
+    publication_date: { day: 1, month: 5, year: 2004 },
+    details: [
+      { price: 484.36, currency: 'sek' },
+      { price: 60.62, currency: 'usd' },
+      { price: 45.47, currency: 'gbp' }
+    ]
+  },
+  {
+    _id: ObjectId("6336de313865743872b48336"),
+    bookID: 6003,
+    title: '火盃的考驗 (哈利波特  #4)',
+    authors: [ 'J.K. Rowling', 'J.K.羅琳', '彭倩文' ],
+    average_rating: 4.56,
+    isbn: '9573318318',
+    '  num_pages': 768,
+    ratings_count: 91,
+    text_reviews_count: 2,
+    publication_date: { day: 8, month: 12, year: 2001 },
+    language_code: 'zho'
+  },
+  {
+    _id: ObjectId("6336de313865743872b483be"),
+    bookID: 10,
+    title: 'Harry Potter Collection (Harry Potter  #1-6)',
+    authors: [ 'J.K. Rowling' ],
+    isbn: '0439827604',
+    '  num_pages': 3342,
+    ratings_count: 28242,
+    text_reviews_count: 808,
+    publication_date: { day: 12, month: 9, year: 2005 },
+    details: [ { price: 270.39, currency: 'chf', discount: true, rate: 40 } ]
+  },
+  {
+    _id: ObjectId("6336de313865743872b484d3"),
+    bookID: 2,
+    title: 'Harry Potter and the Order of the Phoenix (Harry Potter  #5)',
+    authors: [ 'J.K. Rowling', 'Mary GrandPré' ],
+    average_rating: 4.49,
+    isbn: '0439358078',
+    '  num_pages': 870,
+    ratings_count: 2153167,
+    text_reviews_count: 29221,
+    publication_date: { day: 1, month: 9, year: 2004 },
+    language_code: 'eng'
+  },
+  {
+    _id: ObjectId("6336de313865743872b4866d"),
+    bookID: 4,
+    title: 'Harry Potter and the Chamber of Secrets (Harry Potter  #2)',
+    authors: [ 'J.K. Rowling' ],
+    isbn: '0439554896',
+    '  num_pages': 352,
+    ratings_count: 6333,
+    text_reviews_count: 244,
+    publication_date: { day: 1, month: 11, year: 2003 },
+    details: [
+      { price: 50.06, currency: 'usd', discount: true, rate: 25 },
+      { price: 412.96, currency: 'sek', discount: true, rate: 10 },
+      { price: 45.55, currency: 'esp', discount: true, rate: 25 },
+      { price: 38.04, currency: 'gbp', discount: true, rate: 15 }
+    ]
+  },
+  {
+    _id: ObjectId("6336de313865743872b487ea"),
+    bookID: 5991,
+    title: '混血王子的背叛 (哈利波特  #6)',
+    authors: [ 'J.K. Rowling', 'J.K.羅琳', '皇冠編譯組', '張定綺', '彭倩文', '趙丕慧', '林靜華' ],
+    isbn: '9573321742',
+    ratings_count: 75,
+    publication_date: { day: 1, month: 10, year: 2005 },
+    publisher: '皇冠文化出版有限公司',
+    details: [
+      { price: 650.11, currency: 'chf', discount: true, rate: 15 },
+      { price: 713.57, currency: 'sek', discount: true, rate: 30 },
+      { price: 74.04, currency: 'esp', discount: true, rate: 30 },
+      { price: 81.37, currency: 'usd' },
+      { price: 61.84, currency: 'gbp' }
+    ],
+    language_code: 'zho'
+  },
+  {
+    _id: ObjectId("6336de313865743872b48829"),
+    bookID: 8,
+    title: 'Harry Potter Boxed Set  Books 1-5 (Harry Potter  #1-5)',
+    authors: [ 'J.K. Rowling', 'Mary GrandPré' ],
+    isbn: '0439682584',
+    '  num_pages': 2690,
+    ratings_count: 41428,
+    text_reviews_count: 164,
+    publication_date: { day: 13, month: 9, year: 2004 },
+    details: [
+      { price: 5.19, currency: 'usd' },
+      { price: 4.51, currency: 'esp', discount: true, rate: 35 }
+    ]
+  }
+]
+books> 
+books> C4: Listado de títulos publicados por más de un autor, donde uno de los autores es 'Roald Dahl'. Mostrar solo los 10 primeros títulos.
+
+books> -----------------------------------------------
+
+books> [
+  {
+    _id: ObjectId("6336de313865743872b48072"),
+    bookID: 6667,
+    title: "Boy: Tales of Childhood (Roald Dahl's Autobiography  #1)",
+    authors: [ 'Roald Dahl', 'Quentin Blake' ],
+    isbn: '0141311401',
+    ratings_count: 45253,
+    publication_date: { day: 5, month: 4, year: 2001 },
+    publisher: 'Puffin Books',
+    details: [ { price: 18.62, currency: 'gbp', discount: true, rate: 45 } ],
+    language_code: 'eng'
+  },
+  {
+    _id: ObjectId("6336de313865743872b482bc"),
+    bookID: 6310,
+    title: 'Charlie and the Chocolate Factory (Charlie Bucket  #1)',
+    authors: [ 'Roald Dahl', 'Quentin Blake' ],
+    isbn: '0142403881',
+    ratings_count: 558799,
+    publication_date: { day: 2, month: 6, year: 2005 },
+    publisher: 'Puffin Books',
+    details: [
+      { price: 19.54, currency: 'esp', discount: true, rate: 25 },
+      { price: 15.81, currency: 'gbp' },
+      { price: 192.59, currency: 'sek', discount: true, rate: 45 },
+      { price: 175.46, currency: 'chf', discount: true, rate: 15 },
+      { price: 21.96, currency: 'usd', discount: true, rate: 45 }
+    ],
+    language_code: 'eng'
+  },
+  {
+    _id: ObjectId("6336de313865743872b4845a"),
+    bookID: 6678,
+    title: "Going Solo (Roald Dahl's Autobiography  #2)",
+    authors: [ 'Roald Dahl', 'Quentin Blake' ],
+    average_rating: 4.08,
+    isbn: '0141311428',
+    '  num_pages': 209,
+    ratings_count: 17327,
+    text_reviews_count: 992,
+    publication_date: { day: 5, month: 4, year: 2001 },
+    language_code: 'eng'
+  },
+  {
+    _id: ObjectId("6336de313865743872b48566"),
+    bookID: 6690,
+    title: 'Danny the Champion of the World',
+    authors: [ 'Roald Dahl', 'Quentin Blake' ],
+    average_rating: 4.09,
+    isbn: '0375814256',
+    '  num_pages': 224,
+    ratings_count: 46753,
+    text_reviews_count: 1672,
+    publication_date: { day: 12, month: 2, year: 2002 },
+    language_code: 'eng'
+  },
+  {
+    _id: ObjectId("6336de313865743872b48646"),
+    bookID: 6670,
+    title: 'The Magic Finger',
+    authors: [ 'Roald Dahl', 'Quentin Blake' ],
+    isbn: '0141311290',
+    ratings_count: 23558,
+    publication_date: { day: 5, month: 4, year: 2001 },
+    publisher: 'Puffin Books',
+    details: [
+      { price: 799.76, currency: 'sek' },
+      { price: 91.19, currency: 'usd' },
+      { price: 799.76, currency: 'chf', discount: true, rate: 20 },
+      { price: 68.39, currency: 'gbp', discount: true, rate: 40 },
+      { price: 89.37, currency: 'esp', discount: true, rate: 35 }
+    ],
+    language_code: 'eng'
+  },
+  {
+    _id: ObjectId("6336de313865743872b4877c"),
+    bookID: 6326,
+    title: 'Collected Stories',
+    authors: [ 'Roald Dahl', 'Jeremy Treglown' ],
+    isbn: '0307264904',
+    ratings_count: 346,
+    publication_date: { day: 17, month: 10, year: 2006 },
+    publisher: 'Alfred A. Knopf',
+    details: [
+      { price: 22.79, currency: 'esp' },
+      { price: 209.28, currency: 'sek', discount: true, rate: 5 },
+      { price: 18.86, currency: 'gbp', discount: true, rate: 45 },
+      { price: 216.09, currency: 'chf' }
+    ],
+    language_code: 'eng'
+  },
+  {
+    _id: ObjectId("6336de313865743872b4878c"),
+    bookID: 6693,
+    title: 'Fantastic Mr. Fox',
+    authors: [ 'Roald Dahl', 'Quentin Blake' ],
+    isbn: '0375822070',
+    ratings_count: 83723,
+    publication_date: { day: 11, month: 6, year: 2002 },
+    publisher: 'Knopf Books for Young Readers',
+    details: [
+      { price: 12.21, currency: 'gbp' },
+      { price: 135.52, currency: 'sek' },
+      { price: 15.1, currency: 'esp' },
+      { price: 16.96, currency: 'usd' }
+    ],
+    language_code: 'eng'
+  },
+  {
+    _id: ObjectId("6336de313865743872b487de"),
+    bookID: 6311,
+    title: 'Charlie and the Chocolate Factory: A Play',
+    authors: [ 'Richard R. George', 'Roald Dahl' ],
+    isbn: '0140311254',
+    ratings_count: 2760,
+    publication_date: { day: 27, month: 9, year: 1979 },
+    publisher: 'Puffin Books',
+    details: [
+      { price: 18.53, currency: 'sek' },
+      { price: 1.71, currency: 'gbp', discount: true, rate: 45 },
+      { price: 17.95, currency: 'chf', discount: true, rate: 20 },
+      { price: 1.95, currency: 'esp' }
+    ],
+    language_code: 'eng'
+  },
+  {
+    _id: ObjectId("6336de313865743872b4883b"),
+    bookID: 6332,
+    title: 'Dirty Beasts',
+    authors: [ 'Roald Dahl', 'Quentin Blake' ],
+    isbn: '0142302279',
+    ratings_count: 4075,
+    publication_date: { day: 14, month: 10, year: 2002 },
+    publisher: 'Puffin Books',
+    details: [
+      { price: 27.07, currency: 'usd', discount: true, rate: 40 },
+      { price: 216.31, currency: 'sek', discount: true, rate: 5 }
+    ],
+    language_code: 'eng'
+  },
+  {
+    _id: ObjectId("6336de313865743872b48855"),
+    bookID: 6689,
+    title: 'James and the Giant Peach',
+    authors: [ 'Roald Dahl', 'Quentin Blake' ],
+    isbn: '0375814248',
+    ratings_count: 328542,
+    publication_date: { day: 10, month: 9, year: 2002 },
+    publisher: 'Alfred A. Knopf',
+    details: [
+      { price: 582.09, currency: 'sek', discount: true, rate: 40 },
+      { price: 72.85, currency: 'usd' },
+      { price: 66.3, currency: 'esp', discount: true, rate: 40 }
+    ],
+    language_code: 'eng'
+  }
+]
+books> 
+books> C5: Listado de títulos que estén relacionados con biografías. (Podéis realizar una búsqueda por la expresión 'biography')
+
+books> -----------------------------------------------
+
+books> [
+  {
+    _id: ObjectId("6336de313865743872b47e24"),
+    bookID: 168,
+    title: 'Growing Up Untouchable in India: A Dalit Autobiography',
+    authors: [ 'Vasant Moon', 'Gail Omvedt', 'Eleanor Zelliot' ],
+    isbn: '0742508803',
+    '  num_pages': 224,
+    ratings_count: 16,
+    text_reviews_count: 4,
+    publication_date: { day: 20, month: 12, year: 2000 },
+    details: [
+      { price: 333.74, currency: 'chf' },
+      { price: 41.77, currency: 'usd', discount: true, rate: 40 },
+      { price: 36.34, currency: 'esp', discount: true, rate: 35 }
+    ]
+  },
+  {
+    _id: ObjectId("6336de313865743872b47ed3"),
+    bookID: 2971,
+    title: 'The Autobiography of Mark Twain',
+    authors: [ 'Mark Twain', 'Charles Neider' ],
+    isbn: '0060955422',
+    '  num_pages': 508,
+    ratings_count: 2871,
+    text_reviews_count: 209,
+    publication_date: { day: 28, month: 11, year: 2000 },
+    details: [ { price: 70.53, currency: 'esp', discount: true, rate: 40 } ]
+  },
+  {
+    _id: ObjectId("6336de313865743872b47f1c"),
+    bookID: 7530,
+    title: 'Autobiography of a Fat Bride: True Tales of a Pretend Adulthood',
+    authors: [ 'Laurie Notaro' ],
+    isbn: '037576092X',
+    ratings_count: 8009,
+    publication_date: { day: 8, month: 7, year: 2003 },
+    publisher: 'Villard',
+    details: [ { price: 324.85, currency: 'chf' } ],
+    language_code: 'en-US'
+  },
+  {
+    _id: ObjectId("6336de313865743872b47fc6"),
+    bookID: 10108,
+    title: 'The Autobiography of Henry VIII: With Notes by His Fool  Will Somers',
+    authors: [ 'Margaret George' ],
+    isbn: '0312194390',
+    ratings_count: 24108,
+    publication_date: { day: 15, month: 9, year: 1998 },
+    publisher: 'Griffin',
+    details: [ { price: 12.04, currency: 'usd', discount: true, rate: 30 } ],
+    language_code: 'eng'
+  },
+  {
+    _id: ObjectId("6336de313865743872b48072"),
+    bookID: 6667,
+    title: "Boy: Tales of Childhood (Roald Dahl's Autobiography  #1)",
+    authors: [ 'Roald Dahl', 'Quentin Blake' ],
+    isbn: '0141311401',
+    ratings_count: 45253,
+    publication_date: { day: 5, month: 4, year: 2001 },
+    publisher: 'Puffin Books',
+    details: [ { price: 18.62, currency: 'gbp', discount: true, rate: 45 } ],
+    language_code: 'eng'
+  },
+  {
+    _id: ObjectId("6336de313865743872b4811e"),
+    bookID: 3831,
+    title: 'Time To Be In Earnest: A Fragment Of Autobiography',
+    authors: [ 'P.D. James' ],
+    isbn: '0345442121',
+    '  num_pages': 306,
+    ratings_count: 495,
+    text_reviews_count: 76,
+    publication_date: { day: 27, month: 2, year: 2001 },
+    details: [
+      { price: 28.04, currency: 'gbp' },
+      { price: 341.56, currency: 'chf', discount: true, rate: 10 },
+      { price: 38.95, currency: 'usd' }
+    ]
+  },
+  {
+    _id: ObjectId("6336de313865743872b4837f"),
+    bookID: 9018,
+    title: 'Long Walk to Freedom: Autobiography of Nelson Mandela',
+    authors: [ 'Nelson Mandela', 'Kofi Annan', 'Danny Glover' ],
+    isbn: '1586216880',
+    ratings_count: 79,
+    publication_date: { day: 1, month: 12, year: 2004 },
+    publisher: 'Little  Brown & Company',
+    details: [ { price: 773.39, currency: 'chf' } ],
+    language_code: 'eng'
+  },
+  {
+    _id: ObjectId("6336de313865743872b48416"),
+    bookID: 7388,
+    title: 'My Pride and Joy: An Autobiography',
+    authors: [ 'George  Adamson' ],
+    isbn: '0671624970',
+    ratings_count: 134,
+    publication_date: { day: 31, month: 12, year: 1987 },
+    publisher: 'Simon & Schuster',
+    details: [
+      { price: 764.83, currency: 'chf' },
+      { price: 70.46, currency: 'gbp', discount: true, rate: 20 },
+      { price: 813.04, currency: 'sek' },
+      { price: 92.71, currency: 'usd', discount: true, rate: 15 },
+      { price: 90.85, currency: 'esp' }
+    ],
+    language_code: 'en-US'
+  },
+  {
+    _id: ObjectId("6336de313865743872b4845a"),
+    bookID: 6678,
+    title: "Going Solo (Roald Dahl's Autobiography  #2)",
+    authors: [ 'Roald Dahl', 'Quentin Blake' ],
+    average_rating: 4.08,
+    isbn: '0141311428',
+    '  num_pages': 209,
+    ratings_count: 17327,
+    text_reviews_count: 992,
+    publication_date: { day: 5, month: 4, year: 2001 },
+    language_code: 'eng'
+  },
+  {
+    _id: ObjectId("6336de313865743872b485fb"),
+    bookID: 7003,
+    title: "If I Don't Write It Nobody Else Will: An Autobiography",
+    authors: [ 'Eric Sykes' ],
+    isbn: '0007177844',
+    ratings_count: 25,
+    publication_date: { day: 1, month: 5, year: 2006 },
+    publisher: 'Fourth Estate',
+    details: [
+      { price: 484.24, currency: 'sek', discount: true, rate: 10 },
+      { price: 52.24, currency: 'esp' },
+      { price: 58.7, currency: 'usd' },
+      { price: 44.61, currency: 'gbp', discount: true, rate: 15 },
+      { price: 484.24, currency: 'chf' }
+    ],
+    language_code: 'eng'
+  },
+  {
+    _id: ObjectId("6336de313865743872b486a4"),
+    bookID: 5736,
+    title: 'Coming of Age in Mississippi: The Classic Autobiography of a Young Black Girl in the Rural South',
+    authors: [ 'Anne Moody' ],
+    isbn: '0385337817',
+    ratings_count: 7072,
+    publication_date: { day: 3, month: 2, year: 2004 },
+    publisher: 'Delta',
+    details: [
+      { price: 212.29, currency: 'chf', discount: true, rate: 15 },
+      { price: 26.04, currency: 'esp' }
+    ],
+    language_code: 'eng'
+  },
+  {
+    _id: ObjectId("6336de313865743872b486b6"),
+    bookID: 4591,
+    title: 'Genome: the Autobiography of a Species in 23 Chapters',
+    authors: [ 'Matt Ridley' ],
+    isbn: '0060894083',
+    '  num_pages': 344,
+    ratings_count: 20695,
+    text_reviews_count: 714,
+    publication_date: { day: 30, month: 5, year: 2006 },
+    details: [
+      { price: 38.27, currency: 'usd', discount: true, rate: 30 },
+      { price: 33.29, currency: 'esp' },
+      { price: 335.6, currency: 'sek' }
+    ]
+  }
+]
+books> 
+books> C6: Títulos publicados en un idioma distinto del inglés  por el  autor: 'Arturo Pérez-Reverte'
+
+books> -----------------------------------------------
+
+books> [
+  {
+    _id: ObjectId("6336de313865743872b485a0"),
+    bookID: 11027,
+    title: 'No me cogeréis vivo: artículos 2001-2005',
+    authors: [ 'Arturo Pérez-Reverte' ],
+    average_rating: 4.16,
+    isbn: '8420469432',
+    '  num_pages': 537,
+    ratings_count: 199,
+    text_reviews_count: 5,
+    publication_date: { day: 10, month: 11, year: 2005 },
+    language_code: 'spa'
+  }
+]
+books> 
+books> C7: Títulos publicados por el  autor: 'Laurie Notaro'
+
+books> -----------------------------------------------
+
+books> [
+  {
+    _id: ObjectId("6336de313865743872b47dae"),
+    bookID: 7536,
+    title: 'Anleitung zum Zickigsein',
+    authors: [ 'Laurie Notaro' ],
+    average_rating: 3.88,
+    isbn: '3404149475',
+    '  num_pages': 254,
+    ratings_count: 2,
+    text_reviews_count: 1,
+    publication_date: { day: 1, month: 8, year: 2003 },
+    language_code: 'ger'
+  },
+  {
+    _id: ObjectId("6336de313865743872b47f1c"),
+    bookID: 7530,
+    title: 'Autobiography of a Fat Bride: True Tales of a Pretend Adulthood',
+    authors: [ 'Laurie Notaro' ],
+    isbn: '037576092X',
+    ratings_count: 8009,
+    publication_date: { day: 8, month: 7, year: 2003 },
+    publisher: 'Villard',
+    details: [ { price: 324.85, currency: 'chf' } ],
+    language_code: 'en-US'
+  },
+  {
+    _id: ObjectId("6336de313865743872b481e0"),
+    bookID: 7531,
+    title: "The Idiot Girls' Action-Adventure Club: True Tales from a Magnificent and Clumsy Life",
+    authors: [ 'Laurie Notaro' ],
+    isbn: '0375760911',
+    ratings_count: 16133,
+    publication_date: { day: 2, month: 7, year: 2002 },
+    publisher: 'Villard',
+    details: [
+      { price: 66.08, currency: 'chf', discount: true, rate: 35 },
+      { price: 7.2, currency: 'esp', discount: true, rate: 15 }
+    ],
+    language_code: 'en-GB'
+  },
+  {
+    _id: ObjectId("6336de313865743872b484e9"),
+    bookID: 7533,
+    title: 'We Thought You Would Be Prettier: True Tales of the Dorkiest Girl Alive',
+    authors: [ 'Laurie Notaro' ],
+    isbn: '0812969014',
+    ratings_count: 10040,
+    publication_date: { day: 19, month: 4, year: 2005 },
+    publisher: 'Villard',
+    details: [ { price: 73.99, currency: 'gbp', discount: true, rate: 30 } ],
+    language_code: 'eng'
+  },
+  {
+    _id: ObjectId("6336de313865743872b487e9"),
+    bookID: 7534,
+    title: "There's a (Slight) Chance I Might Be Going to Hell: A Novel of Sewer Pipes  Pageant Queens  and Big Trouble",
+    authors: [ 'Laurie Notaro' ],
+    isbn: '1400065011',
+    ratings_count: 36,
+    publication_date: { day: 29, month: 5, year: 2007 },
+    publisher: 'Villard',
+    details: [ { price: 18.04, currency: 'usd', discount: true, rate: 45 } ],
+    language_code: 'eng'
+  },
+  {
+    _id: ObjectId("6336de313865743872b487f3"),
+    bookID: 7529,
+    title: 'I Love Everybody (and Other Atrocious Lies)',
+    authors: [ 'Laurie Notaro' ],
+    average_rating: 3.97,
+    isbn: '0812969006',
+    '  num_pages': 228,
+    ratings_count: 9648,
+    text_reviews_count: 587,
+    publication_date: { day: 8, month: 6, year: 2004 },
+    language_code: 'en-US'
+  }
+]
+books> 
+books> C8: Títulos publicados en un idioma distinto del inglés  por cualquiera de los autores: “Arturo Pérez-Reverte” , “Laurie Notaro”.
+
+books> -----------------------------------------------
+
+books> [
+  {
+    _id: ObjectId("6336de313865743872b47dae"),
+    bookID: 7536,
+    title: 'Anleitung zum Zickigsein',
+    authors: [ 'Laurie Notaro' ],
+    average_rating: 3.88,
+    isbn: '3404149475',
+    '  num_pages': 254,
+    ratings_count: 2,
+    text_reviews_count: 1,
+    publication_date: { day: 1, month: 8, year: 2003 },
+    language_code: 'ger'
+  },
+  {
+    _id: ObjectId("6336de313865743872b485a0"),
+    bookID: 11027,
+    title: 'No me cogeréis vivo: artículos 2001-2005',
+    authors: [ 'Arturo Pérez-Reverte' ],
+    average_rating: 4.16,
+    isbn: '8420469432',
+    '  num_pages': 537,
+    ratings_count: 199,
+    text_reviews_count: 5,
+    publication_date: { day: 10, month: 11, year: 2005 },
+    language_code: 'spa'
+  }
+]
+books> 
+books> 
+books> C9: Títulos donde se conoce el precio en moneda “usd” y además se les ha aplicado un descuento
+
+books> -----------------------------------------------
+
+books> [
+  {
+    _id: ObjectId("6336de313865743872b47db5"),
+    bookID: 2508,
+    title: 'Tono-Bungay',
+    authors: [ 'H.G. Wells', 'Edward Mendelson', 'Patrick Parrinder' ],
+    isbn: '0141441119',
+    '  num_pages': 414,
+    ratings_count: 856,
+    text_reviews_count: 111,
+    publication_date: { day: 28, month: 6, year: 2005 },
+    details: [
+      { price: 686.5, currency: 'sek', discount: true, rate: 45 },
+      { price: 84.2, currency: 'esp' },
+      { price: 85.92, currency: 'usd', discount: true, rate: 10 },
+      { price: 708.84, currency: 'chf', discount: true, rate: 30 }
+    ]
+  },
+  {
+    _id: ObjectId("6336de313865743872b47db6"),
+    bookID: 2411,
+    title: 'Melville and the politics of identity: From *King Lear* to *Moby-Dick*',
+    authors: [ 'Julian Markels' ],
+    isbn: '0252063023',
+    '  num_pages': 164,
+    ratings_count: 0,
+    text_reviews_count: 0,
+    publication_date: { day: 1, month: 7, year: 1993 },
+    details: [
+      { price: 30.35, currency: 'usd', discount: true, rate: 5 },
+      { price: 23.06, currency: 'gbp', discount: true, rate: 15 },
+      { price: 266.14, currency: 'chf' },
+      { price: 250.36, currency: 'sek' }
+    ]
+  },
+  {
+    _id: ObjectId("6336de313865743872b47dbe"),
+    bookID: 91,
+    title: "Always Enough: God's Miraculous Provision Among the Poorest Children on Earth",
+    authors: [ 'Heidi Baker', 'Rolland Baker' ],
+    isbn: '0800793617',
+    '  num_pages': 192,
+    ratings_count: 860,
+    text_reviews_count: 53,
+    publication_date: { day: 1, month: 9, year: 2003 },
+    details: [
+      { price: 447.95, currency: 'chf', discount: true, rate: 10 },
+      { price: 54.3, currency: 'usd', discount: true, rate: 45 },
+      { price: 433.84, currency: 'sek' },
+      { price: 40.72, currency: 'gbp', discount: true, rate: 5 },
+      { price: 47.24, currency: 'esp' }
+    ]
+  },
+  {
+    _id: ObjectId("6336de313865743872b47dbf"),
+    bookID: 5770,
+    title: 'The Design and Implementation of the 4.3BSD UNIX Operating System',
+    authors: [
+      'Samuel J. Leffler',
+      'Marshall Kirk McKusick',
+      'Michael J. Karels'
+    ],
+    isbn: '0201061961',
+    ratings_count: 27,
+    publication_date: { day: 1, month: 6, year: 1989 },
+    publisher: 'Addison Wesley Publishing Company',
+    details: [
+      { price: 27.11, currency: 'usd', discount: true, rate: 35 },
+      { price: 237.77, currency: 'sek', discount: true, rate: 35 },
+      { price: 223.67, currency: 'chf' },
+      { price: 24.13, currency: 'esp' }
+    ],
+    language_code: 'eng'
+  },
+  {
+    _id: ObjectId("6336de313865743872b47dca"),
+    bookID: 5952,
+    title: 'Waiting for My Cats to Die: A Memoir',
+    authors: [ 'Stacy Horn' ],
+    isbn: '0312287445',
+    ratings_count: 177,
+    publication_date: { day: 17, month: 1, year: 2002 },
+    publisher: "St. Martin's Griffin",
+    details: [
+      { price: 757.52, currency: 'sek', discount: true, rate: 5 },
+      { price: 66.11, currency: 'gbp' },
+      { price: 91.82, currency: 'usd', discount: true, rate: 25 },
+      { price: 89.98, currency: 'esp', discount: true, rate: 15 },
+      { price: 757.52, currency: 'chf', discount: true, rate: 25 }
+    ],
+    language_code: 'eng'
+  },
+  {
+    _id: ObjectId("6336de313865743872b47dcb"),
+    bookID: 4657,
+    title: 'The Water-Method Man',
+    authors: [ 'John Irving' ],
+    isbn: '034541800X',
+    '  num_pages': 272,
+    ratings_count: 10479,
+    text_reviews_count: 251,
+    publication_date: { day: 23, month: 6, year: 1997 },
+    details: [
+      { price: 68.21, currency: 'gbp', discount: true, rate: 40 },
+      { price: 86.21, currency: 'esp' },
+      { price: 94.74, currency: 'usd', discount: true, rate: 35 }
+    ]
+  },
+  {
+    _id: ObjectId("6336de313865743872b47dcc"),
+    bookID: 9497,
+    title: "Memory's Embrace (Corbins  #3)",
+    authors: [ 'Linda Lael Miller' ],
+    isbn: '0671737694',
+    ratings_count: 407,
+    publication_date: { day: 1, month: 6, year: 1991 },
+    publisher: 'Pocket Books',
+    details: [
+      { price: 17.8, currency: 'usd', discount: true, rate: 25 },
+      { price: 13.53, currency: 'gbp', discount: true, rate: 40 },
+      { price: 16.2, currency: 'esp', discount: true, rate: 15 },
+      { price: 146.89, currency: 'chf' },
+      { price: 142.26, currency: 'sek', discount: true, rate: 40 }
+    ],
+    language_code: 'eng'
+  },
+  {
+    _id: ObjectId("6336de313865743872b47dce"),
+    bookID: 2688,
+    title: 'Novels 1901–1902: The Sacred Fount / The Wings of the Dove',
+    authors: [ 'Henry James', 'Leo Bersani' ],
+    isbn: '193108288X',
+    '  num_pages': 713,
+    ratings_count: 27,
+    text_reviews_count: 3,
+    publication_date: { day: 2, month: 2, year: 2006 },
+    details: [
+      { price: 52.1, currency: 'esp', discount: true, rate: 25 },
+      { price: 472.3, currency: 'sek' },
+      { price: 57.25, currency: 'usd', discount: true, rate: 40 },
+      { price: 502.07, currency: 'chf' }
+    ]
+  },
+  {
+    _id: ObjectId("6336de313865743872b47dd2"),
+    bookID: 10718,
+    title: 'Something Happened',
+    authors: [ 'Joseph Heller' ],
+    isbn: '0684841215',
+    ratings_count: 6166,
+    publication_date: { day: 12, month: 11, year: 1997 },
+    publisher: 'Simon  Schuster',
+    details: [
+      { price: 14.42, currency: 'usd', discount: true, rate: 25 },
+      { price: 10.96, currency: 'gbp', discount: true, rate: 45 }
+    ],
+    language_code: 'eng'
+  },
+  {
+    _id: ObjectId("6336de313865743872b47dd3"),
+    bookID: 1509,
+    title: 'Trojan Women / Iphigenia Among the Taurians / Ion',
+    authors: [ 'Euripides', 'David Kovacs' ],
+    isbn: '0674995740',
+    '  num_pages': 528,
+    ratings_count: 29,
+    text_reviews_count: 2,
+    publication_date: { day: 1, month: 12, year: 1999 },
+    details: [
+      { price: 664.89, currency: 'chf', discount: true, rate: 30 },
+      { price: 664.89, currency: 'sek' },
+      { price: 74.06, currency: 'esp' },
+      { price: 83.22, currency: 'usd', discount: true, rate: 35 },
+      { price: 62.41, currency: 'gbp', discount: true, rate: 10 }
+    ]
+  },
+  {
+    _id: ObjectId("6336de313865743872b47dd7"),
+    bookID: 85,
+    title: 'The Heidi Chronicles',
+    authors: [ 'Wendy Wasserstein' ],
+    isbn: '0822205106',
+    '  num_pages': 81,
+    ratings_count: 1423,
+    text_reviews_count: 70,
+    publication_date: { day: 1, month: 3, year: 2002 },
+    details: [
+      { price: 176.19, currency: 'sek' },
+      { price: 16.54, currency: 'gbp', discount: true, rate: 45 },
+      { price: 19.63, currency: 'esp' },
+      { price: 22.05, currency: 'usd', discount: true, rate: 10 },
+      { price: 181.92, currency: 'chf' }
+    ]
+  },
+  {
+    _id: ObjectId("6336de313865743872b47dd8"),
+    bookID: 6988,
+    title: 'Yeah  I Said It',
+    authors: [ 'Wanda Sykes' ],
+    isbn: '0743482719',
+    ratings_count: 458,
+    publication_date: { day: 13, month: 9, year: 2005 },
+    publisher: 'Atria Books',
+    details: [
+      { price: 12.15, currency: 'gbp' },
+      { price: 16.88, currency: 'usd', discount: true, rate: 10 },
+      { price: 134.86, currency: 'sek' }
+    ],
+    language_code: 'en-US'
+  },
+  {
+    _id: ObjectId("6336de313865743872b47ddf"),
+    bookID: 4803,
+    title: 'The Log from the Sea of Cortez',
+    authors: [ 'John Steinbeck', 'Richard Astro' ],
+    isbn: '0141186070',
+    '  num_pages': 288,
+    ratings_count: 3427,
+    text_reviews_count: 276,
+    publication_date: { day: 18, month: 1, year: 2001 },
+    details: [
+      { price: 80.06, currency: 'usd', discount: true, rate: 40 },
+      { price: 639.68, currency: 'chf' },
+      { price: 72.85, currency: 'esp' }
+    ]
+  },
+  {
+    _id: ObjectId("6336de313865743872b47de9"),
+    bookID: 7102,
+    title: "U.S.A.: 42e Parallèle/L'An premier du siècle/La Grosse galette",
+    authors: [ 'John Dos Passos' ],
+    isbn: '2070766039',
+    ratings_count: 9,
+    publication_date: { day: 4, month: 9, year: 2002 },
+    publisher: 'Gallimard',
+    details: [
+      { price: 44.26, currency: 'esp' },
+      { price: 45.17, currency: 'usd', discount: true, rate: 35 },
+      { price: 360.88, currency: 'chf', discount: true, rate: 5 },
+      { price: 360.88, currency: 'sek' },
+      { price: 34.33, currency: 'gbp', discount: true, rate: 35 }
+    ],
+    language_code: 'eng'
+  },
+  {
+    _id: ObjectId("6336de313865743872b47dea"),
+    bookID: 2727,
+    title: 'Saul Steinberg: Illuminations',
+    authors: [ 'Saul Steinberg', 'Joel Smith', 'Charles Simic' ],
+    isbn: '0300115865',
+    '  num_pages': 288,
+    ratings_count: 39,
+    text_reviews_count: 5,
+    publication_date: { day: 1, month: 11, year: 2006 },
+    details: [
+      { price: 39.86, currency: 'esp', discount: true, rate: 20 },
+      { price: 34.82, currency: 'gbp' },
+      { price: 366.09, currency: 'sek' },
+      { price: 45.82, currency: 'usd', discount: true, rate: 30 },
+      { price: 378, currency: 'chf' }
+    ]
+  },
+  {
+    _id: ObjectId("6336de313865743872b47dec"),
+    bookID: 2745,
+    title: 'Real Boys: Rescuing Our Sons from the Myths of Boyhood',
+    authors: [ 'William S. Pollack', 'Mary Pipher' ],
+    isbn: '0805061835',
+    '  num_pages': 480,
+    ratings_count: 1397,
+    text_reviews_count: 128,
+    publication_date: { day: 10, month: 5, year: 1999 },
+    details: [
+      { price: 13.19, currency: 'sek' },
+      { price: 1.6, currency: 'usd', discount: true, rate: 20 },
+      { price: 1.2, currency: 'gbp' }
+    ]
+  },
+  {
+    _id: ObjectId("6336de313865743872b47df3"),
+    bookID: 2962,
+    title: 'The Annotated Huckleberry Finn',
+    authors: [ 'Mark Twain', 'Michael Patrick Hearn', 'E.W. Kemble' ],
+    isbn: '0393020398',
+    '  num_pages': 656,
+    ratings_count: 185,
+    text_reviews_count: 18,
+    publication_date: { day: 17, month: 10, year: 2001 },
+    details: [
+      { price: 3.68, currency: 'esp', discount: true, rate: 45 },
+      { price: 33.38, currency: 'sek' },
+      { price: 4.05, currency: 'usd', discount: true, rate: 35 },
+      { price: 35.49, currency: 'chf' },
+      { price: 3.03, currency: 'gbp', discount: true, rate: 10 }
+    ]
+  },
+  {
+    _id: ObjectId("6336de313865743872b47df6"),
+    bookID: 7611,
+    title: 'sex.lies.murder.fame.',
+    authors: [ 'Lolita Files' ],
+    isbn: '0060786809',
+    ratings_count: 205,
+    publication_date: { day: 10, month: 1, year: 2006 },
+    publisher: 'Amistad',
+    details: [
+      { price: 23.91, currency: 'esp' },
+      { price: 18.55, currency: 'gbp' },
+      { price: 194.98, currency: 'sek' },
+      { price: 24.4, currency: 'usd', discount: true, rate: 25 },
+      { price: 201.32, currency: 'chf' }
+    ],
+    language_code: 'eng'
+  },
+  {
+    _id: ObjectId("6336de313865743872b47df7"),
+    bookID: 7101,
+    title: 'The 42nd Parallel (U.S.A.  #1)',
+    authors: [ 'John Dos Passos' ],
+    isbn: '0618056815',
+    ratings_count: 5290,
+    publication_date: { day: 25, month: 5, year: 2000 },
+    publisher: 'Mariner Books',
+    details: [
+      { price: 43.86, currency: 'usd', discount: true, rate: 40 },
+      { price: 350.48, currency: 'sek' }
+    ],
+    language_code: 'eng'
+  },
+  {
+    _id: ObjectId("6336de313865743872b47df8"),
+    bookID: 2933,
+    title: 'Robinson Crusoe',
+    authors: [ 'Daniel Defoe', 'John J. Richetti' ],
+    isbn: '0141439823',
+    '  num_pages': 286,
+    ratings_count: 1507,
+    text_reviews_count: 142,
+    publication_date: { day: 27, month: 3, year: 2003 },
+    details: [
+      { price: 58.24, currency: 'esp' },
+      { price: 511.32, currency: 'chf' },
+      { price: 64, currency: 'usd', discount: true, rate: 20 }
+    ]
+  }
+]
+Type "it" for more
+books> 
+books> C10: Títulos que carecen de información de precio
+
+books> -----------------------------------------------
+
+books> [
+  {
+    _id: ObjectId("6336de313865743872b47dae"),
+    bookID: 7536,
+    title: 'Anleitung zum Zickigsein',
+    authors: [ 'Laurie Notaro' ],
+    average_rating: 3.88,
+    isbn: '3404149475',
+    '  num_pages': 254,
+    ratings_count: 2,
+    text_reviews_count: 1,
+    publication_date: { day: 1, month: 8, year: 2003 },
+    language_code: 'ger'
+  },
+  {
+    _id: ObjectId("6336de313865743872b47db1"),
+    bookID: 1517,
+    title: 'Aeschylus II: The Suppliant Maidens  The Persians  Seven against Thebes  and Prometheus Bound (The Complete Greek Tragedies)',
+    authors: [
+      'Aeschylus',
+      'David Grene',
+      'Richmond Lattimore',
+      'Seth Benardete'
+    ],
+    average_rating: 4.1,
+    isbn: '0226307948',
+    '  num_pages': 188,
+    ratings_count: 389,
+    text_reviews_count: 26,
+    publication_date: { day: 1, month: 2, year: 1992 },
+    language_code: 'eng'
+  },
+  {
+    _id: ObjectId("6336de313865743872b47db7"),
+    bookID: 4696,
+    title: 'The Last Jew',
+    authors: [ 'Noah Gordon', 'Mirjana Cvekić', 'Ljiljana Cvekić' ],
+    average_rating: 4.1,
+    isbn: '0312300530',
+    '  num_pages': 352,
+    ratings_count: 4360,
+    text_reviews_count: 189,
+    publication_date: { day: 15, month: 8, year: 2000 },
+    language_code: 'eng'
+  },
+  {
+    _id: ObjectId("6336de313865743872b47dbd"),
+    bookID: 2077,
+    title: 'Leaps of Faith: Science  Miracles & the Search for Supernatural Consolation',
+    authors: [ 'Nicholas Humphrey', 'Daniel C. Dennett' ],
+    average_rating: 3.61,
+    isbn: '0387987207',
+    '  num_pages': 244,
+    ratings_count: 21,
+    text_reviews_count: 3,
+    publication_date: { day: 4, month: 6, year: 1999 },
+    language_code: 'en-US'
+  },
+  {
+    _id: ObjectId("6336de313865743872b47dc5"),
+    bookID: 6294,
+    title: "Howl's Moving Castle (Howl's Moving Castle  #1)",
+    authors: [ 'Diana Wynne Jones' ],
+    average_rating: 4.29,
+    isbn: '006441034X',
+    '  num_pages': 329,
+    ratings_count: 161582,
+    text_reviews_count: 9026,
+    publication_date: { day: 1, month: 8, year: 2001 },
+    language_code: 'eng'
+  },
+  {
+    _id: ObjectId("6336de313865743872b47dd6"),
+    bookID: 59,
+    title: 'The Changeling Sea',
+    authors: [ 'Patricia A. McKillip' ],
+    average_rating: 4.06,
+    isbn: '0141312629',
+    '  num_pages': 137,
+    ratings_count: 4454,
+    text_reviews_count: 302,
+    publication_date: { day: 14, month: 4, year: 2003 },
+    language_code: 'eng'
+  },
+  {
+    _id: ObjectId("6336de313865743872b47ddb"),
+    bookID: 4693,
+    title: 'Matters of Choice (Cole Family Trilogy  #3)',
+    authors: [ 'Noah Gordon', 'Mirjana Cvekić', 'Ljiljana Cvekić' ],
+    average_rating: 3.39,
+    isbn: '0451187261',
+    '  num_pages': 448,
+    ratings_count: 2680,
+    text_reviews_count: 142,
+    publication_date: { day: 1, month: 5, year: 1997 },
+    language_code: 'eng'
+  },
+  {
+    _id: ObjectId("6336de313865743872b47de0"),
+    bookID: 5794,
+    title: 'El Aleph',
+    authors: [ 'Jorge Luis Borges' ],
+    average_rating: 4.38,
+    isbn: '9500425998',
+    '  num_pages': 253,
+    ratings_count: 146,
+    text_reviews_count: 9,
+    publication_date: { day: 1, month: 9, year: 2007 },
+    language_code: 'spa'
+  },
+  {
+    _id: ObjectId("6336de313865743872b47de4"),
+    bookID: 2722,
+    title: 'Cities of Salt (مدن الملح #1)',
+    authors: [ 'Abdul Rahman Munif', 'Peter Theroux' ],
+    average_rating: 4.13,
+    isbn: '039475526X',
+    '  num_pages': 627,
+    ratings_count: 856,
+    text_reviews_count: 105,
+    publication_date: { day: 17, month: 7, year: 1989 },
+    language_code: 'eng'
+  },
+  {
+    _id: ObjectId("6336de313865743872b47de7"),
+    bookID: 9791,
+    title: 'A Walk in the Woods: Rediscovering America on the Appalachian Trail',
+    authors: [ 'Bill Bryson' ],
+    average_rating: 4.06,
+    isbn: '0307279464',
+    '  num_pages': 397,
+    ratings_count: 308840,
+    text_reviews_count: 14993,
+    publication_date: { day: 26, month: 12, year: 2006 },
+    language_code: 'eng'
+  },
+  {
+    _id: ObjectId("6336de313865743872b47df1"),
+    bookID: 3300,
+    title: 'Inés of My Soul',
+    authors: [ 'Isabel Allende', 'Margaret Sayers Peden' ],
+    average_rating: 3.93,
+    isbn: '0061161535',
+    '  num_pages': 321,
+    ratings_count: 15345,
+    text_reviews_count: 1075,
+    publication_date: { day: 7, month: 11, year: 2006 },
+    language_code: 'eng'
+  },
+  {
+    _id: ObjectId("6336de313865743872b47dfc"),
+    bookID: 10846,
+    title: "Gatsby's Girl",
+    authors: [ 'Caroline Preston' ],
+    average_rating: 3.54,
+    isbn: '0618537252',
+    '  num_pages': 312,
+    ratings_count: 863,
+    text_reviews_count: 121,
+    publication_date: { day: 1, month: 5, year: 2006 },
+    language_code: 'en-US'
+  },
+  {
+    _id: ObjectId("6336de313865743872b47dfd"),
+    bookID: 5659,
+    title: 'The Wind in the Willows',
+    authors: [ 'Kenneth Grahame', 'Gillian Avery' ],
+    average_rating: 3.99,
+    isbn: '0143039091',
+    '  num_pages': 197,
+    ratings_count: 147748,
+    text_reviews_count: 3490,
+    publication_date: { day: 27, month: 10, year: 2005 },
+    language_code: 'eng'
+  },
+  {
+    _id: ObjectId("6336de313865743872b47dfe"),
+    bookID: 534,
+    title: 'We Were Not Like Other People',
+    authors: [ 'Ephraim Sevela', 'Antonina W. Bouis' ],
+    average_rating: 4.14,
+    isbn: '0060255080',
+    '  num_pages': 216,
+    ratings_count: 1,
+    text_reviews_count: 0,
+    publication_date: { day: 1, month: 1, year: 1989 },
+    language_code: 'eng'
+  },
+  {
+    _id: ObjectId("6336de313865743872b47dff"),
+    bookID: 1362,
+    title: 'The Histories',
+    authors: [ 'Herodotus', 'Aubrey de Sélincourt', 'John M. Marincola' ],
+    average_rating: 3.99,
+    isbn: '0140449086',
+    '  num_pages': 716,
+    ratings_count: 34727,
+    text_reviews_count: 597,
+    publication_date: { day: 30, month: 1, year: 2003 },
+    language_code: 'eng'
+  },
+  {
+    _id: ObjectId("6336de313865743872b47e17"),
+    bookID: 25,
+    title: "I'm a Stranger Here Myself: Notes on Returning to America After Twenty Years Away",
+    authors: [ 'Bill Bryson' ],
+    average_rating: 3.9,
+    isbn: '076790382X',
+    '  num_pages': 304,
+    ratings_count: 49240,
+    text_reviews_count: 2211,
+    publication_date: { day: 28, month: 6, year: 2000 },
+    language_code: 'eng'
+  },
+  {
+    _id: ObjectId("6336de313865743872b47e1a"),
+    bookID: 3751,
+    title: "Moonraker's Bride",
+    authors: [ 'Madeleine Brent' ],
+    average_rating: 4.31,
+    isbn: '0449235947',
+    '  num_pages': 319,
+    ratings_count: 55,
+    text_reviews_count: 13,
+    publication_date: { day: 12, month: 6, year: 1978 },
+    language_code: 'eng'
+  },
+  {
+    _id: ObjectId("6336de313865743872b47e1e"),
+    bookID: 8199,
+    title: 'Writings to Young Women from Laura Ingalls Wilder: On Life as a Pioneer Woman (Writings to Young Women from Laura Ingalls Wilder #2)',
+    authors: [ 'Laura Ingalls Wilder', 'Stephen W. Hines' ],
+    average_rating: 3.92,
+    isbn: '1400307856',
+    '  num_pages': 116,
+    ratings_count: 94,
+    text_reviews_count: 10,
+    publication_date: { day: 10, month: 5, year: 2006 },
+    language_code: 'eng'
+  },
+  {
+    _id: ObjectId("6336de313865743872b47e1f"),
+    bookID: 8915,
+    title: 'A Short History of World War II',
+    authors: [ 'James L. Stokesbury' ],
+    average_rating: 3.95,
+    isbn: '0688085873',
+    '  num_pages': 416,
+    ratings_count: 472,
+    text_reviews_count: 41,
+    publication_date: { day: 1, month: 1, year: 1980 },
+    language_code: 'eng'
+  },
+  {
+    _id: ObjectId("6336de313865743872b47e22"),
+    bookID: 5693,
+    title: 'Selected Stories of Anton Chekhov',
+    authors: [ 'Anton Chekhov', 'Richard Pevear', 'Larissa Volokhonsky' ],
+    average_rating: 4.35,
+    isbn: '0553381008',
+    '  num_pages': 467,
+    ratings_count: 27027,
+    text_reviews_count: 466,
+    publication_date: { day: 31, month: 10, year: 2000 },
+    language_code: 'eng'
+  }
+]
+Type "it" for more
+books> 
+books> C11: Títulos donde el precio en “usd” supera el valor de 95.
+
+books> -----------------------------------------------
+
+books> [
+  {
+    _id: ObjectId("6336de313865743872b47e0b"),
+    bookID: 3051,
+    title: 'Sir Gawain and the Green Knight',
+    authors: [ 'Selina Shirley Hastings', 'Juan Wijngaard' ],
+    isbn: '0744520053',
+    '  num_pages': 29,
+    ratings_count: 65,
+    text_reviews_count: 9,
+    publication_date: { day: 27, month: 6, year: 1991 },
+    details: [
+      { price: 71.67, currency: 'gbp' },
+      { price: 763.5, currency: 'chf' },
+      { price: 95.56, currency: 'usd' },
+      { price: 83.13, currency: 'esp', discount: true, rate: 25 },
+      { price: 838.03, currency: 'sek' }
+    ]
+  },
+  {
+    _id: ObjectId("6336de313865743872b47e60"),
+    bookID: 6904,
+    title: "My Sister's Keeper (Gillian Adams  #2)",
+    authors: [ 'Nora Kelly' ],
+    isbn: '1890208280',
+    ratings_count: 22,
+    publication_date: { day: 1, month: 2, year: 2000 },
+    publisher: 'Poisoned Pen Press',
+    details: [
+      { price: 99.19, currency: 'usd', discount: true, rate: 40 },
+      { price: 818.33, currency: 'sek' },
+      { price: 71.42, currency: 'gbp', discount: true, rate: 15 },
+      { price: 869.91, currency: 'chf' }
+    ],
+    language_code: 'eng'
+  },
+  {
+    _id: ObjectId("6336de313865743872b47e77"),
+    bookID: 972,
+    title: 'Da Vinci Code (Robert Langdon  #2)',
+    authors: [ 'Dan Brown', 'Daniel Roche' ],
+    isbn: '2266144340',
+    '  num_pages': 744,
+    ratings_count: 377,
+    text_reviews_count: 16,
+    publication_date: { day: 3, month: 5, year: 2005 },
+    details: [
+      { price: 95.78, currency: 'usd', discount: true, rate: 10 },
+      { price: 765.29, currency: 'sek' },
+      { price: 68.96, currency: 'gbp', discount: true, rate: 10 }
+    ]
+  },
+  {
+    _id: ObjectId("6336de313865743872b47e8f"),
+    bookID: 5310,
+    title: 'The Life and Times of Scrooge McDuck Companion',
+    authors: [ 'Don Rosa' ],
+    isbn: '1888472405',
+    '  num_pages': 208,
+    ratings_count: 959,
+    text_reviews_count: 22,
+    publication_date: { day: 19, month: 9, year: 2006 },
+    details: [
+      { price: 68.53, currency: 'gbp', discount: true, rate: 20 },
+      { price: 95.18, currency: 'usd', discount: true, rate: 10 },
+      { price: 785.21, currency: 'chf', discount: true, rate: 20 },
+      { price: 86.61, currency: 'esp' },
+      { price: 834.7, currency: 'sek', discount: true, rate: 25 }
+    ]
+  },
+  {
+    _id: ObjectId("6336de313865743872b47ea2"),
+    bookID: 1123,
+    title: 'Eating for Life: Your Guide to Great Health  Fat Loss and Increased Energy!',
+    authors: [ 'Bill Phillips' ],
+    isbn: '0972018417',
+    '  num_pages': 405,
+    ratings_count: 814,
+    text_reviews_count: 51,
+    publication_date: { day: 26, month: 11, year: 2003 },
+    details: [
+      { price: 75.33, currency: 'gbp' },
+      { price: 99.11, currency: 'usd', discount: true, rate: 10 }
+    ]
+  },
+  {
+    _id: ObjectId("6336de313865743872b47eda"),
+    bookID: 8204,
+    title: 'The Laura Ingalls Wilder Country Cookbook',
+    authors: [ 'Laura Ingalls Wilder', 'William   Anderson' ],
+    isbn: '0064461963',
+    ratings_count: 234,
+    publication_date: { day: 1, month: 10, year: 1997 },
+    publisher: 'HarperCollins Publishers',
+    details: [
+      { price: 97.14, currency: 'usd' },
+      { price: 851.95, currency: 'chf', discount: true, rate: 30 },
+      { price: 776.18, currency: 'sek', discount: true, rate: 5 },
+      { price: 88.4, currency: 'esp' }
+    ],
+    language_code: 'eng'
+  },
+  {
+    _id: ObjectId("6336de313865743872b47ef3"),
+    bookID: 10261,
+    title: 'The Art of Richard P. Feynman',
+    authors: [ 'Michelle Feynman' ],
+    isbn: '2884490477',
+    ratings_count: 13,
+    publication_date: { day: 1, month: 7, year: 1995 },
+    publisher: 'Routledge',
+    details: [
+      { price: 816.94, currency: 'sek' },
+      { price: 816.94, currency: 'chf', discount: true, rate: 10 },
+      { price: 99.02, currency: 'usd', discount: true, rate: 30 },
+      { price: 71.3, currency: 'gbp', discount: true, rate: 20 },
+      { price: 88.13, currency: 'esp', discount: true, rate: 25 }
+    ],
+    language_code: 'en-US'
+  },
+  {
+    _id: ObjectId("6336de313865743872b47efa"),
+    bookID: 2552,
+    title: 'On the Road',
+    authors: [ 'Jack Kerouac', 'Ann Charters' ],
+    isbn: '0141182679',
+    '  num_pages': 281,
+    ratings_count: 5575,
+    text_reviews_count: 502,
+    publication_date: { day: 24, month: 2, year: 2000 },
+    details: [
+      { price: 843.13, currency: 'sek', discount: true, rate: 25 },
+      { price: 69.22, currency: 'gbp' },
+      { price: 96.14, currency: 'usd' }
+    ]
+  },
+  {
+    _id: ObjectId("6336de313865743872b47f03"),
+    bookID: 10346,
+    title: 'The Medici Giraffe and Other Tales of Exotic Animals and Power',
+    authors: [ 'Marina Belozerskaya' ],
+    isbn: '0316525650',
+    ratings_count: 224,
+    publication_date: { day: 21, month: 8, year: 2006 },
+    publisher: 'Little  Brown and Company',
+    details: [
+      { price: 95.1, currency: 'esp' },
+      { price: 775.33, currency: 'sek', discount: true, rate: 45 },
+      { price: 97.04, currency: 'usd', discount: true, rate: 20 },
+      { price: 851.01, currency: 'chf', discount: true, rate: 10 }
+    ],
+    language_code: 'eng'
+  },
+  {
+    _id: ObjectId("6336de313865743872b47f0f"),
+    bookID: 4670,
+    title: 'Tender is the Night',
+    authors: [ 'F. Scott Fitzgerald', 'Arnold Goldman', 'Richard Godden' ],
+    isbn: '0141183594',
+    '  num_pages': 400,
+    ratings_count: 1354,
+    text_reviews_count: 140,
+    publication_date: { day: 28, month: 6, year: 2001 },
+    details: [
+      { price: 86.69, currency: 'esp', discount: true, rate: 5 },
+      { price: 803.58, currency: 'sek', discount: true, rate: 35 },
+      { price: 778.25, currency: 'chf', discount: true, rate: 30 },
+      { price: 70.13, currency: 'gbp', discount: true, rate: 10 },
+      { price: 97.4, currency: 'usd' }
+    ]
+  },
+  {
+    _id: ObjectId("6336de313865743872b47f1b"),
+    bookID: 8574,
+    title: 'Whip Hand (Sid Halley  #2)',
+    authors: [ 'Dick Francis' ],
+    isbn: '0425203549',
+    ratings_count: 5108,
+    publication_date: { day: 7, month: 6, year: 2005 },
+    publisher: "G.P. Putnam's Sons",
+    details: [
+      { price: 796.53, currency: 'sek', discount: true, rate: 10 },
+      { price: 86.73, currency: 'esp' },
+      { price: 99.69, currency: 'usd', discount: true, rate: 30 },
+      { price: 74.77, currency: 'gbp' }
+    ],
+    language_code: 'eng'
+  },
+  {
+    _id: ObjectId("6336de313865743872b47f3c"),
+    bookID: 793,
+    title: 'Best of London (Lonely Planet Best Of)',
+    authors: [ 'Lonely Planet', 'Sarah Johnstone', 'Steve Fallon' ],
+    isbn: '1740594770',
+    '  num_pages': 128,
+    ratings_count: 11,
+    text_reviews_count: 0,
+    publication_date: { day: 1, month: 9, year: 2004 },
+    details: [
+      { price: 82.75, currency: 'esp', discount: true, rate: 5 },
+      { price: 759.95, currency: 'chf' },
+      { price: 68.48, currency: 'gbp' },
+      { price: 784.68, currency: 'sek', discount: true, rate: 15 },
+      { price: 95.11, currency: 'usd' }
+    ]
+  },
+  {
+    _id: ObjectId("6336de313865743872b47f41"),
+    bookID: 5305,
+    title: 'Sense and Sensuality: Jesus Talks to Oscar Wilde on the Pursuit of Pleasure (Great Conversations)',
+    authors: [ 'Ravi Zacharias' ],
+    isbn: '1590528603',
+    '  num_pages': 94,
+    ratings_count: 545,
+    text_reviews_count: 52,
+    publication_date: { day: 1, month: 6, year: 2006 },
+    details: [
+      { price: 795.93, currency: 'chf', discount: true, rate: 15 },
+      { price: 74.71, currency: 'gbp' },
+      { price: 99.62, currency: 'usd' },
+      { price: 97.62, currency: 'esp', discount: true, rate: 25 },
+      { price: 873.63, currency: 'sek' }
+    ]
+  },
+  {
+    _id: ObjectId("6336de313865743872b47f44"),
+    bookID: 4990,
+    title: 'Inside the Red Tent',
+    authors: [ 'Sandra Hack Polaski' ],
+    isbn: '0827230281',
+    '  num_pages': 100,
+    ratings_count: 181,
+    text_reviews_count: 16,
+    publication_date: { day: 1, month: 7, year: 2006 },
+    details: [
+      { price: 98.37, currency: 'usd' },
+      { price: 862.66, currency: 'chf', discount: true, rate: 10 },
+      { price: 89.51, currency: 'esp', discount: true, rate: 5 },
+      { price: 811.51, currency: 'sek' }
+    ]
+  },
+  {
+    _id: ObjectId("6336de313865743872b47f4d"),
+    bookID: 8127,
+    title: 'Anne of Green Gables (Anne of Green Gables  #1)',
+    authors: [ 'L.M. Montgomery' ],
+    isbn: '0451528824',
+    ratings_count: 625759,
+    publication_date: { day: 6, month: 5, year: 2003 },
+    publisher: 'Signet Book',
+    details: [
+      { price: 96.12, currency: 'usd', discount: true, rate: 15 },
+      { price: 792.97, currency: 'sek', discount: true, rate: 25 },
+      { price: 85.54, currency: 'esp', discount: true, rate: 45 },
+      { price: 767.98, currency: 'chf', discount: true, rate: 40 },
+      { price: 73.05, currency: 'gbp', discount: true, rate: 20 }
+    ],
+    language_code: 'eng'
+  },
+  {
+    _id: ObjectId("6336de313865743872b47fab"),
+    bookID: 5346,
+    title: 'The Last Juror',
+    authors: [ 'John Grisham' ],
+    isbn: '0385339682',
+    '  num_pages': 278,
+    ratings_count: 72294,
+    text_reviews_count: 1755,
+    publication_date: { day: 25, month: 4, year: 2006 },
+    details: [
+      { price: 813.68, currency: 'sek', discount: true, rate: 5 },
+      { price: 864.96, currency: 'chf' },
+      { price: 98.63, currency: 'usd' },
+      { price: 73.97, currency: 'gbp', discount: true, rate: 30 },
+      { price: 87.78, currency: 'esp', discount: true, rate: 10 }
+    ]
+  },
+  {
+    _id: ObjectId("6336de313865743872b47fb2"),
+    bookID: 4248,
+    title: 'The Da Vinci Code',
+    authors: [ 'Dan Brown' ],
+    isbn: '1400079179',
+    '  num_pages': 489,
+    ratings_count: 13934,
+    text_reviews_count: 1459,
+    publication_date: { day: 28, month: 3, year: 2006 },
+    details: [
+      { price: 75.48, currency: 'gbp' },
+      { price: 99.32, currency: 'usd', discount: true, rate: 5 },
+      { price: 871, currency: 'chf', discount: true, rate: 5 },
+      { price: 793.54, currency: 'sek' }
+    ]
+  },
+  {
+    _id: ObjectId("6336de313865743872b48011"),
+    bookID: 7058,
+    title: "The Good Husband of Zebra Drive (No. 1 Ladies' Detective Agency #8)",
+    authors: [ 'Alexander McCall Smith' ],
+    isbn: '0375422730',
+    ratings_count: 20290,
+    publication_date: { day: 17, month: 4, year: 2007 },
+    publisher: 'Pantheon Books',
+    details: [
+      { price: 864.45, currency: 'sek', discount: true, rate: 5 },
+      { price: 787.56, currency: 'chf', discount: true, rate: 20 },
+      { price: 70.97, currency: 'gbp', discount: true, rate: 35 },
+      { price: 87.73, currency: 'esp', discount: true, rate: 45 },
+      { price: 98.57, currency: 'usd' }
+    ],
+    language_code: 'eng'
+  },
+  {
+    _id: ObjectId("6336de313865743872b48023"),
+    bookID: 9863,
+    title: 'The Wizard of Oz',
+    authors: [ 'Salman Rushdie', 'Richard Maltby', 'Melvyn Bragg' ],
+    isbn: '0851703003',
+    ratings_count: 749,
+    publication_date: { day: 27, month: 5, year: 1992 },
+    publisher: 'British Film Institute',
+    details: [
+      { price: 873.04, currency: 'sek' },
+      { price: 99.55, currency: 'usd' }
+    ],
+    language_code: 'eng'
+  },
+  {
+    _id: ObjectId("6336de313865743872b4803c"),
+    bookID: 7598,
+    title: "A Study Guide to Gabriel Garcia Marquez' One Hundred Years of Solitude",
+    authors: [
+      'Gabriel García Márquez',
+      'Brenda K. Marshall',
+      'F. Murray Abraham'
+    ],
+    isbn: '1570421129',
+    ratings_count: 75,
+    publication_date: { day: 1, month: 4, year: 2006 },
+    publisher: 'Warner Adult',
+    details: [
+      { price: 99.71, currency: 'usd' },
+      { price: 71.79, currency: 'gbp' }
+    ],
+    language_code: 'eng'
+  }
+]
+Type "it" for more
+books> 
+books> C12: Titulos de libros que han sido publicados en idioma español y no tienen precio en moneda “esp”.
+
+books> -----------------------------------------------
+
+books> [
+  {
+    _id: ObjectId("6336de313865743872b47de0"),
+    bookID: 5794,
+    title: 'El Aleph',
+    authors: [ 'Jorge Luis Borges' ],
+    average_rating: 4.38,
+    isbn: '9500425998',
+    '  num_pages': 253,
+    ratings_count: 146,
+    text_reviews_count: 9,
+    publication_date: { day: 1, month: 9, year: 2007 },
+    language_code: 'spa'
+  },
+  {
+    _id: ObjectId("6336de313865743872b47e4c"),
+    bookID: 4515,
+    title: 'Las luces de septiembre (Niebla  #3)',
+    authors: [ 'Carlos Ruiz Zafón' ],
+    average_rating: 3.77,
+    isbn: '8423671267',
+    '  num_pages': 279,
+    ratings_count: 5119,
+    text_reviews_count: 217,
+    publication_date: { day: 1, month: 10, year: 2005 },
+    language_code: 'spa'
+  },
+  {
+    _id: ObjectId("6336de313865743872b47fcb"),
+    bookID: 5008,
+    title: 'El azul de la virgen',
+    authors: [ 'Tracy Chevalier' ],
+    average_rating: 3.66,
+    isbn: '8466313591',
+    '  num_pages': 411,
+    ratings_count: 50,
+    text_reviews_count: 5,
+    publication_date: { day: 1, month: 10, year: 2004 },
+    language_code: 'spa'
+  },
+  {
+    _id: ObjectId("6336de313865743872b4821e"),
+    bookID: 9713,
+    title: 'El amor en los tiempos del cólera',
+    authors: [ 'Gabriel García Márquez' ],
+    isbn: '9500703203',
+    ratings_count: 663,
+    publication_date: { day: 1, month: 1, year: 1992 },
+    publisher: 'Sudamericana',
+    details: [
+      { price: 96.65, currency: 'chf' },
+      { price: 7.94, currency: 'gbp' }
+    ],
+    language_code: 'spa'
+  },
+  {
+    _id: ObjectId("6336de313865743872b4822a"),
+    bookID: 1646,
+    title: 'Respiración artificial',
+    authors: [ 'Ricardo Piglia' ],
+    average_rating: 3.96,
+    isbn: '8433924710',
+    '  num_pages': 218,
+    ratings_count: 1279,
+    text_reviews_count: 77,
+    publication_date: { day: 1, month: 3, year: 2008 },
+    language_code: 'spa'
+  },
+  {
+    _id: ObjectId("6336de313865743872b482b5"),
+    bookID: 6896,
+    title: 'Las rubias de 5th Avenue',
+    authors: [ 'Plum Sykes' ],
+    isbn: '8497935888',
+    ratings_count: 5,
+    publication_date: { day: 28, month: 2, year: 2005 },
+    publisher: 'Debolsillo',
+    details: [
+      { price: 58.7, currency: 'usd', discount: true, rate: 20 },
+      { price: 484.31, currency: 'sek', discount: true, rate: 45 },
+      { price: 42.27, currency: 'gbp' },
+      { price: 484.31, currency: 'chf', discount: true, rate: 45 }
+    ],
+    language_code: 'spa'
+  },
+  {
+    _id: ObjectId("6336de313865743872b48310"),
+    bookID: 9288,
+    title: 'La casa de los espíritus',
+    authors: [ 'Isabel Allende' ],
+    average_rating: 4.23,
+    isbn: '9500717638',
+    '  num_pages': 456,
+    ratings_count: 198,
+    text_reviews_count: 18,
+    publication_date: { day: 1, month: 9, year: 2000 },
+    language_code: 'spa'
+  },
+  {
+    _id: ObjectId("6336de313865743872b4831b"),
+    bookID: 1914,
+    title: 'La Tierra es plana: Breve historia del mundo globalizado del siglo XXI',
+    authors: [ 'Thomas L. Friedman' ],
+    average_rating: 3.68,
+    isbn: '8427032226',
+    '  num_pages': 495,
+    ratings_count: 38,
+    text_reviews_count: 0,
+    publication_date: { day: 1, month: 1, year: 2006 },
+    language_code: 'spa'
+  },
+  {
+    _id: ObjectId("6336de313865743872b4832f"),
+    bookID: 8373,
+    title: 'El Reino Animal',
+    authors: [ 'Sergio Ramírez' ],
+    isbn: '9707705736',
+    ratings_count: 16,
+    publication_date: { day: 1, month: 7, year: 2006 },
+    publisher: 'Alfaguara',
+    details: [
+      { price: 685.05, currency: 'sek' },
+      { price: 83.04, currency: 'usd', discount: true, rate: 30 },
+      { price: 663.46, currency: 'chf', discount: true, rate: 5 }
+    ],
+    language_code: 'spa'
+  },
+  {
+    _id: ObjectId("6336de313865743872b4833d"),
+    bookID: 3303,
+    title: 'El reino del dragón de oro',
+    authors: [ 'Isabel Allende' ],
+    average_rating: 3.84,
+    isbn: '0060591714',
+    '  num_pages': 432,
+    ratings_count: 1189,
+    text_reviews_count: 51,
+    publication_date: { day: 7, month: 9, year: 2004 },
+    language_code: 'spa'
+  },
+  {
+    _id: ObjectId("6336de313865743872b4852e"),
+    bookID: 10603,
+    title: 'Cujo',
+    authors: [ 'Stephen King' ],
+    average_rating: 3.71,
+    isbn: '0307348245',
+    '  num_pages': 432,
+    ratings_count: 197993,
+    text_reviews_count: 2816,
+    publication_date: { day: 6, month: 6, year: 2006 },
+    language_code: 'spa'
+  },
+  {
+    _id: ObjectId("6336de313865743872b48551"),
+    bookID: 4520,
+    title: 'El príncipe de la niebla (Trilogía de la Niebla  #1)',
+    authors: [ 'Carlos Ruiz Zafón' ],
+    average_rating: 3.7,
+    isbn: '0061284386',
+    '  num_pages': 230,
+    ratings_count: 3602,
+    text_reviews_count: 325,
+    publication_date: { day: 21, month: 11, year: 2006 },
+    language_code: 'spa'
+  },
+  {
+    _id: ObjectId("6336de313865743872b485a0"),
+    bookID: 11027,
+    title: 'No me cogeréis vivo: artículos 2001-2005',
+    authors: [ 'Arturo Pérez-Reverte' ],
+    average_rating: 4.16,
+    isbn: '8420469432',
+    '  num_pages': 537,
+    ratings_count: 199,
+    text_reviews_count: 5,
+    publication_date: { day: 10, month: 11, year: 2005 },
+    language_code: 'spa'
+  },
+  {
+    _id: ObjectId("6336de313865743872b485ad"),
+    bookID: 1204,
+    title: 'Freakonomics: Un economista políticamente incorrecto explora el lado oculto de lo que nos afecta',
+    authors: [ 'Steven D. Levitt', 'Stephen J. Dubner' ],
+    average_rating: 3.97,
+    isbn: '8466625127',
+    '  num_pages': 250,
+    ratings_count: 193,
+    text_reviews_count: 23,
+    publication_date: { day: 1, month: 8, year: 2006 },
+    language_code: 'spa'
+  },
+  {
+    _id: ObjectId("6336de313865743872b48675"),
+    bookID: 10751,
+    title: 'Wicked: Memorias de una bruja mala (Los años malvados  #1)',
+    authors: [ 'Gregory Maguire', 'Claudia Conde' ],
+    isbn: '0061351393',
+    ratings_count: 47,
+    publication_date: { day: 1, month: 5, year: 2007 },
+    publisher: 'Rayo',
+    details: [
+      { price: 40.07, currency: 'chf' },
+      { price: 40.07, currency: 'sek', discount: true, rate: 20 },
+      { price: 3.64, currency: 'gbp', discount: true, rate: 35 },
+      { price: 4.86, currency: 'usd' }
+    ],
+    language_code: 'spa'
+  },
+  {
+    _id: ObjectId("6336de313865743872b486ad"),
+    bookID: 3468,
+    title: 'El Guardián',
+    authors: [ 'Nicholas Sparks', 'Ramón González Férriz' ],
+    average_rating: 4.15,
+    isbn: '8496284530',
+    '  num_pages': 444,
+    ratings_count: 31,
+    text_reviews_count: 3,
+    publication_date: { day: 1, month: 4, year: 2005 },
+    language_code: 'spa'
+  },
+  {
+    _id: ObjectId("6336de313865743872b486ea"),
+    bookID: 1667,
+    title: 'El túnel',
+    authors: [ 'Ernesto Sabato' ],
+    average_rating: 4.05,
+    isbn: '8432216429',
+    '  num_pages': 159,
+    ratings_count: 453,
+    text_reviews_count: 60,
+    publication_date: { day: 1, month: 7, year: 2003 },
+    language_code: 'spa'
+  },
+  {
+    _id: ObjectId("6336de313865743872b48764"),
+    bookID: 11005,
+    title: 'El Clan Del Oso Cavernario',
+    authors: [ 'Jean M. Auel', 'Leonor Tejada Conde-Pelayo' ],
+    isbn: '9684581149',
+    ratings_count: 176,
+    publication_date: { day: 1, month: 9, year: 1981 },
+    publisher: 'Lasser Press',
+    details: [
+      { price: 527.86, currency: 'sek' },
+      { price: 63.98, currency: 'usd' }
+    ],
+    language_code: 'spa'
+  },
+  {
+    _id: ObjectId("6336de313865743872b48887"),
+    bookID: 8799,
+    title: 'Ahora sabréis lo que es correr',
+    authors: [ 'Dave Eggers', 'María Victoria Alonso Blanco' ],
+    average_rating: 3.63,
+    isbn: '8439710097',
+    '  num_pages': 400,
+    ratings_count: 3,
+    text_reviews_count: 1,
+    publication_date: { day: 31, month: 3, year: 2004 },
+    language_code: 'spa'
+  },
+  {
+    _id: ObjectId("6336de313865743872b4889b"),
+    bookID: 10620,
+    title: 'Misery',
+    authors: [ 'Stephen King', 'María Mir' ],
+    isbn: '074323359X',
+    ratings_count: 129,
+    publication_date: { day: 26, month: 3, year: 2002 },
+    publisher: 'Simon & Schuster Libros en Español',
+    details: [
+      { price: 519.98, currency: 'chf' },
+      { price: 519.98, currency: 'sek' }
+    ],
+    language_code: 'spa'
+  }
+]
+Type "it" for more
+books> 
+books> C13: Títulos de libros que superan las 800 páginas y tienen un rating (average_rating) superior a 4
+
+books> -----------------------------------------------
+
+books> [
+  {
+    _id: ObjectId("6336de313865743872b47ed2"),
+    bookID: 10987,
+    title: 'Voyager (Outlander  #3)',
+    authors: [ 'Diana Gabaldon' ],
+    average_rating: 4.39,
+    isbn: '0385335997',
+    '  num_pages': 870,
+    ratings_count: 198818,
+    text_reviews_count: 8130,
+    publication_date: { day: 7, month: 8, year: 2001 },
+    language_code: 'eng'
+  },
+  {
+    _id: ObjectId("6336de313865743872b47f98"),
+    bookID: 1984,
+    title: 'Bleak House',
+    authors: [ 'Charles Dickens', 'Mary Gaitskill', 'Hablot Knight Browne' ],
+    average_rating: 4.01,
+    isbn: '0375760059',
+    '  num_pages': 887,
+    ratings_count: 1235,
+    text_reviews_count: 146,
+    publication_date: { day: 9, month: 7, year: 2002 },
+    language_code: 'eng'
+  },
+  {
+    _id: ObjectId("6336de313865743872b47fde"),
+    bookID: 2046,
+    title: 'Stories and Early Novels: Pulp Stories / The Big Sleep / Farewell  My Lovely / The High Window',
+    authors: [ 'Raymond Chandler', 'Frank MacShane' ],
+    average_rating: 4.5,
+    isbn: '1883011078',
+    '  num_pages': 1199,
+    ratings_count: 1324,
+    text_reviews_count: 66,
+    publication_date: { day: 1, month: 10, year: 1995 },
+    language_code: 'eng'
+  },
+  {
+    _id: ObjectId("6336de313865743872b480ce"),
+    bookID: 3582,
+    title: 'The New Annotated Sherlock Holmes: The Complete Short Stories',
+    authors: [ 'Arthur Conan Doyle', 'Leslie S. Klinger' ],
+    average_rating: 4.64,
+    isbn: '0393059162',
+    '  num_pages': 1878,
+    ratings_count: 1411,
+    text_reviews_count: 54,
+    publication_date: { day: 30, month: 11, year: 2004 },
+    language_code: 'eng'
+  },
+  {
+    _id: ObjectId("6336de313865743872b480e1"),
+    bookID: 9438,
+    title: 'The Basic Works of Aristotle',
+    authors: [ 'Aristotle', 'Richard Peter McKeon', 'C.D.C. Reeve' ],
+    average_rating: 4.24,
+    isbn: '0375757996',
+    '  num_pages': 1487,
+    ratings_count: 2174,
+    text_reviews_count: 51,
+    publication_date: { day: 19, month: 8, year: 2009 },
+    language_code: 'eng'
+  },
+  {
+    _id: ObjectId("6336de313865743872b48181"),
+    bookID: 3424,
+    title: 'The Grass Crown (Masters of Rome  #2)',
+    authors: [ 'Colleen McCullough' ],
+    average_rating: 4.3,
+    isbn: '038071082X',
+    '  num_pages': 1104,
+    ratings_count: 9623,
+    text_reviews_count: 199,
+    publication_date: { day: 1, month: 7, year: 1992 },
+    language_code: 'eng'
+  },
+  {
+    _id: ObjectId("6336de313865743872b48236"),
+    bookID: 656,
+    title: 'War and Peace',
+    authors: [ 'Leo Tolstoy', 'Henry Gifford', 'Aylmer Maude', 'Louise Maude' ],
+    average_rating: 4.11,
+    isbn: '0192833987',
+    '  num_pages': 1392,
+    ratings_count: 211671,
+    text_reviews_count: 6245,
+    publication_date: { day: 25, month: 6, year: 1998 },
+    language_code: 'eng'
+  },
+  {
+    _id: ObjectId("6336de313865743872b48276"),
+    bookID: 5417,
+    title: "Carrie / 'Salem's Lot / The Shining",
+    authors: [ 'Stephen King' ],
+    average_rating: 4.54,
+    isbn: '0517219026',
+    '  num_pages': 1096,
+    ratings_count: 13137,
+    text_reviews_count: 61,
+    publication_date: { day: 2, month: 7, year: 2002 },
+    language_code: 'eng'
+  },
+  {
+    _id: ObjectId("6336de313865743872b482f1"),
+    bookID: 10980,
+    title: 'Novels 1942–1954: Go Down  Moses / Intruder in the Dust / Requiem for a Nun / A Fable',
+    authors: [ 'William Faulkner', 'Noel Polk', 'Joseph Blotner' ],
+    average_rating: 4.44,
+    isbn: '0940450852',
+    '  num_pages': 1110,
+    ratings_count: 90,
+    text_reviews_count: 7,
+    publication_date: { day: 1, month: 10, year: 1994 },
+    language_code: 'eng'
+  },
+  {
+    _id: ObjectId("6336de313865743872b482f2"),
+    bookID: 7199,
+    title: 'The Way the Crow Flies',
+    authors: [ 'Ann-Marie MacDonald' ],
+    average_rating: 4.09,
+    isbn: '0060586370',
+    '  num_pages': 848,
+    ratings_count: 11330,
+    text_reviews_count: 1011,
+    publication_date: { day: 31, month: 8, year: 2004 },
+    language_code: 'en-US'
+  },
+  {
+    _id: ObjectId("6336de313865743872b48303"),
+    bookID: 5255,
+    title: 'Collected Stories  1891-1910',
+    authors: [ 'Edith Wharton', 'Maureen Howard' ],
+    average_rating: 4.26,
+    isbn: '1883011930',
+    '  num_pages': 928,
+    ratings_count: 56,
+    text_reviews_count: 8,
+    publication_date: { day: 29, month: 1, year: 2001 },
+    language_code: 'eng'
+  },
+  {
+    _id: ObjectId("6336de313865743872b4843a"),
+    bookID: 157,
+    title: 'Anna Karenina',
+    authors: [ 'Leo Tolstoy', 'Constance Garnett', 'Amy Mandelker' ],
+    average_rating: 4.05,
+    isbn: '1593081774',
+    '  num_pages': 803,
+    ratings_count: 303,
+    text_reviews_count: 48,
+    publication_date: { day: 26, month: 8, year: 2004 },
+    language_code: 'eng'
+  },
+  {
+    _id: ObjectId("6336de313865743872b484d2"),
+    bookID: 6857,
+    title: 'Three Plums In One (Stephanie Plum  #1-3)',
+    authors: [ 'Janet Evanovich' ],
+    average_rating: 4.31,
+    isbn: '0743216393',
+    '  num_pages': 1016,
+    ratings_count: 2983,
+    text_reviews_count: 168,
+    publication_date: { day: 26, month: 4, year: 2001 },
+    language_code: 'eng'
+  },
+  {
+    _id: ObjectId("6336de313865743872b484d3"),
+    bookID: 2,
+    title: 'Harry Potter and the Order of the Phoenix (Harry Potter  #5)',
+    authors: [ 'J.K. Rowling', 'Mary GrandPré' ],
+    average_rating: 4.49,
+    isbn: '0439358078',
+    '  num_pages': 870,
+    ratings_count: 2153167,
+    text_reviews_count: 29221,
+    publication_date: { day: 1, month: 9, year: 2004 },
+    language_code: 'eng'
+  },
+  {
+    _id: ObjectId("6336de313865743872b4856f"),
+    bookID: 515,
+    title: "Programming Ruby: The Pragmatic Programmers' Guide",
+    authors: [ 'Dave Thomas', 'Chad Fowler', 'Andy Hunt' ],
+    average_rating: 4.03,
+    isbn: '0974514055',
+    '  num_pages': 828,
+    ratings_count: 1577,
+    text_reviews_count: 49,
+    publication_date: { day: 11, month: 10, year: 2004 },
+    language_code: 'en-US'
+  },
+  {
+    _id: ObjectId("6336de313865743872b48598"),
+    bookID: 2199,
+    title: 'Team of Rivals: The Political Genius of Abraham Lincoln',
+    authors: [ 'Doris Kearns Goodwin' ],
+    average_rating: 4.28,
+    isbn: '0743270754',
+    '  num_pages': 916,
+    ratings_count: 133840,
+    text_reviews_count: 6118,
+    publication_date: { day: 26, month: 9, year: 2006 },
+    language_code: 'eng'
+  },
+  {
+    _id: ObjectId("6336de313865743872b4869e"),
+    bookID: 8155,
+    title: 'A Woman of Substance (Emma Harte Saga #1)',
+    authors: [ 'Barbara Taylor Bradford' ],
+    average_rating: 4.18,
+    isbn: '031235326X',
+    '  num_pages': 928,
+    ratings_count: 34366,
+    text_reviews_count: 573,
+    publication_date: { day: 1, month: 12, year: 2005 },
+    language_code: 'eng'
+  },
+  {
+    _id: ObjectId("6336de313865743872b4873e"),
+    bookID: 5412,
+    title: 'The Stand: Das letzte Gefecht',
+    authors: [ 'Stephen King', 'Joachim Körber' ],
+    average_rating: 4.34,
+    isbn: '3404134117',
+    '  num_pages': 1227,
+    ratings_count: 256,
+    text_reviews_count: 16,
+    publication_date: { day: 1, month: 9, year: 2003 },
+    language_code: 'ger'
+  },
+  {
+    _id: ObjectId("6336de313865743872b48792"),
+    bookID: 9639,
+    title: 'Essays',
+    authors: [ 'George Orwell', 'John Carey' ],
+    average_rating: 4.33,
+    isbn: '0375415033',
+    '  num_pages': 1369,
+    ratings_count: 607,
+    text_reviews_count: 48,
+    publication_date: { day: 15, month: 10, year: 2002 },
+    language_code: 'eng'
+  },
+  {
+    _id: ObjectId("6336de313865743872b488f7"),
+    bookID: 2331,
+    title: 'The Lord of the Rings- 3 volumes set (The Lord of the Rings  #1-3)',
+    authors: [ 'J.R.R. Tolkien' ],
+    average_rating: 4.5,
+    isbn: '0618574999',
+    '  num_pages': 1438,
+    ratings_count: 232,
+    text_reviews_count: 9,
+    publication_date: { day: 1, month: 6, year: 2005 },
+    language_code: 'en-US'
+  }
+]
+Type "it" for more
+books> 
+books> C14: Títulos donde uno de los autores es “Arturo Pérez-Reverte” vendidos con anterioridad al año 2006 en moneda 'chf'
+
+books> -----------------------------------------------
+
+books> 
+books> 
