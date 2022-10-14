@@ -1,0 +1,197 @@
+Current Mongosh Log ID:	6349594a17f9654da3b3267e
+Connecting to:		mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.6.0
+Using MongoDB:		6.0.2
+Using Mongosh:		1.6.0
+
+For mongosh info see: [1mhttps://docs.mongodb.com/mongodb-shell/[0m
+
+------
+   The server generated these startup warnings when booting
+   2022-10-14T14:06:40.559+02:00: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem
+   2022-10-14T14:06:41.198+02:00: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+   2022-10-14T14:06:41.198+02:00: This server is bound to localhost. Remote systems will be unable to connect to this server. Start the server with --bind_ip <address> to specify which IP addresses it should serve responses from, or with --bind_ip_all to bind to all interfaces. If this behavior is desired, start the server with --bind_ip 127.0.0.1 to disable this warning
+   2022-10-14T14:06:41.198+02:00: /sys/kernel/mm/transparent_hugepage/enabled is 'always'. We suggest setting it to 'never'
+   2022-10-14T14:06:41.198+02:00: Soft rlimits for open file descriptors too low
+------
+
+------
+   Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+   metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+   
+   The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+   and anyone you share the URL with. MongoDB may use this information to make product
+   improvements and to suggest MongoDB products and deployment options to you.
+   
+   To enable free monitoring, run the following command: db.enableFreeMonitoring()
+   To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+------
+
+test> Alejandro Barrachina Argudo
+
+test> 
+test> switched to db almacen
+almacen> 
+almacen> 
+almacen> almacen.libros
+almacen> 
+almacen> P1: Crear una variable de tipo array para almacenar todos los documentos de la colección 'libros'. Usa la operación 'toArray()'
+
+almacen> ---------------------------------------------------
+
+almacen> 
+almacen> 
+almacen> 
+almacen> P2: ¿Cuántos elementos hay en el array creado en la pregunta anterior? Usa el atributo de los objetos de tipo array que te devuelve el tamaño del array.
+
+almacen> ----------------------------------------------------
+
+almacen> 4
+almacen> 
+almacen> P3: Crea una nueva base de datos llamada 'stock' y una colección llamada 'ejemplar'. Borra todos los documentos de la colección 'ejemplar' (en caso de que exista alguno) 
+
+almacen> ----------------------------------------------------
+
+almacen> switched to db stock
+stock> Uncaught MongoServerError: Collection stock.ejemplar already exists.
+stock> DeprecationWarning: Collection.remove() is deprecated. Use deleteOne, deleteMany, findOneAndDelete, or bulkWrite.
+{ acknowledged: true, deletedCount: 4 }
+stock> 
+stock> P4: Inicializa una operación bulk de tipo ordenada sobre la colección 'ejemplar' creada en el apartado anterior
+
+stock> ----------------------------------------------------
+
+stock> 
+stock> 
+stock> 
+stock> P5:  Por cada documento en la colección libros, crea un nuevo documento en la colección `ejemplar'. Los documentos de la colección ejemplar tienen los siguientes campos:
+ name : título del libro
+ coste: precio del libro
+ venta: precio del libro
+ editado: grupo del libro
+ fecha : fecha actual.
+ Usa un bucle para recorrer el array creado en la pregunta 1 (por ejemplo forEach), de forma, que por cada documento en el array, se añada una operación de tipo `insert` al objeto bulk. Por último, ejecuta bulk.
+
+stock> ----------------------------------------------------
+
+stock> ... ... ... ... ... ... ... ... ... 
+stock> 
+stock> {
+  acknowledged: true,
+  insertedCount: 4,
+  insertedIds: [
+    { index: 0, _id: ObjectId("6349594bba30d251faee7a94") },
+    { index: 1, _id: ObjectId("6349594bba30d251faee7a95") },
+    { index: 2, _id: ObjectId("6349594bba30d251faee7a96") },
+    { index: 3, _id: ObjectId("6349594bba30d251faee7a97") }
+  ],
+  matchedCount: 0,
+  modifiedCount: 0,
+  deletedCount: 0,
+  upsertedCount: 0,
+  upsertedIds: []
+}
+stock> 
+stock> P6: Lista los documentos creados en la colección 'ejemplar'.
+
+stock> ----------------------------------------------------
+
+stock> [
+  {
+    _id: ObjectId("6349594bba30d251faee7a94"),
+    name: 'Intro a MongoDB con Python para IoT',
+    coste: 13.45,
+    venta: 13.45,
+    editado: 'SM',
+    fecha: 1665751371625
+  },
+  {
+    _id: ObjectId("6349594bba30d251faee7a95"),
+    name: 'Historia de las religiones',
+    coste: 15,
+    venta: 15,
+    editado: 'Catapulta',
+    fecha: 1665751371626
+  },
+  {
+    _id: ObjectId("6349594bba30d251faee7a96"),
+    name: 'Matemáticas de 1 ESO',
+    coste: 20,
+    venta: 20,
+    editado: 'SM',
+    fecha: 1665751371626
+  },
+  {
+    _id: ObjectId("6349594bba30d251faee7a97"),
+    name: 'Literatura',
+    coste: 12,
+    venta: 12,
+    editado: 'SM',
+    fecha: 1665751371626
+  }
+]
+stock> 
+stock> 
+stock> P7: Inicializa una operación bulk de tipo ordenada sobre la colección 'ejemplar' creada en el apartado anterior.
+
+stock> ----------------------------------------------------
+
+stock> 
+stock> 
+stock> P8: Actualiza el precio de venta de los libros. Los libros de la editorial Catapulta se rebajan un 10%. Los libros de la editorial 'SM' pasan a valer un 12% más caros. Añade las operaciones de actualización adecuadas al objeto bulk y ejecuta bulk.
+
+stock> ----------------------------------------------------
+
+stock> 
+stock> { nInsertOps: 0, nUpdateOps: 1, nRemoveOps: 0, nBatches: 1 }
+stock> { nInsertOps: 0, nUpdateOps: 2, nRemoveOps: 0, nBatches: 1 }
+stock> 
+stock> {
+  acknowledged: true,
+  insertedCount: 0,
+  insertedIds: [],
+  matchedCount: 4,
+  modifiedCount: 4,
+  deletedCount: 0,
+  upsertedCount: 0,
+  upsertedIds: []
+}
+stock> 
+stock> P9: Lista los documentos creados en la colección 'ejemplar'.
+
+stock> ----------------------------------------------------
+
+stock> [
+  {
+    _id: ObjectId("6349594bba30d251faee7a94"),
+    name: 'Intro a MongoDB con Python para IoT',
+    coste: 13.45,
+    venta: 16.139999999999997,
+    editado: 'SM',
+    fecha: 1665751371625
+  },
+  {
+    _id: ObjectId("6349594bba30d251faee7a95"),
+    name: 'Historia de las religiones',
+    coste: 15,
+    venta: 13.5,
+    editado: 'Catapulta',
+    fecha: 1665751371626
+  },
+  {
+    _id: ObjectId("6349594bba30d251faee7a96"),
+    name: 'Matemáticas de 1 ESO',
+    coste: 20,
+    venta: 24,
+    editado: 'SM',
+    fecha: 1665751371626
+  },
+  {
+    _id: ObjectId("6349594bba30d251faee7a97"),
+    name: 'Literatura',
+    coste: 12,
+    venta: 14.399999999999999,
+    editado: 'SM',
+    fecha: 1665751371626
+  }
+]
+stock> 

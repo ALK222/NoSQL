@@ -1,0 +1,43 @@
+[{
+  "título": "Intro a MongoDB con Python para IoT",
+  "autor": {
+    "nombre": "Ana",
+    "apellidos": "XXX"
+  },
+  "tags": [
+    "mongo",
+    "python",
+    "iot"
+  ],
+  "precio": 13.45,
+  "grupo": "SM",
+  "tipo": "técnico"
+},{
+  "título": "Historia de las religiones",
+  "tags": [
+    "religión",
+    "primaria"
+  ],
+  "precio": 15,
+  "grupo": "Catapulta",
+  "páginas": 100
+},{
+  "título": "Matemáticas de 1 ESO",
+  "tags": [
+    "matemáticas",
+    "dummy"
+  ],
+  "precio": 20,
+  "grupo": "SM",
+  "tipo": "ejercicios"
+},{
+  "título": "Literatura",
+  "tags": [
+    "lengua",
+    "castellano",
+    "primaria"
+  ],
+  "precio": 12,
+  "grupo": "SM",
+  "volúmenes": 3
+}]
