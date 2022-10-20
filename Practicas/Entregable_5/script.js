@@ -2,6 +2,30 @@
 // Iñaki Berrocal Diaz
 use wasap
 
+clearDatabase();
+
+populateDatabase();
+
+
+
+/**
+ * Resetea la base de datos para tener 0 colecciones y 0 datos
+ */
+function clearDatabase() {
+    db.dropDatabase();
+}
+
+/**
+ * utiliza los archivos usuarios.json y conversaciones.json para llenar la base de datos
+ */
+function populateDatabase() {
+    users = JSON.parse("usuarios.json");
+    convers = JSON.parse("conversaciones.json");
+
+    db.usuarios.insertMany(users);
+    db.conversaciones.insertMany(convers);
+}
+
 
 /**
  * Crea un campo de usuarios con nick y mail unico, indexa el cp de la direccion para mejores busquedas
@@ -85,5 +109,10 @@ function iniciarConversacion(n, m, tags = []) {
     // Creamos nueva conversacion
     id = crearConversacionVacia(n, m, tags);
 
-    // TODO insertar id de la conversacion en el usuario
+    // Metemos la conversación en el usuario que la ha iniciado
+    db.usuarios.updateOne(
+        { nick: n },
+        {
+            $push: { conversaciones: id }
+        });
 }
