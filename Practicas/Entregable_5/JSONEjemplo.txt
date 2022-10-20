@@ -1,0 +1,39 @@
+usuario:
+{
+nombre: "pepe",
+nick: "pepe21",
+email: "pepe@pepemail.es",
+fecha: ,
+dir: {
+	calle: "c/pepe del pepe",
+	num: 23,
+	cp: 28032,
+	poblacion: "madrid",
+	provincia: "madrid"
+}
+tlfs: [912983922,678903456],
+contactos:[mesi,paco]
+conv: [1,27,34]
+}
+
+conversaciones:
+{
+emisor:"pepe",
+receptor:"mesi",
+fecha:
+tags:[juegos, pelis]
+mens:[
+	{
+	autor:"pepe"
+	mens:"olo"
+	fecha:
+	leido:"si"
+	},
+	{
+	autor:"mesi"
+	mens:"calla bobo"
+	fecha:
+	leido:"no"
+	}
+]
+}
