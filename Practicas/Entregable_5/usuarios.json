@@ -1,0 +1,28 @@
+[
+    {
+        "_id": "635119e34e814bf25cc15c0c",
+        "nombre": "Marcos",
+        "nick": "mc1",
+        "mail": "mc1@gmail.com",
+        "fecha_alta": 1666259427667,
+        "direccion": {},
+        "telefonos": [],
+        "contactos": [
+            "pp"
+        ],
+        "conversaciones": []
+    },
+    {
+        "_id": "635119e74e814bf25cc15c0d",
+        "nombre": "Pepe",
+        "nick": "pp",
+        "mail": "pp@gmail.com",
+        "fecha_alta": 1666259431894,
+        "direccion": {},
+        "telefonos": [],
+        "contactos": [
+            "mc1"
+        ],
+        "conversaciones": []
+    }
+]

@@ -1,12 +1,39 @@
 // Alejandro Barrachina Argudo
 // Iñaki Berrocal Diaz
-use wasap
+//use wasap;
+
 
 clearDatabase();
 
-populateDatabase();
+initDatabase();
 
 
+
+function initDatabase() {
+    print("Creando indices de usuarios");
+    crearCampoUsuarios();
+
+    print("Creando indices de conversaciones");
+    crearCampoConversacion();
+
+    print("Volcando datos en la base de datos");
+    populateDatabase();
+}
+
+function exportDatabase() {
+    usuarios = db.usuarios.find().toArray();
+    conversaciones = db.conversaciones.find().toArray();
+
+    const fs = require('fs');
+
+    fs.writeFileSync("./usuarios.json", usuarios, (err) => {
+        if (err) throw err;
+    });
+
+    fs.writeFileSync("./conversaciones.json", conversaciones, (err) => {
+        if (err) throw err;
+    });
+}
 
 /**
  * Resetea la base de datos para tener 0 colecciones y 0 datos
@@ -19,11 +46,11 @@ function clearDatabase() {
  * utiliza los archivos usuarios.json y conversaciones.json para llenar la base de datos
  */
 function populateDatabase() {
-    users = JSON.parse("usuarios.json");
-    convers = JSON.parse("conversaciones.json");
+    users = require("./usuarios.json")
+    convers = require("./conversaciones.json");
 
-    db.usuarios.insertMany(users);
-    db.conversaciones.insertMany(convers);
+    db.usuarios.insertMany(JSON.parse(users));
+    db.conversaciones.insertMany(JSON.parse(convers));
 }
 
 
@@ -41,7 +68,7 @@ function crearCampoUsuarios() {
  * Crea un campo de conversaciones con emisor y receptor unicos de forma conjunta
  */
 function crearCampoConversacion() {
-    db.usuarios.createIndex({ emisor: 1, receptor: 1 }, { unique: true });
+    db.conversaciones.createIndex({ emisor: 1, receptor: 1 }, { unique: true });
 }
 
 /**
@@ -54,14 +81,14 @@ function crearCampoConversacion() {
  */
 function crearConversacionVacia(n, m, t) {
     c = {
-        emisor = n,
-        receptor = m,
-        tags = t,
-        fecha_apertura = new Date().getTime(),
-        comentarios =[]
+        emisor: n,
+        receptor: m,
+        tags: t,
+        fecha_apertura: new Date().getTime(),
+        comentarios: []
     }
 
-    return db.conversaciones.insert(c);
+    return db.conversaciones.insertOne(c);
 }
 
 /**
@@ -84,7 +111,7 @@ function meterUsuario(name, n, email, tlfs = [], dir = {}) {
         conversaciones: []
     };
 
-    db.usuarios.insert(u);
+    db.usuarios.insertOne(u);
 }
 
 function iniciarConversacion(n, m, tags = []) {
@@ -98,8 +125,8 @@ function iniciarConversacion(n, m, tags = []) {
     }
 
     // Comprobamos si ambos se tienen agregados
-    inList1 = db.usuarios.countDocuments({ $and: [{ nombre: m }, { contactos: n }] });
-    inList2 = db.usuarios.countDocuments({ $and: [{ nombre: n }, { contactos: m }] });
+    inList1 = db.usuarios.countDocuments({ $and: [{ nick: m }, { contactos: n }] });
+    inList2 = db.usuarios.countDocuments({ $and: [{ nick: n }, { contactos: m }] });
 
     if (inList1 == 0 || inList2 == 0) {
         console.error("no se tienen en contactos");
@@ -113,6 +140,6 @@ function iniciarConversacion(n, m, tags = []) {
     db.usuarios.updateOne(
         { nick: n },
         {
-            $push: { conversaciones: id }
+            $push: { conversaciones: id.insertedID }
         });
 }
