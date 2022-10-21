@@ -1,7 +1,5 @@
 // Alejandro Barrachina Argudo
 // Iñaki Berrocal Diaz
-//use wasap;
-
 /**
  * 
  * - Los indices usados son :
@@ -12,12 +10,15 @@
  */
 
 
-clearDatabase();
+clearDatabase(); // Limpia ejecuciones anteriores
 
-initDatabase();
+initDatabase(); // Inicia la bd
 
 
 
+/**
+ * Crea los indices y mete datos en la bd
+ */
 function initDatabase() {
     print("Creando indices de usuarios");
     crearCampoUsuarios();
@@ -29,6 +30,9 @@ function initDatabase() {
     populateDatabase();
 }
 
+/**
+ * Exporta los datos de la base de datos a 2 archivos json
+ */
 function exportDatabase() {
     usuarios = db.usuarios.find().toArray();
     conversaciones = db.conversaciones.find().toArray();
@@ -117,12 +121,17 @@ function meterUsuario(name, n, email, tlfs = [], dir = {}) {
         direccion: dir,
         telefonos: tlfs,
         contactos: [],
-        conversaciones: []
     };
 
     db.usuarios.insertOne(u);
 }
 
+/**
+ * Inicia una conversación entre 2 usuarios
+ * @param {String} n emisor
+ * @param {String} m receptor
+ * @param {String[]} tags etiquetas de la conversación
+ */
 function iniciarConversacion(n, m, tags = []) {
     // Comprobamos si conversacion existe bilateralmente
     exists1 = db.conversaciones.countDocuments({ $and: [{ emisor: n }, { receptor: m }] });
@@ -145,14 +154,17 @@ function iniciarConversacion(n, m, tags = []) {
     // Creamos nueva conversacion
     id = crearConversacionVacia(n, m, tags);
     print(id);
-    // Metemos la conversación en el usuario que la ha iniciado
-    db.usuarios.updateOne(
-        { nick: n },
-        {
-            $push: { conversaciones: id.insertedId }
-        });
 }
 
+/**
+ * Crea una nueva dirección
+ * @param {String} cal Calle
+ * @param {Int} num numero
+ * @param {Int} codp codigo postal
+ * @param {String} pob poblacion
+ * @param {String} prov provincia
+ * @returns JSON con la direccion
+ */
 function crearDireccion(cal, num, codp, pob, prov) {
     d = {
         calle: cal,
@@ -174,7 +186,7 @@ function meterMensaje(contenido, emisor, receptor, origen) {
     comentario = {
         emisor: origen,
         mensaje: contenido,
-        leido: 0,
+        leido: false,
         fecha: new Date().getTime()
     };
     db.conversaciones.updateOne(

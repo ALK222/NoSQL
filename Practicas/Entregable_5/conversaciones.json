@@ -9,26 +9,26 @@
             {
                 "emisor": "pp",
                 "mensaje": "He perdido",
-                "leido": 0,
+                "leido": true,
                 "fecha": 1666341038228
             },
             {
                 "emisor": "mc1",
                 "mensaje": "Has perdido",
-                "leido": 0,
+                "leido": false,
                 "fecha": 1666341906317
             }
         ]
     },
     {
-        "_id": "635290d5559d70b41a168bf6",
+        "_id": "635291db559d70b41a168bf7",
         "emisor": "alv",
         "receptor": "pp",
         "tags": [
             "juegos",
             "estrategia"
         ],
-        "fecha_apertura": 1666355413185,
+        "fecha_apertura": 1666355675466,
         "comentarios": []
     }
 ]

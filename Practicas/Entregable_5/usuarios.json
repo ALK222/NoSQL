@@ -9,8 +9,7 @@
         "telefonos": [],
         "contactos": [
             "pp"
-        ],
-        "conversaciones": []
+        ]
     },
     {
         "_id": "635119e74e814bf25cc15c0d",
@@ -23,8 +22,7 @@
         "contactos": [
             "mc1",
             "alv"
-        ],
-        "conversaciones": []
+        ]
     },
     {
         "_id": "63528c4eb77afd3f078fe83d",
@@ -42,9 +40,16 @@
         "telefonos": [],
         "contactos": [
             "pp"
-        ],
-        "conversaciones": [
-            "635290d5559d70b41a168bf6"
         ]
+    },
+    {
+        "_id": "63529269559d70b41a168bf8",
+        "nombre": "Alex",
+        "nick": "alk",
+        "mail": "aaa@gmail.com",
+        "fecha_alta": 1666355817720,
+        "direccion": {},
+        "telefonos": [],
+        "contactos": []
     }
 ]
