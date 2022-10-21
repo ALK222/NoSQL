@@ -3,7 +3,7 @@
 //use wasap;
 
 /**
- * Esta base de datos es una puta mierda. Dicho esto:
+ * 
  * - Los indices usados son :
  *      - usuarios: nick y mail ya que son unicos para cada usuario;
  *                  y el cp ya que es uno de los requisitos de busqueda
