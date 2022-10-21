@@ -2,6 +2,15 @@
 // Iñaki Berrocal Diaz
 //use wasap;
 
+/**
+ * Esta base de datos es una puta mierda. Dicho esto:
+ * - Los indices usados son :
+ *      - usuarios: nick y mail ya que son unicos para cada usuario;
+ *                  y el cp ya que es uno de los requisitos de busqueda
+ *      - conversaciones: emisor y receptor para que no haya dos conversacion
+ *                        es entre los mismos usuarios
+ */
+
 
 clearDatabase();
 
@@ -49,8 +58,8 @@ function populateDatabase() {
     users = require("./usuarios.json")
     convers = require("./conversaciones.json");
 
-    db.usuarios.insertMany(JSON.parse(users));
-    db.conversaciones.insertMany(JSON.parse(convers));
+    db.usuarios.insertMany(users);
+    db.conversaciones.insertMany(convers);
 }
 
 
@@ -142,4 +151,24 @@ function iniciarConversacion(n, m, tags = []) {
         {
             $push: { conversaciones: id.insertedID }
         });
+}
+
+/**
+ * Añade un mensaje a una conversación
+ * @param {String} contenido Texto del mensaje
+ * @param {String} emisor Emisor de la conversacion
+ * @param {String} receptor Receptor de la conversacion
+ * @param {String} origen Usuario que envía el mensaje
+ */
+function meterMensaje(contenido, emisor, receptor, origen) {
+    comentario = {
+        emisor: origen,
+        mensaje: contenido,
+        leido: 0,
+        fecha: new Date().getTime()
+    };
+    db.conversaciones.updateOne(
+        { $and: [{ "emisor": emisor }, { "receptor": receptor }] },
+        { $push: { "comentarios": comentario } }
+    );
 }

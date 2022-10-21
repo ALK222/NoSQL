@@ -5,6 +5,19 @@
         "receptor": "mc1",
         "tags": null,
         "fecha_apertura": 1666339481590,
-        "comentarios": []
+        "comentarios": [
+            {
+                "emisor": "pp",
+                "mensaje": "He perdido",
+                "leido": 0,
+                "fecha": 1666341038228
+            },
+            {
+                "emisor": "mc1",
+                "mensaje": "Has perdido",
+                "leido": 0,
+                "fecha": 1666341906317
+            }
+        ]
     }
 ]
