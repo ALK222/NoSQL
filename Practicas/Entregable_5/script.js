@@ -26,11 +26,11 @@ function exportDatabase() {
 
     const fs = require('fs');
 
-    fs.writeFileSync("./usuarios.json", usuarios, (err) => {
+    fs.writeFileSync("./usuarios.json", JSON.stringify(usuarios), (err) => {
         if (err) throw err;
     });
 
-    fs.writeFileSync("./conversaciones.json", conversaciones, (err) => {
+    fs.writeFileSync("./conversaciones.json", JSON.stringify(conversaciones), (err) => {
         if (err) throw err;
     });
 }

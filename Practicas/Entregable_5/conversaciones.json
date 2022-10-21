@@ -1,1 +1,10 @@
-[]
+[
+    {
+        "_id": "63525299517bf0c964cd1590",
+        "emisor": "pp",
+        "receptor": "mc1",
+        "tags": null,
+        "fecha_apertura": 1666339481590,
+        "comentarios": []
+    }
+]
