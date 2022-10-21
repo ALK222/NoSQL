@@ -144,15 +144,25 @@ function iniciarConversacion(n, m, tags = []) {
 
     // Creamos nueva conversacion
     id = crearConversacionVacia(n, m, tags);
-
+    print(id);
     // Metemos la conversación en el usuario que la ha iniciado
     db.usuarios.updateOne(
         { nick: n },
         {
-            $push: { conversaciones: id.insertedID }
+            $push: { conversaciones: id.insertedId }
         });
 }
 
+function crearDireccion(cal, num, codp, pob, prov) {
+    d = {
+        calle: cal,
+        numero: num,
+        cp: codp,
+        poblacion: pob,
+        provincia: prov
+    };
+    return d;
+}
 /**
  * Añade un mensaje a una conversación
  * @param {String} contenido Texto del mensaje

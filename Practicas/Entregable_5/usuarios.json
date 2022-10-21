@@ -21,8 +21,30 @@
         "direccion": {},
         "telefonos": [],
         "contactos": [
-            "mc1"
+            "mc1",
+            "alv"
         ],
         "conversaciones": []
+    },
+    {
+        "_id": "63528c4eb77afd3f078fe83d",
+        "nombre": "Alberto",
+        "nick": "alv",
+        "mail": "alv@gmail.com",
+        "fecha_alta": 1666354254634,
+        "direccion": {
+            "calle": "calle inventada",
+            "numero": 123,
+            "cp": 668,
+            "poblacion": "Madrid",
+            "provincia": "Madrid"
+        },
+        "telefonos": [],
+        "contactos": [
+            "pp"
+        ],
+        "conversaciones": [
+            "635290d5559d70b41a168bf6"
+        ]
     }
 ]
