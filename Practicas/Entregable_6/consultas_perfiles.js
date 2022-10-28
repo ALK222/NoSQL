@@ -1,4 +1,5 @@
-
+// Alejandro Barrachina Argudo
+// Iñaki Berrocal Diaz
 use gestion
 
 print("C1: Número de empleados por empresa")
