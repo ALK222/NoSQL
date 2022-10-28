@@ -1,0 +1,142 @@
+MongoDB shell version v5.0.2
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("b9317034-8a36-48fc-a3df-6305845557e3") }
+MongoDB server version: 5.0.2
+================
+Warning: the "mongo" shell has been superseded by "mongosh",
+which delivers improved usability and compatibility.The "mongo" shell has been deprecated and will be removed in
+an upcoming release.
+We recommend you begin using "mongosh".
+For installation instructions, see
+https://docs.mongodb.com/mongodb-shell/install/
+================
+WARNING: some history file lines were truncated at 4095 bytes.
+switched to db gestion
+C1: Número de empleados por empresa
+Sol: -----------------------------
+{ "_id" : "IBM", "total" : 4 }
+{ "_id" : "Amazon", "total" : 5 }
+{ "_id" : "Google", "total" : 1 }
+C2: Empresa con mayor número de empleados
+-----------------------------
+{ "_id" : "Amazon", "num_emp" : 5 }
+C3:Listado de empleados que tienen más de un teléfono de contacto
+--------------------------------------------------------------
+C4: Listado de empleados que tienen de más de 45 años que viven en Madrid
+-----------------------------
+c5: Listado de empleados que no les gusta la música y son desarrolladores de Software
+-----------------------------
+c6: Habilidades entre los empleados
+-----------------------------
+[
+	"cocina",
+	"control de calidad",
+	"control de costes",
+	"desarrollador de software",
+	"desarrollador de videojuegos",
+	"gestión de proyectos",
+	"gestión logística",
+	"inventario",
+	"publicidad",
+	"transporte",
+	"ventas"
+]
+c7: Salario medio de los empleados por empresa
+-----------------------------
+{ "_id" : "IBM", "total" : 46875 }
+{ "_id" : "Amazon", "total" : 53540 }
+{ "_id" : "Google", "total" : 59000 }
+c8: Empresas cuyo salario medio de los empleados supera los 50000 €
+-----------------------------
+{ "_id" : "Amazon", "salario_medio" : 53540 }
+{ "_id" : "Google", "salario_medio" : 59000 }
+c9: Número de empleados por empresa y ciudad
+-----------------------------
+{ "_id" : { "empresa" : "Amazon", "ciudad" : "Madrid" }, "num_empleados" : 2 }
+{ "_id" : { "empresa" : "IBM", "ciudad" : "Madrid" }, "num_empleados" : 4 }
+{ "_id" : { "empresa" : "Google", "ciudad" : "Barcelona" }, "num_empleados" : 1 }
+{ "_id" : { "empresa" : "Amazon", "ciudad" : "Barcelona" }, "num_empleados" : 3 }
+c10: Número de empleados por empresa y habilidad
+-------------------------------------------
+{ "num_empleados" : 2, "empresa" : "Amazon", "habilidad" : "control de calidad" }
+{ "num_empleados" : 1, "empresa" : "Amazon", "habilidad" : "control de costes" }
+{ "num_empleados" : 2, "empresa" : "Amazon", "habilidad" : "gestión de proyectos" }
+{ "num_empleados" : 1, "empresa" : "Amazon", "habilidad" : "gestión logística" }
+{ "num_empleados" : 1, "empresa" : "Amazon", "habilidad" : "publicidad" }
+{ "num_empleados" : 4, "empresa" : "Amazon", "habilidad" : "transporte" }
+{ "num_empleados" : 1, "empresa" : "Amazon", "habilidad" : "ventas" }
+{ "num_empleados" : 1, "empresa" : "Google", "habilidad" : "control de calidad" }
+{ "num_empleados" : 1, "empresa" : "Google", "habilidad" : "gestión de proyectos" }
+{ "num_empleados" : 1, "empresa" : "Google", "habilidad" : "inventario" }
+{ "num_empleados" : 1, "empresa" : "IBM", "habilidad" : "cocina" }
+{ "num_empleados" : 3, "empresa" : "IBM", "habilidad" : "control de calidad" }
+{ "num_empleados" : 1, "empresa" : "IBM", "habilidad" : "control de costes" }
+{ "num_empleados" : 2, "empresa" : "IBM", "habilidad" : "desarrollador de software" }
+{ "num_empleados" : 1, "empresa" : "IBM", "habilidad" : "desarrollador de videojuegos" }
+c11: Empresas que no tienen empleados trabajando en Barcelona
+------------------------------------------------------------
+c12: Crea una colección donde cada documento tenga solo dos campos.
+Por un lado la empresa y por otro la lista de empleados de dicha empresa
+Ordena los resultados por nombre de empresa
+-----------------------------
+{ "_id" : "IBM", "empleados" : [ "Ana", "Luis", "Juan", "Tim" ] }
+{ "_id" : "Google", "empleados" : [ "Benito" ] }
+{ "_id" : "Amazon", "empleados" : [ "Julian", "María", "Valeria", "Ada", "Teresa" ] }
+c13: Listado de habilidades  de los empleados de cada una de las empresas
+-----------------------------
+{ "_id" : "IBM", "perfiles" : [ "desarrollador de videojuegos", "desarrollador de software", "cocina", "control de calidad", "control de costes" ] }
+{ "_id" : "Amazon", "perfiles" : [ "transporte", "ventas", "publicidad", "control de calidad", "control de costes", "gestión logística", "gestión de proyectos" ] }
+{ "_id" : "Google", "perfiles" : [ "control de calidad", "inventario", "gestión de proyectos" ] }
+c14: Datos de los empleados con el salario más alto de cada una de las empresas
+-----------------------------
+{ "_id" : "Amazon", "max_salario" : 60000 }
+{ "_id" : "IBM", "max_salario" : 49000 }
+{ "_id" : "Google", "max_salario" : 59000 }
+c15: Datos de los empleados con el salario más alto de cada una de las empresas.Ordenar por sallario
+-----------------------------
+{ "_id" : "Amazon", "empleado" : "Julian", "incorporacion" : 1998, "salario" : 60000 }
+{ "_id" : "Google", "empleado" : "Benito", "incorporacion" : 1999, "salario" : 59000 }
+{ "_id" : "IBM", "empleado" : "Tim", "incorporacion" : 2000, "salario" : 49000 }
+c16: Empresa con mayor número de empleados
+-----------------------------
+{ "_id" : "Amazon", "num_emp" : 5 }
+Número de empleados por fecha de incorporación
+-----------------------------
+{ "_id" : 2000, "num_emp" : 3 }
+{ "_id" : 1999, "num_emp" : 2 }
+{ "_id" : 1998, "num_emp" : 2 }
+{ "_id" : 1995, "num_emp" : 2 }
+{ "_id" : 1997, "num_emp" : 1 }
+c18: Salario medio por fecha de incorporación
+-----------------------------
+{ "_id" : 1999, "salario_medio" : 55350 }
+{ "_id" : 1998, "salario_medio" : 53250 }
+{ "_id" : 1997, "salario_medio" : 50000 }
+{ "_id" : 1995, "salario_medio" : 50000 }
+{ "_id" : 2000, "salario_medio" : 49000 }
+c19: Salario medio, maximo y  minimo por rango de edad [18, 25)[25,35),[35, 45),[45,...)
+-----------------------------
+{ "_id" : 18, "num_empleados" : 1, "salario_máximo" : 45000, "salario_mínimo" : 45000, "salario_medio" : 45000 }
+{ "_id" : 25, "num_empleados" : 4, "salario_máximo" : 51700, "salario_mínimo" : 46500, "salario_medio" : 48550 }
+{ "_id" : 35, "num_empleados" : 1, "salario_máximo" : 60000, "salario_mínimo" : 60000, "salario_medio" : 60000 }
+{ "_id" : "+45", "num_empleados" : 4, "salario_máximo" : 59000, "salario_mínimo" : 50000, "salario_medio" : 53750 }
+Salario medio por habilidad expresado en miles
+-----------------------------
+{ "_id" : "inventario", "medio" : 59 }
+{ "_id" : "gestión de proyectos", "medio" : 58 }
+{ "_id" : "transporte", "medio" : 51.925 }
+{ "_id" : "ventas", "medio" : 51 }
+{ "_id" : "publicidad", "medio" : 51 }
+{ "_id" : "control de calidad", "medio" : 50.533 }
+{ "_id" : "control de costes", "medio" : 50.35 }
+{ "_id" : "gestión logística", "medio" : 50 }
+{ "_id" : "desarrollador de videojuegos", "medio" : 47 }
+{ "_id" : "desarrollador de software", "medio" : 45.75 }
+{ "_id" : "cocina", "medio" : 45 }
+c21: Nombre del cliente que más gana en el conjunto de datos
+-----------------------------
+c22: Salario medio por empresa, de aquellos empleados interesados en el cine
+-----------------------------
+c23: Listado de empleados que tienen más de un teléfono de contacto
+-----------------------------
+bye
